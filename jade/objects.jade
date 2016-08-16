@@ -1,0 +1,54 @@
+include mixins
+doctype html
+html(lang='ru')
+    +dev_head('Air Объекты', false, false, true)
+
+    body.open_tabs
+        .wrapper
+            //.rect_1024
+            .base
+                +header(4)
+                
+                +breadcrumbs(['Главная', 'Объекты'])
+                
+                div.main_content
+                    .news_section 
+                        .section_inner.clearfix
+
+                            .news_block
+                                .block_caption Наши Обьекты
+                                .block_caption_tip Колосальный опыт, лучшие специалисты.
+                                
+                            .service_tab_ph
+                                ul.news_list
+                                    +loop_while(9)
+                                        li
+                                            a.news_unit(href='news_1.html')
+                                                .service_object_img
+                                                    img(src='i/object_1.jpg')
+                                                    .service_object_date 1 месяц назад
+                                                .news_description
+                                                    .news_caption 
+                                                        a.gl_link.clr_blue.fw_500(href='#') Открылся центр исполнения заказов «Юлмарт»
+                                                    p Компания AIR TECHNOLOGY завершила монтаж инженерных систем в пригородном центре исполнения…
+                                                        
+                           .text_center
+                               a.btn_v1.more_btn.btn_white_blue_2(href='#')
+                                    span.mob_hidden ПОКАЗАТЬ ВСЕ 22 ОБЪЕКТА
+                                    span.dt_hidden БОЛЬШЕ ОБЪЕКТОВ
+                            
+                    .service_tab_ph: .service_object_list_w.standalone
+                        .section_inner
+                            .service_range
+                                h3.block_caption Будьте в курсе наших новостей
+                                .block_caption_tip Введите ваш электронный адрес
+                                
+                                .text_center
+                                    .subscribe_row
+                                        .input_w
+                                            input#feedback_name.f_input_v2.f_input(placeholder='ВАШ ЭЛ.АДРЕС')
+                                        a.btn_v1.btn_white_blue_3.about_callback_btn(href='#') ПОДПИСАТЬСЯ
+                    
+                        
+                                         
+            +footer()

@@ -1,0 +1,114 @@
+include mixins
+doctype html
+html(lang='ru')
+    +dev_head('Air Шаг 2 из 2', false, false, false, false, false, false, true)
+
+    body.open_tabs
+        .wrapper
+            //.rect_1024
+            .base
+                +header(0)
+
+                +breadcrumbs(['← Вернуться назад'])
+
+                div.main_content
+                    .section_inner
+                        .calc_holder
+                            .block_caption Шаг 2 из 2
+
+                            ul.calc_steps
+                                li.complete
+                                    .calc_step_btn
+                                        span.calc_step_text ОБЩАЯ ИНФОРМАЦИЯ
+                                li.active
+                                    .calc_step_btn
+                                        span.calc_step_text ИНЖЕНЕРНЫЕ СЕТИ
+
+                            form(action='#')
+                                .calc_section
+                                    .block_caption Вентиляция
+                                    .calc_block
+                                        .calc_form_col
+                                            .form_cell.form_cell_v1
+                                                label.f_label_v1(for='object_type') Приточная
+                                                .input_w
+                                                    select#object_type.select2(data-select-class='select_v1')
+                                                        option Механическая
+                                                        option Механическая 2
+                                                        option Механическая 3
+                                                        
+                                            .form_cell.form_cell_v1
+                                                label.f_label_v1(for='object_type2') Вытяжная
+                                                .input_w
+                                                    select#object_type2.select2(data-select-class='select_v1')
+                                                        option Механическая
+                                                        option Механическая 2
+                                                        option Механическая 3
+                                                        
+                                            .form_cell.form_cell_v1
+                                                label.f_label_v1(for='object_type3') Приточно - вытежная
+                                                .input_w
+                                                    .input_tip 70% возврата тепловой энергии, допускается подмес вытяжного воздуха
+                                                    select#object_type3.select2(data-select-class='select_v1')
+                                                        option С роторным рукуператором
+                                                        option С роторным рукуператором 2
+                                                        option С роторным рукуператором 3
+                                                        
+                                            .form_cell.form_cell_v1
+                                                label.f_label_v1(for='object_info') Местная - вытежная
+                                                .input_w
+                                                    textarea#object_info.f_input_v1.f_input.autoSize Тут текст который описывает местную вытежную, чем больше текста, тем больше сам инпут.
+                                                                                                            
+                                            .form_cell.form_cell_v1
+                                                label.f_label_v1(for='object_info2') Аспирация
+                                                .input_w
+                                                    textarea#object_info2.f_input_v1.f_input.autoSize Тут текст который описывает местную вытежную, чем больше текста, тем больше сам инпут.
+                                                    
+
+                                .calc_section
+                                    .block_caption Кондиционированние
+                                    .calc_block
+                                        .calc_form_col
+
+                                            .form_cell.form_cell_v1
+                                                label.f_label_v1(for='object_type4') Сплит - система ( ON/OFF, инвертор )
+                                                .input_w
+                                                    select#object_type4.select2(data-select-class='select_v1')
+                                                        option Внутренний блок настенного типа
+                                                        option Внутренний блок настенного типа 2
+                                                        option Внутренний блок настенного типа 3
+                                                        
+                                            .form_cell.form_cell_v1
+                                                label.f_label_v1(for='object_type5') Мультисплит - система ( ON/OFF, инвертор)
+                                                .input_w
+                                                    select#object_type5.select2(data-select-class='select_v1')
+                                                        option Внутренний блок настенного типа
+                                                        option Внутренний блок настенного типа 2
+                                                        option Внутренний блок настенного типа 3
+                                                        
+                                            .form_cell.form_cell_v1
+                                                label.f_label_v1(for='object_type6') VRF система
+                                                .input_w
+                                                    select#object_type6.select2(data-select-class='select_v1')
+                                                        option Внутренний блок настенного типа
+                                                        option Внутренний блок настенного типа 2
+                                                        option Внутренний блок настенного типа 3
+                                                        
+                                            .form_cell.form_cell_v1
+                                                label.f_label_v1(for='object_info3') Холодильная машина - чиллер
+                                                .input_w
+                                                    input#object_info3.f_input_v1.f_input(value='Фанкойлы настенного типа')
+                                                    
+                                            .form_cell.form_cell_v1
+                                                label.f_label_v1(for='object_info4') К-во теплоизбытков
+                                                .input_w
+                                                    textarea#object_info4.f_input_v1.f_input.autoSize Тут текст который описывает местную вытежную, чем больше текста, тем больше сам инпут.
+                                            
+                                                    
+                                .calc_step_controls
+                                    a.btn_v2.btn_red.calc_step_link(href='calc_22.html') ОТПРАВИТЬ
+                                                    
+
+            +footer()
+            //-+popups()
+            +index_popup()

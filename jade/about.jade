@@ -1,0 +1,71 @@
+include mixins
+doctype html
+html(lang='ru')
+    +dev_head('Air О компании', false, true)
+
+    body.open_tabs
+        .wrapper
+            //.rect_1024
+            .base
+                +header(2)
+
+                +about_hero()
+                
+                +breadcrumbs(['Главная', 'Новости', 'О Компании'])
+                
+                div.main_content
+                    .about_section
+                        .section_inner.clearfix
+                        
+                            .about_img_w
+                                img(src='i/air_wtf.png')
+                                
+                            .about_block
+                                h3.block_caption Что такое AIR?
+                                .block_caption_tip Безупречное качество от лучших инженеров.
+                                
+                                p Мы занимаемся любимым делом. Сложные задачи вызывают неподдельный интерес. Огромное удовольствие видеть  качественно выполненную в срок работу и благодарного заказчика. Секрет нашего успеха очень прост. Правильно построенная структура компании в исполнении молодых, амбициозных, энергичных, смелых инженеров.  И еще ... мы доказываем свою компетентность и профессионализм делом, а не большим количеством слов. 
+                                    
+                                p Ждем Вас.
+                                
+                                .licence_block
+                                    .about_caption ЛИЦЕНЗИИ:
+                                    
+                                    ul.about_licences
+                                        +loop_while(2)
+                                            li
+                                                .licence_unit
+                                                    .licence_img
+                                                        img(src='i/about_file.png')
+                                                    p: a.licence_link.licenceBtn(href='#') Свидетельство о допуске к строительным работам
+                                                    .licence_file PDF, 22Kb
+
+                        .section_inner.clearfix
+                            .about_features_w: .about_features_list.featuresSlider
+                                .slide
+                                    .feature_unit
+                                        .feature_counter 10+
+                                        .feature_name Лет н а рынке
+                                .slide
+                                    .feature_unit
+                                        .feature_counter 130+
+                                        .feature_name Рабочих обьектов
+                                .slide
+                                    .feature_unit
+                                        .feature_counter 70+
+                                        .feature_name Квалифицированных сотрудников
+                                            
+                            
+                    .service_tab_at: .service_object_list_w.standalone
+                        .section_inner
+                            .service_range
+                                h3.block_caption Связаться с нами легко и&nbsp;просто
+                                .block_caption_tip Наши инженеры ответят на все<br>ваши вопросы
+                                
+                                .text_center
+                                    a.btn_v1.btn_white_green.about_callback_btn(href='contacts.html#feedback_section') СВЯЗАТЬСЯ С НАМИ
+                    
+                    +insta_section()
+                    
+            +footer()
+            +about_popups()

@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'air_icons';
+  src:  url('fonts/air_icons.eot?nx9j03');
+  src:  url('fonts/air_icons.eot?nx9j03#iefix') format('embedded-opentype'),
+    url('fonts/air_icons.ttf?nx9j03') format('truetype'),
+    url('fonts/air_icons.woff?nx9j03') format('woff'),
+    url('fonts/air_icons.svg?nx9j03#air_icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="i-"], [class*=" i-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'air_icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-ward:before {
+  content: "\e90f";
+}
+.i-door:before {
+  content: "\e910";
+}
+.i-ruler:before {
+  content: "\e911";
+}
+.i-trash-can:before {
+  content: "\e90b";
+}
+.i-attach:before {
+  content: "\e90c";
+}
+.i-fullscreen:before {
+  content: "\e905";
+}
+.i-pin:before {
+  content: "\e900";
+}
+.i-clock:before {
+  content: "\e902";
+}
+.i-doc_pdf:before {
+  content: "\e903";
+}
+.i-phone:before {
+  content: "\e904";
+}
+.i-close:before {
+  content: "\e90a";
+}
+.i-chevron-right:before {
+  content: "\e908";
+}
+.i-chevron-left:before {
+  content: "\e909";
+}
+.i-chevron-up:before {
+  content: "\e906";
+}
+.i-chevron-down:before {
+  content: "\e901";
+}
+.i-document:before {
+  content: "\e90d";
+}
+.i-envelope:before {
+  content: "\e912";
+}
+.i-check:before {
+  content: "\e90e";
+}
+.i-calculator:before {
+  content: "\e907";
+}
+

@@ -1,0 +1,201 @@
+include mixins
+doctype html
+html(lang='ru')
+    +dev_head('Air контакты', false, false, false, true)
+
+    body.open_tabs.contacts_page
+        .wrapper
+            //.rect_1024
+            .base
+                +header(5)
+                
+                +contacts_hero()
+                
+                +breadcrumbs(['Главная', 'Контакты'])
+
+                div.main_content
+                    
+                    .contacts_section
+                        .section_inner
+                            .contacts_block
+                                h3.block_caption
+                                    span.mob_hidden Наши 
+                                    | Контакты
+                                .block_caption_tip Смотрите наши представительства на карте
+                                    
+                        .map_holder
+                            .mob_map_switcher.dt_hidden
+                                a.btn_v1.map_switch_btn.mapBtnMob.office_current(href='#') САНКТ-ПЕТЕРБУРГ
+                                a.btn_v1.map_switch_btn.mapBtnMob(href='#') МОСКВА
+                            .map_w
+                                #ya_map.map_block
+                            .map_info
+                                .section_inner.clearfix
+                                    .contacts_col
+                                        .office_block.mapBtn.office_spb.office_current
+                                            .active_arrow.mob_hidden
+                                            .contacts_caption ЦЕНТРАЛЬНЫЙ ОФИС В САНКТ-ПЕТЕРБУРГЕ
+                                            .contacts_list_w 
+                                                dl.contacts_list
+                                                    dt
+                                                        span.contact_icon.i-clock
+                                                        span.clr_gray_mob График работы:
+                                                    dd
+                                                        span.fw_500 Пн. – Пт.,с 9:00 до 18:00
+
+                                                dl.contacts_list.contacts_list_right
+                                                    dt
+                                                        span.contact_icon.i-pin
+                                                        span.clr_gray_mob Адрес:
+                                                    dd
+                                                        span.fw_500 195027, Россия, 
+                                                            span.mob_hidden  <br>  
+                                                            | г. Санкт-Петербург, 
+                                                            span.mob_hidden  <br>  
+                                                            | Свердловская набережная, 
+                                                            span.mob_hidden  <br>  
+                                                            | дом 44
+                                                        
+                                                dl.contacts_list
+                                                    dt
+                                                        span.contact_icon.i-phone
+                                                        span.clr_gray_mob Наш телефон:
+                                                    dd
+                                                        .fw_500 8 (812) 313 80 37
+                                                        span.contact_tip.clr_gray_mob (многоканальный)
+                                                        
+                                                dl.contacts_list.dt_hidden
+                                                    dt
+                                                        span.contact_icon.i-envelope
+                                                        span.clr_gray_mob Эл. почта:
+                                                    dd
+                                                        p
+                                                            a.contact_link.clr_green.fw_500(href='mailto:gav@airtechnology.ru') gav@airtechnology.ru
+                                                            span  (
+                                                                span.clr_gray_mob Продукция АТ
+                                                                | )
+
+                                                        p
+                                                            a.contact_link.clr_blue.fw_500(href='mailto:aak@airtechnology.ru') aak@airtechnology.ru
+                                                            span  (
+                                                                span.clr_gray_mob Пром. Холод
+                                                                | )
+
+                                                        p
+                                                            a.contact_link.clr_red.fw_500(href='mailto:ssa@airtechnology.ru') ssa@airtechnology.ru
+                                                            span  (
+                                                                span.clr_gray_mob Инжин. Генподряд
+                                                                | )
+
+
+                                        .office_block.mapBtn.office_msc
+                                            .active_arrow.mob_hidden
+                                            .contacts_caption ОФИС В МОСКВЕ
+                                            .contacts_list_w
+                                                dl.contacts_list
+                                                    dt
+                                                        span.contact_icon.i-clock
+                                                        span.clr_gray_mob График работы:
+                                                    dd
+                                                        span.fw_500 Пн. – Пт.,с 9:00 до 18:00
+
+                                                dl.contacts_list.contacts_list_right
+                                                    dt
+                                                        span.contact_icon.i-pin
+                                                        span.clr_gray_mob Адрес:
+                                                    dd
+                                                        span.fw_500 195027, Россия, г. Москва, 
+                                                            span.mob_hidden  <br> 
+                                                            | ул. Нижняя, дом 14, 
+                                                            span.mob_hidden  <br> 
+                                                            | бизнес-центр "Петровский"
+
+                                                dl.contacts_list
+                                                    dt
+                                                        span.contact_icon.i-phone
+                                                        span.clr_gray_mob Наш телефон:
+                                                    dd
+                                                        .fw_500 8 (800) 500 88 10
+                                                        span.contact_tip.clr_gray_mob (звонок по России бесплатный)
+                                                        
+                                                dl.contacts_list.dt_hidden
+                                                    dt
+                                                        span.contact_icon.i-envelope
+                                                        span.clr_gray_mob Эл. почта:
+                                                    dd
+                                                        p
+                                                            a.contact_link.clr_green.fw_500(href='mailto:gav@airtechnology.ru') gav@airtechnology.ru
+                                                            span  (
+                                                                span.clr_gray_mob Продукция АТ
+                                                                | )
+                                                            
+                                                        p
+                                                            a.contact_link.clr_blue.fw_500(href='mailto:aak@airtechnology.ru') aak@airtechnology.ru
+                                                            span  (
+                                                                span.clr_gray_mob Пром. Холод
+                                                                | )
+                                                            
+                                                        p
+                                                            a.contact_link.clr_red.fw_500(href='mailto:ssa@airtechnology.ru') ssa@airtechnology.ru
+                                                            span  (
+                                                                span.clr_gray_mob Инжин. Генподряд
+                                                                | )
+
+                    #feedback_section.feedback_section
+                        .section_inner.clearfix
+                            .feedback_block
+                                h3.block_caption Обратная Связь
+                                .block_caption_tip Связаться с нами легко и просто
+
+                            .feedback_form_holder
+                                .feedback_form_caption.mob_hidden ФОРМА ОБРАТНОЙ СВЯЗИ
+                                
+                                form(action='#')
+                                    .form_cell.form_cell_v1
+                                        label.f_label_v1(for='feedback_name') Ваше имя
+                                        .input_w
+                                            input#feedback_name.f_input_v1.f_input()
+                                        
+                                    .form_cell.form_cell_v1
+                                        label.f_label_v1(for='feedback_phone') Номер телефона
+                                        .input_w
+                                            input#feedback_phone.f_input_v1.f_input()
+                                        
+                                    .form_cell.form_cell_v1
+                                        label.f_label_v1(for='feedback_email') Эл. почта
+                                        .input_w
+                                            input#feedback_email.f_input_v1.f_input()
+                                        
+                                    .form_cell.form_cell_v1
+                                        label.f_label_v1(for='feedback_msg') Сообщение
+                                        .input_w
+                                            textarea#feedback_msg.f_input_v1.f_input(placeholder='Макс. 500 символов')
+                                            
+                                    .form_cell.form_cell_v1.form_el_v1
+                                        .form_el.mob_hidden
+                                            label.check_emul_v1
+                                                input.inp_hidden(type='checkbox' checked)
+                                                span.check_text Я подтверждаю<br>введенные данные
+                                        
+                                        .form_el
+                                            button.btn_v1.btn_red.feedback_btn ОТПРАВИТЬ
+
+                            .feedback_info_holder.mob_hidden
+                                .feedback_form_caption НАША ЭЛЕКТРОННАЯ ПОЧТА
+                                    
+                                dl.feedback_contacts
+                                    dt Продукция АТ
+                                    dd
+                                        a.gl_link.clr_green.fw_500(href='mailto:gav@airtechnology.ru') gav@airtechnology.ru
+                                    dt Промышленный Холод
+                                    dd
+                                        a.gl_link.clr_blue.fw_500(href='mailto:aak@airtechnology.ru') aak@airtechnology.ru
+                               
+                                    dt Инжиниринговый Генподряд
+                                    dd
+                                        a.gl_link.clr_red.fw_500(href='mailto:ssa@airtechnology.ru') ssa@airtechnology.ru
+                                .feedback_img
+                                    img(src='i/pen.png')
+                    
+            +footer()
+            

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="28px" height="19px" viewBox="0 0 28 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Bitmap</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect x="0" y="1" width="26" height="17" id="rect-1"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.421237245   0 0 0 0 0.421237245   0 0 0 0 0.421237245  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Menu_language" transform="translate(-19.000000, -16.000000)">
+            <g id="Group-2">
+                <g transform="translate(20.000000, 16.000000)">
+                    <g id="Bitmap">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#rect-1"></use>
+                        <image x="0" y="1" width="26" height="17" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAACFCAYAAAAenrcsAAAABGdBTUEAA1teXP8meAAAAypJREFUeAHt1jFNBVEURdE/hB4bCEADAlCDJYRggAY1ZCDU87eBs6Z8t1s5O5nj/PtuPgIELgUeLl89EiDwLyAQQyAQAgIJHCcCArEBAiEgkMBxIiAQGyAQAgIJHCcCArEBAiEgkMBxIiAQGyAQAgIJHCcCArEBAiEgkMBxIiAQGyAQAgIJHCcCArEBAiEgkMBxIiAQGyAQAgIJHCcCArEBAiEgkMBxIiAQGyAQAgIJHCcCArEBAiEgkMBxIiAQGyAQAgIJHCcCArEBAiEgkMBxIiAQGyAQAgIJHCcCArEBAiEgkMBxIiAQGyAQAgIJHCcCArEBAiEgkMBxIiAQGyAQAgIJHCcCArEBAiEgkMBxIiAQGyAQAgIJHCcCx9v754mBAIFrgeP28iGQaxuvBG5+sYyAQAgIJHCcCAjEBgiEgEACx4mAQGyAQAgIJHCcCAjEBgiEgEACx4mAQGyAQAgIJHCcCAjEBgiEgEACx4mAQGyAQAgIJHCcCAjEBgiEgEACx4mAQGyAQAgIJHCcCAjEBgiEgEACx4mAQGyAQAgIJHCcCAjEBgiEgEACx4mAQGyAQAgIJHCcCAjEBgiEgEACx4mAQGyAQAgIJHCcCAjEBgiEgEACx4mAQGyAQAgIJHCcCAjEBgiEgEACx4mAQGyAQAgIJHCcCAjEBgiEgEACx4mAQGyAQAgIJHCcCDy+/nxRIEDgjsDx/fx03rl5JjAv4BdrfgIASkAgpeM2LyCQ+QkAKAGBlI7bvIBA5icAoAQEUjpu8wICmZ8AgBIQSOm4zQsIZH4CAEpAIKXjNi8gkPkJACgBgZSO27yAQOYnAKAEBFI6bvMCApmfAIASEEjpuM0LCGR+AgBKQCCl4zYvIJD5CQAoAYGUjtu8gEDmJwCgBARSOm7zAgKZnwCAEhBI6bjNCwhkfgIASkAgpeM2LyCQ+QkAKAGBlI7bvIBA5icAoAQEUjpu8wICmZ8AgBIQSOm4zQsIZH4CAEpAIKXjNi8gkPkJACgBgZSO27yAQOYnAKAEBFI6bvMCApmfAIASEEjpuM0LCGR+AgBKQCCl4zYvIJD5CQAogV/fgQ2R11omqAAAAABJRU5ErkJggg=="></image>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

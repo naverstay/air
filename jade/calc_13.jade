@@ -1,0 +1,138 @@
+include mixins
+doctype html
+html(lang='ru')
+    +dev_head('Air Шаг 1 из 3', false, false, false, false, false, false, true)
+
+    body.open_tabs
+        .wrapper
+            //.rect_1024
+            .base
+                +header(0)
+
+                +breadcrumbs(['← Вернуться назад'])
+
+                div.main_content
+                    .section_inner
+                        .calc_holder
+                            .block_caption Шаг 1 из 3
+
+                            ul.calc_steps
+                                li.active
+                                    .calc_step_btn
+                                        span.calc_step_text ТИП ПАНЕЛИ
+                                li
+                                    .calc_step_btn
+                                        span.calc_step_text ДВЕРИ
+                                li
+                                    .calc_step_btn
+                                        span.calc_step_text ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ
+
+                            form(action='#')
+                                .calc_section
+                                    .orderBlock.order_block
+                                        .block_caption Параметры
+                                        .calc_block
+                                            .calc_form_col
+                                                
+                                                .form_cell.form_cell_v1
+                                                    label.f_label_v1(for='object_type') Тип панели
+                                                    .input_w
+                                                        select#object_type.select2(data-select-class='select_v1')
+                                                            option ППУ
+                                                            option ППУ 2
+                                                            option ППУ 3
+    
+                                                .form_cell.form_cell_v1
+                                                    label.f_label_v1(for='object_info1')
+                                                        | Толщина изоляции 
+                                                        span.f_label_tip (мм)
+                                                    .input_w.increase_box
+                                                        input#object_info1.f_input_v1.f_input(value='600')
+                                                        span.increase_btn.minus &mdash;
+                                                        span.increase_btn.plus +
+                                                        
+                                                .form_cell.form_cell_v1
+                                                    label.f_label_v1(for='object_info2')
+                                                        | Температура внутри камеры 
+                                                        span.f_label_tip (°C)
+                                                    .input_w.increase_box
+                                                        input#object_info2.f_input_v1.f_input(value='600')
+                                                        span.increase_btn.minus &mdash;
+                                                        span.increase_btn.plus +
+                                                        
+                                                .form_cell.form_cell_v1
+                                                    label.f_label_v1(for='object_info3')
+                                                        | Длина камеры 
+                                                        span.f_label_tip (м)
+                                                    .input_w.increase_box
+                                                        input#object_info3.f_input_v1.f_input(value='600')
+                                                        span.increase_btn.minus &mdash;
+                                                        span.increase_btn.plus +
+                                                        
+                                                .form_cell.form_cell_v1
+                                                    label.f_label_v1(for='object_info4')
+                                                        | Ширина камеры 
+                                                        span.f_label_tip (м)
+                                                    .input_w.increase_box
+                                                        input#object_info4.f_input_v1.f_input(value='600')
+                                                        span.increase_btn.minus &mdash;
+                                                        span.increase_btn.plus +
+                                                        
+                                                .form_cell.form_cell_v1
+                                                    label.f_label_v1(for='object_info5')
+                                                        | Высота камеры  
+                                                        span.f_label_tip (м)
+                                                    .input_w.increase_box
+                                                        input#object_info5.f_input_v1.f_input(value='600')
+                                                        span.increase_btn.minus &mdash;
+                                                        span.increase_btn.plus +
+                                                        
+                                            .calc_form_col.full_width
+                                                .form_cell.form_cell_v1
+                                                    p: b Дополнительное оснащение камеры:
+                                                        
+                                                    ul.additional_features_list.check_blue 
+                                                        li
+                                                            label.check_emul_v1
+                                                                input.inp_hidden(type='checkbox' checked)
+                                                                span.check_text Канелюрный уголок
+                                                    
+                                                        li
+                                                            label.check_emul_v1
+                                                                input.inp_hidden(type='checkbox')
+                                                                span.check_text Конструкии 
+                                                                
+                                                            span &nbsp; (Необходимо 
+                                                                a.clr_blue(href='#') приложить
+                                                                |  проект КМ, КЖ или вырезку из него, типовое решение может не подойти в определенных случаях.)
+                                                            
+                                                        li
+                                                            label.check_emul_v1
+                                                                input.inp_hidden(type='checkbox')
+                                                                span.check_text Обшивка панелями существующие стены и перекрытия
+                                                                
+                                                        li
+                                                            label.check_emul_v1
+                                                                input.inp_hidden(type='checkbox')
+                                                                span.check_text Система электрического обогрева грунта (кабель, щит)
+                                                
+                                            .calc_form_col
+                                                .form_cell.form_cell_v1
+                                                    label.f_label_v1(for='object_info6')
+                                                        | К-во камер данного типа 
+                                                        span.f_label_tip (м)
+                                                    .input_w.increase_box
+                                                        input#object_info6.f_input_v1.f_input(value='600')
+                                                        span.increase_btn.minus &mdash;
+                                                        span.increase_btn.plus +
+                                                    
+                                    .form_cell.form_cell_v2
+                                        a.btn_v2.btn_blue.calc_add_btn.orderAddBtn(href='#') ДОБАВИТЬ НОВУЮ КАМЕРУ
+
+                                .calc_step_controls
+                                    a.btn_v2.btn_red.calc_step_link(href='calc_23.html') СЛЕДУЮЩИЙ ШАГ →
+                                                    
+
+            +footer()
+            //-+popups()
+            +index_popup()

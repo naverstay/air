@@ -1,0 +1,69 @@
+include mixins
+doctype html
+html(lang='ru')
+    +dev_head('Air Шаг 3 из 3', false, false, false, false, false, false, true)
+
+    body.open_tabs
+        .wrapper
+            //.rect_1024
+            .base
+                +header(0)
+
+                +breadcrumbs(['← Вернуться назад'])
+
+                div.main_content
+                    .section_inner
+                        .calc_holder
+                            .block_caption Шаг 3 из 3
+
+                            ul.calc_steps
+                                li.complete
+                                    .calc_step_btn
+                                        span.calc_step_text ТИП ПАНЕЛИ
+                                li.complete
+                                    .calc_step_btn
+                                        span.calc_step_text ДВЕРИ
+                                li.active
+                                    .calc_step_btn
+                                        span.calc_step_text ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ
+
+                            form(action='#')
+                                .calc_section
+                                    .block_caption Итоговая форма
+                                    .calc_block
+                                        .calc_form_col
+                                            
+                                            .form_cell.form_cell_v1
+                                                label.f_label_v1(for='other_info') Дополнительная информация
+                                                .input_w
+                                                    textarea#other_info.f_input_v1.f_input.autoSize(placeholder='Вы можете указать дополнительную информацию по объекту, региону и пр.')
+                                                    input#attach_1.inp_hidden(type='file')
+                                                    label.attach_link(for='attach_1') Прикрепить файл
+
+                                .calc_section
+                                    .block_caption Введенные данные
+                                    .calc_block
+                                        .calc_form_col.full_width
+                                            .form_cell.form_cell_v1
+                                                .f_label_v1 Камеры
+                                                +loop_while(2)
+                                                    .order_object
+                                                        span.order_object_icon.i-ward
+                                                        span Камера 1.  40х25х8, ПИР 150 мм, -18 С, канелюрный уголок, Распашная 1х2, Откатная без привода 2х2,5 со скоростными воротами
+                                                        a.order_object_rm.i-close(href='#')
+                                                        
+                                                .f_label_v1 Двери 
+                                                +loop_while(2)
+                                                    .order_object
+                                                        span.order_object_icon.i-door
+                                                        span Дверь 1.  Откатная без привода 2х2,5 со скоростными воротами
+                                                        a.order_object_rm.i-close(href='#')
+                                                        
+
+                                .calc_step_controls
+                                    a.btn_v2.btn_red.calc_step_link.wide(href='calc_33.html') ОТПРАВИТЬ
+                                    
+
+            +footer()
+            //-+popups()
+            +index_popup()

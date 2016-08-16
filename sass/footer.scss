@@ -1,0 +1,212 @@
+
+.footer {
+  min-height: 255px;
+  padding-top: 40px;
+  background: url(../i/footer_bg.jpg) no-repeat 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+
+  @include respond-to-min($resp_step_2) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding-top: 58px;
+
+    .section_inner {
+      position: relative;
+      padding: 0 85px;
+      //max-width: $content-max-w - 170;
+    }
+  }
+}
+
+.footer_logo_holder {
+  text-align: center;
+  margin-bottom: 15px;
+
+  @include respond-to-min($resp_step_2) {
+    margin-bottom: 0;
+    float: left;
+    text-align: left;
+    min-width: 200px;
+    padding-left: 8px;
+  }
+
+  @include respond-to-min($resp_step_2 + 200) {
+    min-width: 230px;
+  }
+}
+
+.copyright {
+  padding-top: 5px;
+  font-size: 12px;
+  line-height: 25px;
+  color: #fff;
+  color: rgba(255, 255, 255, .49);
+
+  @include respond-to-min($resp_step_2) {
+    position: absolute;
+    top: 60px;
+    left: 83px;
+    font-size: 14px;
+    padding-top: 30px;
+    padding-left: 10px;
+  }
+}
+
+.footer_callback_block {
+
+  @include respond-to-min($resp_step_2) {
+    float: right;
+    text-align: right;
+    padding-right: 27px;
+    min-width: 230px;
+  }
+}
+
+.footer_dev_block {
+  padding-top: 10px;
+  padding-bottom: 50px;
+  white-space: nowrap;
+  display: table;
+  width: 100%;
+  text-align: center;
+
+  > span {
+    color: #c9c9c9;
+    font-size: 10px;
+    display: table-header-group;
+
+    &:first-child {
+      display: table-footer-group;
+    }
+
+    @include respond-to-min($resp_step_2) {
+      display: inline-block !important;
+      vertical-align: middle;
+      padding-left: 5px;
+    }
+  }
+
+  img {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  @include respond-to-min($resp_step_2) {
+    display: block;
+    text-align: right;
+    padding: 40px 0 0;
+  }
+}
+
+.footer_menu_col {
+
+  @include respond-to-min($resp_step_2) {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 195px;
+    margin-left: 10px;
+    text-align: left;
+  }
+
+}
+
+.footer_menu_caption {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+}
+
+.footer_menu {
+  text-align: center;
+
+  li {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 5px;
+    padding: 0 15px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -2px;
+      border-radius: 100%;
+      width: 4px;
+      height: 4px;
+      margin-top: -2px;
+      background: #fff;
+    }
+
+    &.no_dot,
+    &:first-child {
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  @include respond-to-min($resp_step_2) {
+    text-align: left;
+
+    li {
+      display: block;
+      padding: 0;
+      margin-bottom: 10px;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+}
+
+.f_menu_link {
+  color: #cad3db;
+  font-size: 14px;
+
+  &:hover {
+    color: #fff;
+  }
+
+}
+
+$rectWidth: $content-max-w;
+
+.rect_1024 {
+  @extend %hor_centr;
+  position: absolute;
+  width: $rectWidth;
+  max-width: 100%;
+  top: 0;
+  bottom: 0;
+  border: solid red;
+  border-width: 0 1px;
+  z-index: 10;
+  pointer-events: none;
+
+  &:after {
+    @extend %hor_centr;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: red;
+  }
+}
+
+#chromeperfectpixel-panel {
+  top: 40px !important;
+  left: 0 !important;
+}

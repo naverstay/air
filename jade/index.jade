@@ -1,0 +1,492 @@
+include mixins
+doctype html
+html(lang='ru')
+    +dev_head('Air главная', true)
+
+    body.open_tabs
+        .wrapper
+            //.rect_1024
+            .base
+                +header(1)
+
+                +main_banner()
+
+                div.main_content
+                    .tabBlock.tabScrollWatch(data-tab-context='#service_tabs')
+                        #service_tab_1.service_tab.service_tab_ph
+                            .service_block_w: .section_inner
+                                .service_block
+                                    .service_img
+                                        img(src='i/svg/prom_holod_2.svg')
+                                        //-+service_ph()
+                                    .service_info
+                                        .service_caption Промышленный Холод
+    
+                                        .block_caption_tip Разработка систем холодоснабжения 
+                                            span.mob_hidden  для складских, производственных и торговых помещений
+    
+                                        p Предоставляем полный комплекс услуг по реализации систем  <br>  холодоснабжения для производства, переработки и хранения пищевой продукции, технологического кондиционирования помещений и решения других задач.
+    
+                                        p Мы осуществляем проектирование, монтаж и сервисное обслуживание систем промышленного холода, производим надежное и эффективное холодильное оборудование, системы автоматики, применяем энергосберегающие технологии.
+    
+                                        ul.service_more_info
+                                            li: a.service_btn.btn_v2.btn_blue(href='ph.html') ЧИТАТЬ ПОДРОБНЕЕ
+                            
+                            .service_range_w: .section_inner
+                                .service_range
+                                    h3.block_caption Спектр Услуг
+                                    .block_caption_tip.mob_hidden Производим надежное и эффективное холодильное оборудование, <br>системы автоматики, применяем энергосберегающие технологии.
+                                    .block_caption_tip.dt_hidden Широкий спектр профессиональных услуг
+    
+    
+                                .service_range_list_w
+                                    .service_range_list.rangeSlider
+                                        .slide
+                                            .service_range_unit.serviceBtn
+                                                .service_range_img
+                                                    img.fitImage(src='i/svg/ph_service_1.svg' )
+                                                p Строительство<br>холодильных складов
+    
+                                        .slide
+                                            .service_range_unit.serviceBtn
+                                                .service_range_img
+                                                    img.fitImage(src='i/svg/ph_service_2.svg' )
+                                                p Строительство<br>фрукто/овоще хранилищ
+    
+                                        .slide
+                                            .service_range_unit.serviceBtn
+                                                .service_range_img
+                                                    img.fitImage(src='i/svg/ph_service_3.svg' )
+                                                p Строительство камер<br>шоковой заморозки
+    
+                                        .slide
+                                            .service_range_unit.serviceBtn
+                                                .service_range_img
+                                                    img.fitImage(src='i/svg/ph_service_4.svg' )
+                                                p Холодоснабжение<br>предприятия АПК
+    
+                                        .slide
+                                            .service_range_unit.serviceBtn
+                                                .service_range_img
+                                                    img.fitImage(src='i/svg/ph_service_5.svg' )
+                                                p Холодоснабжение<br>продуктовых гипермаркетов
+    
+                                        .slide
+                                            .service_range_unit.serviceBtn
+                                                .service_range_img
+                                                    img.fitImage(src='i/svg/ph_service_6.svg' )
+                                                p Xолодоснабжение<br>с применением CO
+    
+                                        .slide
+                                            .service_range_unit.serviceBtn
+                                                .service_range_img
+                                                    img.fitImage(src='i/svg/ph_service_7.svg' )
+                                                p Tехнологическое<br>охлаждение жидкостей
+    
+                                        .slide
+                                            .service_range_unit.serviceBtn
+                                                .service_range_img
+                                                    img.fitImage(src='i/svg/ph_service_8.svg' )
+                                                p Монтаж сэндвич<br>панелей и дверей
+    
+                                    .service_range_controls.dt_hidden
+                                        .slider_dots
+    
+                            .service_object_list_w
+                                .section_inner
+                                    .service_range
+                                        h3.block_caption Наши Обьекты
+                                        .block_caption_tip.mob_hidden Разработка систем холодоснабжения для складских,  <br>  производственных и торговых помещений
+                                        .block_caption_tip.dt_hidden Портфолио выполненных работ
+
+                                +objectSlider()
+
+                        #service_tab_2.service_tab.service_tab_ic
+                            .service_block_w: .section_inner
+                                .service_block
+                                    .service_img
+                                        img(src='i/svg/engineering_contract.svg')
+                                        //-+service_ic()
+                                    .service_info
+                                        .service_caption Инжиниринговый Генподряд
+    
+                                        .block_caption_tip.mob_hidden Предлагаем комплексные решения по проектированию, монтажу и обслуживанию всех типов инженерных систем
+                                        .block_caption_tip.dt_hidden Все инженерные сети взаимосвязаны
+    
+                                        p В современном здании все инженерные сети взаимосвязаны, и отказ одной системы может повлиять на работоспособность остальных.
+    
+                                        p Поэтому мы рассматриваем инженерные системы в качестве единого механизма, который позволяет  создать и поддерживать параметры микроклимата здания в целом и каждого помещения в отдельности в соответствие с нормативными документами, техническим заданием заказчика либо по требованиям технологии не зависимо от погодных условий за окном.
+    
+                                        ul.service_more_info
+                                            li: a.service_btn.btn_v2.btn_red(href='#') ЧИТАТЬ ПОДРОБНЕЕ
+
+                            .service_range_w: .section_inner
+                                .service_range
+                                    h3.block_caption Спектр Услуг
+                                    .block_caption_tip.mob_hidden Решаем сложные задачи в области инжиниринговых систем.<br>Колосальный опыт, лучшие специалисты.
+                                    .block_caption_tip.dt_hidden Широкий спектр профессиональных услуг
+    
+                                .service_range_list_w
+                                    .service_range_list.rangeSlider
+                                        .slide
+                                            .service_range_unit.serviceBtn
+                                                .service_range_img
+                                                    img.fitImage(src='i/svg/ic_service_1.svg' )
+                                                p Системы водоснабжения<br>и канализация
+    
+                                        .slide
+                                            .service_range_unit.serviceBtn
+                                                .service_range_img
+                                                    img.fitImage(src='i/svg/ic_service_2.svg' )
+                                                p Системы теплоснабжения и<br>отопления
+    
+                                        .slide
+                                            .service_range_unit.serviceBtn
+                                                .service_range_img
+                                                    img.fitImage(src='i/svg/ic_service_3.svg' )
+                                                p Автоматизация и диспетчеризация<br>инжинерных систем
+    
+                                        .slide.new_line
+    
+                                        .slide
+                                            .service_range_unit.serviceBtn
+                                                .service_range_img
+                                                    img.fitImage(src='i/svg/ic_service_4.svg' )
+                                                p Вентиляция и кондиционирование<br>воздуха 
+    
+                                        .slide
+                                            .service_range_unit.serviceBtn
+                                                .service_range_img
+                                                    img.fitImage(src='i/svg/ic_service_5.svg' )
+                                                p Теплогенерирующие<br>установки
+    
+                                    .service_range_controls.dt_hidden
+                                        .slider_dots
+    
+                            .service_object_list_w
+                                .section_inner
+                                    .service_range
+                                        h3.block_caption Наши Обьекты
+                                        .block_caption_tip.mob_hidden Разработка систем холодоснабжения для складских,  <br>  производственных и торговых помещений
+                                        .block_caption_tip.dt_hidden Портфолио выполненных работ
+
+                                +objectSlider()
+
+                        #service_tab_3.service_tab.service_tab_at
+                            .service_block_w: .section_inner
+                                .service_block
+                                    .service_img
+                                        img(src='i/svg/air_tech.svg')
+                                        //-+service_at()
+                                    .service_info
+                                        .service_caption Продукция AIR TECHNOLOGY
+    
+                                        .block_caption_tip.mob_hidden Отечественная продукция, собственного производства.
+                                        .block_caption_tip.dt_hidden Широкий спектр профессиональных услуг
+    
+                                        p Предлагаем широкий типоразмерный ряд смесительных узлов, насосных станций и щитов автоматики для промышленного холода.
+    
+                                        p Вся продукция может быть изготовлена в нескольких вариантах. Кроме того вы можете приобрести продукты с нестандартной конфигурацией, мы подберём оптимально соответствующий вашим задачам и требования вариант.
+    
+                                        ul.service_more_info
+                                            li: a.service_btn.btn_v2.btn_green(href='#') ЧИТАТЬ ПОДРОБНЕЕ
+                                            li
+                                                a.service_calc_btn.btn_v2(href='calc_12.html')
+                                                    span.i-calculator
+                                                    div РАСЧИТАТЬ СТОИМОСТЬ
+                                                    p Калькулятор вам в помощь
+
+                            .service_range_w: .section_inner
+                                .service_range
+                                    h3.block_caption Спектр Услуг
+                                    .block_caption_tip.mob_hidden Отечественная продукция, собственного производства.
+                                    .block_caption_tip.dt_hidden Широкий выбор, безупречное качество
+    
+                                .service_range_list_w
+                                    .service_range_list.rangeSlider
+                                        .slide
+                                            .service_range_unit.serviceBtnAT
+                                                .service_range_img
+                                                    img.fitImage(src='i/svg/at_service_1.svg' )
+                                                p Смесительные узлы для систем<br>вентиляции и теплоснабжения
+    
+                                        .slide
+                                            .service_range_unit.serviceBtnAT
+                                                .service_range_img
+                                                    img.fitImage(src='i/svg/at_service_2.svg' )
+                                                p Щиты автоматики<br>систем вентиляции
+    
+                                        .slide
+                                            .service_range_unit.serviceBtnAT
+                                                .service_range_img
+                                                    img.fitImage(src='i/svg/at_service_3.svg' )
+                                                p Щиты автоматики систем<br>холодоснабжения
+    
+                                        .slide.new_line
+    
+                                        .slide
+                                            .service_range_unit.serviceBtnAT
+                                                .service_range_img
+                                                    img.fitImage(src='i/svg/at_service_4.svg' )
+                                                p Щиты автоматики<br>для холодильных дверей
+                                        .slide
+                                            .service_range_unit.serviceBtnAT
+                                                .service_range_img
+                                                    img.fitImage(src='i/svg/at_service_5.svg' )
+                                                p Щиты автоматики для<br>секционных, рулонных ворот       
+    
+                                        .slide
+                                            .service_range_unit.serviceBtnAT
+                                                .service_range_img
+                                                    img.fitImage(src='i/svg/at_service_6.svg' )
+                                                p Насосные станции     
+    
+                                    .service_range_controls.dt_hidden
+                                        .slider_dots
+    
+                            .service_object_list_w
+                                .section_inner 
+                                    .service_range
+                                        h3.block_caption Наши Обьекты
+                                        .block_caption_tip.mob_hidden Примеры работ в данной категории
+                                        .block_caption_tip.dt_hidden Портфолио выполненных работ
+
+                                +objectSlider()
+                    .review_section
+                        .section_inner
+                            .review_block
+                                h3.block_caption Отзывы
+                                .block_caption_tip.mob_hidden Что говорят о нас наши партнеры?
+                                
+                            .review_slider_w
+                                .reviews_holder.reviewHolder
+                                    .review_list
+                                        .review_unit
+                                            .review_author_avatar_slider
+                                                .review_author_slider.reviewAuthorSlider
+                                                    +loop_while(3)
+                                                        .slide
+                                                            .review_author_avatar: img(src='i/rev_author_1.jpg')
+                                                
+                                            .review_text
+                                                .reviewSlider
+                                                    +loop_while(3)
+                                                        .slide
+                                                            p Хочеться поблагодорить команду Air Technology за проделанную работу, хочеться отметить быстроту и отличное качество проделанной работы.
+                                                    
+                                                .review_author_box
+                                                    .reviewNameSlider
+                                                        +loop_while(1)
+                                                            .slide
+                                                                .mob_table: .mob_t_cell
+                                                                    .review_author_name Тирион Ланистер
+                                                                    .review_author_post President @ James Holdings Insurance Agency Inc.
+                                                    
+                                                            .slide
+                                                                .mob_table: .mob_t_cell
+                                                                    .review_author_name Тирион Ланистер 2
+                                                                    .review_author_post President @ James Holdings Insurance Agency Inc.
+                                                    
+                                                            .slide
+                                                                .mob_table: .mob_t_cell
+                                                                    .review_author_name Тирион Ланистер 3
+                                                                    .review_author_post President @ James Holdings Insurance Agency Inc.
+                                                    
+                                                .review_unit_controls
+                                                    a.btn_v1.review_btn.btn_white_blue.offReviewBtn(href='#')
+                                                        span.i-doc_pdf.review_btn_icon
+                                                        span ОФИЦИАЛЬНЫЙ ОТЗЫВ
+                                                        
+                                    .review_controls
+                                        .slider_arrow.slider_prev.i-chevron-left
+                                        .slider_arrow.slider_next.i-chevron-right
+                                        .slider_dots.dt_hidden
+
+                    .contacts_section
+                        .section_inner
+                            .contacts_block
+                                h3.block_caption
+                                    span.mob_hidden Наши 
+                                    | Контакты
+                                .block_caption_tip Смотрите наши представительства на карте
+                                    
+                        .map_holder
+                            .mob_map_switcher.dt_hidden
+                                a.btn_v1.map_switch_btn.mapBtnMob.office_current(href='#') САНКТ-ПЕТЕРБУРГ
+                                a.btn_v1.map_switch_btn.mapBtnMob(href='#') МОСКВА
+                            .map_w
+                                #ya_map.map_block
+                            .map_info
+                                .section_inner.clearfix
+                                    .contacts_col
+                                        .office_block.mapBtn.office_spb.office_current
+                                            .active_arrow.mob_hidden
+                                            .contacts_caption ЦЕНТРАЛЬНЫЙ ОФИС В САНКТ-ПЕТЕРБУРГЕ
+                                            .contacts_list_w 
+                                                dl.contacts_list
+                                                    dt
+                                                        span.contact_icon.i-clock
+                                                        span.clr_gray_mob График работы:
+                                                    dd
+                                                        span.fw_500 Пн. – Пт.,с 9:00 до 18:00
+
+                                                dl.contacts_list.contacts_list_right
+                                                    dt
+                                                        span.contact_icon.i-pin
+                                                        span.clr_gray_mob Адрес:
+                                                    dd
+                                                        span.fw_500 195027, Россия, 
+                                                            span.mob_hidden  <br>  
+                                                            | г. Санкт-Петербург, 
+                                                            span.mob_hidden  <br>  
+                                                            | Свердловская набережная, 
+                                                            span.mob_hidden  <br>  
+                                                            | дом 44
+                                                        
+                                                dl.contacts_list
+                                                    dt
+                                                        span.contact_icon.i-phone
+                                                        span.clr_gray_mob Наш телефон:
+                                                    dd
+                                                        .fw_500 8 (812) 313 80 37
+                                                        span.contact_tip.clr_gray_mob (многоканальный)
+                                                        
+                                                dl.contacts_list.dt_hidden
+                                                    dt
+                                                        span.contact_icon.i-envelope
+                                                        span.clr_gray_mob Эл. почта:
+                                                    dd
+                                                        p
+                                                            a.contact_link.clr_green.fw_500(href='mailto:gav@airtechnology.ru') gav@airtechnology.ru
+                                                            span  (
+                                                                span.clr_gray_mob Продукция АТ
+                                                                | )
+
+                                                        p
+                                                            a.contact_link.clr_blue.fw_500(href='mailto:aak@airtechnology.ru') aak@airtechnology.ru
+                                                            span  (
+                                                                span.clr_gray_mob Пром. Холод
+                                                                | )
+
+                                                        p
+                                                            a.contact_link.clr_red.fw_500(href='mailto:ssa@airtechnology.ru') ssa@airtechnology.ru
+                                                            span  (
+                                                                span.clr_gray_mob Инжин. Генподряд
+                                                                | )
+
+
+                                        .office_block.mapBtn.office_msc
+                                            .active_arrow.mob_hidden
+                                            .contacts_caption ОФИС В МОСКВЕ
+                                            .contacts_list_w
+                                                dl.contacts_list
+                                                    dt
+                                                        span.contact_icon.i-clock
+                                                        span.clr_gray_mob График работы:
+                                                    dd
+                                                        span.fw_500 Пн. – Пт.,с 9:00 до 18:00
+
+                                                dl.contacts_list.contacts_list_right
+                                                    dt
+                                                        span.contact_icon.i-pin
+                                                        span.clr_gray_mob Адрес:
+                                                    dd
+                                                        span.fw_500 195027, Россия, г. Москва, 
+                                                            span.mob_hidden  <br> 
+                                                            | ул. Нижняя, дом 14, 
+                                                            span.mob_hidden  <br> 
+                                                            | бизнес-центр "Петровский"
+
+                                                dl.contacts_list
+                                                    dt
+                                                        span.contact_icon.i-phone
+                                                        span.clr_gray_mob Наш телефон:
+                                                    dd
+                                                        .fw_500 8 (800) 500 88 10
+                                                        span.contact_tip.clr_gray_mob (звонок по России бесплатный)
+                                                        
+                                                dl.contacts_list.dt_hidden
+                                                    dt
+                                                        span.contact_icon.i-envelope
+                                                        span.clr_gray_mob Эл. почта:
+                                                    dd
+                                                        p
+                                                            a.contact_link.clr_green.fw_500(href='mailto:gav@airtechnology.ru') gav@airtechnology.ru
+                                                            span  (
+                                                                span.clr_gray_mob Продукция АТ
+                                                                | )
+                                                            
+                                                        p
+                                                            a.contact_link.clr_blue.fw_500(href='mailto:aak@airtechnology.ru') aak@airtechnology.ru
+                                                            span  (
+                                                                span.clr_gray_mob Пром. Холод
+                                                                | )
+                                                            
+                                                        p
+                                                            a.contact_link.clr_red.fw_500(href='mailto:ssa@airtechnology.ru') ssa@airtechnology.ru
+                                                            span  (
+                                                                span.clr_gray_mob Инжин. Генподряд
+                                                                | )
+
+                    .feedback_section
+                        .section_inner.clearfix
+                            .feedback_block
+                                h3.block_caption Обратная Связь
+                                .block_caption_tip Связаться с нами легко и просто
+
+                            .feedback_form_holder
+                                .feedback_form_caption.mob_hidden ФОРМА ОБРАТНОЙ СВЯЗИ
+                                
+                                form(action='#')
+                                    .form_cell.form_cell_v1
+                                        label.f_label_v1(for='feedback_name') Ваше имя
+                                        .input_w
+                                            input#feedback_name.f_input_v1.f_input()
+                                        
+                                    .form_cell.form_cell_v1
+                                        label.f_label_v1(for='feedback_phone') Номер телефона
+                                        .input_w
+                                            input#feedback_phone.f_input_v1.f_input()
+                                        
+                                    .form_cell.form_cell_v1
+                                        label.f_label_v1(for='feedback_email') Эл. почта
+                                        .input_w
+                                            input#feedback_email.f_input_v1.f_input()
+                                        
+                                    .form_cell.form_cell_v1
+                                        label.f_label_v1(for='feedback_msg') Сообщение
+                                        .input_w
+                                            textarea#feedback_msg.f_input_v1.f_input(placeholder='Макс. 500 символов')
+                                            
+                                    .form_cell.form_cell_v1.form_el_v1
+                                        .form_el.mob_hidden
+                                            label.check_emul_v1
+                                                input.inp_hidden(type='checkbox' checked)
+                                                span.check_text Я подтверждаю<br>введенные данные
+                                        
+                                        .form_el
+                                            button.btn_v1.btn_red.feedback_btn ОТПРАВИТЬ
+
+                            .feedback_info_holder.mob_hidden
+                                .feedback_form_caption НАША ЭЛЕКТРОННАЯ ПОЧТА
+                                    
+                                dl.feedback_contacts
+                                    dt Продукция АТ
+                                    dd
+                                        a.gl_link.clr_green.fw_500(href='mailto:gav@airtechnology.ru') gav@airtechnology.ru
+                                    dt Промышленный Холод
+                                    dd
+                                        a.gl_link.clr_blue.fw_500(href='mailto:aak@airtechnology.ru') aak@airtechnology.ru
+                               
+                                    dt Инжиниринговый Генподряд
+                                    dd
+                                        a.gl_link.clr_red.fw_500(href='mailto:ssa@airtechnology.ru') ssa@airtechnology.ru
+                                .feedback_img
+                                    img(src='i/pen.png')
+
+                    +insta_section()
+                    
+            +footer()
+            //-+popups()
+            +index_popup()
+            +object_popup()

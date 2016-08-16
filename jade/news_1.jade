@@ -1,0 +1,98 @@
+include mixins
+doctype html
+html(lang='ru')
+    +dev_head('Air Новости', false, false, false, false, true)
+
+    body.open_tabs.news_page
+        .wrapper
+            //.rect_1024
+            .base
+                +header(4)
+                
+                +news_hero_1()
+
+                +breadcrumbs(['Главная', 'Новости', 'Ауди Центр “Выборгский”'])
+                
+                div.main_content
+                    .news_section 
+                        .section_inner.clearfix
+                            
+                            .news_block
+                                .block_caption.mob_hidden Открылся центр исполнения заказов «Юлмарт»
+                                .block_caption.dt_hidden Открытие центра ЮЛМАРТ
+                                .block_caption_tip.mob_hidden В нашей реальности возможно решение любых AIR вопросов.
+                                        
+                            .news_container.service_tab_ph
+                                .news_image 
+                                    .service_object_img
+                                        img(src='i/news_1.jpg')
+                                        a.fullscreen_btn.dt_hidden.i-fullscreen(href='#')
+                                        .service_object_date 
+                                            span.service_object_counter 200 просмотров
+                                            span 16 фото
+                                        
+                                .article_block
+                                    h3 12 ноября состоялось официальное открытие нового центра.
+                                
+                                    p Oткрытие оптово-розничного парка «Мезоджи», расположенного на Пулковском шоссе. Первыми резидентами парка стали флагманский пригородный центр исполнения заказов интернет-ретейлера «Юлмарт» и «Оптоклуб РЯДЫ». В церемонии открытия принял участие губернатор Санкт-Петербурга Георгий Сергеевич Полтавченко.
+                                    
+                                    p Компания AIR TECHNOLOGY выполнила монтажные работы по:
+                                    
+                                    p • В церемонии открытия принял участие
+                                    
+                                    p • Выполнила монтажные работы по системам отопления
+                                    
+                                    p • Теплоснабжения
+                                    
+                                    p Первыми резидентами парка стали флагманский пригородный центр исполнения заказов интернет-ретейлера «Юлмарт» и «Оптоклуб РЯДЫ». В церемонии открытия принял участие губернатор Санкт-Петербурга
+                                    
+                                    h3 Так же из преимуществ можем выделить следующее.
+                                    
+                                    p Объект расположен к югу от границы города, в непосредственной близости к Пулковскому шоссе, на расстоянии 2,5 км от КАД. Площадь объекта составляет более 22 500 м2. Новый центр исполнения заказов «Юлмарт» сможет обслуживать около 2,8 млн человек.
+                                    
+                                    p 12 ноября состоялось официальное открытие оптово-розничного парка «Мезоджи», расположенного на Пулковском шоссе. Первыми резидентами парка стали флагманский пригородный центр исполнения заказов интернет-ретейлера «Юлмарт» и «Оптоклуб РЯДЫ». В церемонии открытия принял участие губернатор Санкт-Петербурга Георгий Сергеевич Полтавченко.
+                                    
+                                    
+                                .mob_hidden
+                                    a.btn_v1.more_btn.btn_white_blue_2.objectBtn(href='#') ПОСМОТРЕТЬ ОБЪЕКТ ПОДРОБНО
+                                    
+                            .aside_right
+                                .news_aside_caption ПОСЛЕДНЕЕ
+                                
+                                ul.last_news
+                                    +loop_while(2)
+                                        li
+                                            .other_news_item
+                                                .other_img
+                                                    img(src='i/other_news_2.png')
+                                                    
+                                                p
+                                                    a.news_link(href='#') Новые модели в линейке фанкойлов от «Daikin»
+                                                .news_date 1 неделю назад
+                                                
+                                    li.mob_hidden
+                                        .other_news_item
+                                            .other_img
+                                                img(src='i/other_news_2.png')
+                                                
+                                            p
+                                                a.news_link(href='#') Новые модели в линейке фанкойлов от «Daikin»
+                                            .news_date 1 неделю назад
+                                                
+                            
+                    .service_tab_ph: .service_object_list_w.standalone
+                        .section_inner
+                            .service_range
+                                h3.block_caption Будьте в курсе наших новостей
+                                .block_caption_tip Введите ваш электронный адрес
+                                
+                                .text_center
+                                    .subscribe_row
+                                        .input_w
+                                            input#feedback_name.f_input_v2.f_input(placeholder='ВАШ ЭЛ.АДРЕС')
+                                        a.btn_v1.btn_white_blue_3.about_callback_btn(href='#') ПОДПИСАТЬСЯ
+                    
+                        
+                                         
+            +footer()
+            +object_popup()

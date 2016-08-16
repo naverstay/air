@@ -1,0 +1,98 @@
+html, body {
+  height: 100%;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font: 1.4em/1.2 $Roboto;
+  color: $default_t_color;
+}
+
+.hide {
+  display: none !important;
+}
+
+.cb {
+  clear: both;
+}
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+
+  @include respond-to-min($resp_step_2) {
+    padding-top: 101px;
+  }
+
+}
+
+.base {
+  @include respond-to-min($resp_step_2) {
+    padding-bottom: 255px;
+  }
+}
+
+.section_inner {
+  position: relative;
+  width: 100%;
+  max-width: $content-max-w;
+  margin: 0 auto;
+  padding: 0 25px;
+
+  @include respond-to-min($resp_step_2) {
+    padding: 0 100px;
+  }
+
+  .main_content & {
+    //max-width: $content-max-w - 200;
+  }
+}
+
+.preloader {
+  @include transition_all(opacity 1s);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.69);
+  pointer-events: none;
+
+  img {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 500px;
+  }
+
+  &.loaded {
+    opacity: 0;
+  }
+}
+
+.mob_hidden {
+  @include respond-to-max($resp_step_2) {
+    display: none !important;
+  }
+}
+
+.dt_hidden {
+  @include respond-to-min($resp_step_2) {
+    display: none !important;
+  }
+}

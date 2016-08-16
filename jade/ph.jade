@@ -1,0 +1,311 @@
+include mixins
+doctype html
+html(lang='ru')
+    +dev_head('Air Промышленный Холод', false,false,false,false,false, true)
+
+    body.open_tabs
+        .wrapper
+            //.rect_1024
+            .base
+                +header(3)
+
+                div.main_content
+                    .service_tab_ph.service_tab.standalone
+                        .service_block_w
+                            .section_inner
+                                .service_block
+                                    .service_img
+                                        img(src='i/svg/prom_holod_2.svg')
+                                        //-+service_ph()
+                                    .service_info
+                                        .service_caption Промышленный Холод
+        
+                                        .block_caption_tip Разработка систем холодоснабжения 
+                                            span.mob_hidden  для складских, производственных и торговых помещений
+        
+                                        p Предоставляем полный комплекс услуг по реализации систем  <br>  холодоснабжения для производства, переработки и хранения пищевой продукции, технологического кондиционирования помещений и решения других задач.
+        
+                                        p Мы осуществляем проектирование, монтаж и сервисное обслуживание систем промышленного холода, производим надежное и эффективное холодильное оборудование, системы автоматики, применяем энергосберегающие технологии.
+                                    
+                    .section_inner
+                        .service_spec_block
+
+                            .service_img_w
+                                img(src='i/ph_spec_1.png')
+    
+                            .about_block
+                                h3.block_caption Лучшие Специалисты
+                                .block_caption_tip AIR TECHNOLOGY - максимально надеждное и эффективное решение
+    
+                                p Наши специалисты выполнят проект с учетом специфики производства и требований заказчика, существующих норм и технологических особенностей используемого оборудования.
+    
+                                p В результате вы получите работающий, надежный и эффективный проект холодоснабжения, который в дальнейшем позволит избежать затрат на ремонт и замену оборудования.
+                                    
+                    .project_section
+                        .section_inner
+                            .service_range
+                                h3.block_caption Проектирование Систем<br>Холодоснабжения
+                                .block_caption_tip Осуществляем проектирование систем холодоснабжения для<br>таких обьектов как:
+                                    
+                            ul.service_scroll.col_5
+                                li
+                                    .service_scroll_item
+                                        .service_scroll_img
+                                            img(src='i/svg/ph_proj_1.svg')
+                                        p ХОЛОДИЛЬНЫЕ<br>СКЛАДЫ
+                                        
+                                li
+                                    .service_scroll_item
+                                        .service_scroll_img
+                                            img(src='i/svg/ph_proj_2.svg')
+                                        p МЯСОПЕРЕ&shy;РАБАТЫВАЮЩИЕ<br>ПРЕДПРИЯТИЯ
+                                        
+                                li
+                                    .service_scroll_item
+                                        .service_scroll_img
+                                            img(src='i/svg/ph_proj_3.svg')
+                                        p ОВОЩЕ&shy;ХРАНИЛИЩА
+                                        
+                                li
+                                    .service_scroll_item
+                                        .service_scroll_img
+                                            img(src='i/svg/ph_proj_4.svg')
+                                        p ПТИЦЕ&shy;ФАБРИКИ
+                                        
+                                li
+                                    .service_scroll_item
+                                        .service_scroll_img
+                                            img(src='i/svg/ph_proj_5.svg')
+                                        p ПРОДУКТОВЫЕ<br>ГИПЕРМАРКЕТЫ
+
+                    .section_inner
+                        .service_spec_block.left_mod
+                            .about_block
+                                h3.block_caption Монтаж
+                                .block_caption_tip Предоставляем полный комплекс услуг по монтажу систем холодоснабжения и автоматизации холодоснабжения:
+
+                                ul.service_feature_list
+                                    li Строительство холодильных складов; 
+                                    li Монтаж холодильных установок, теплообменного оборудования, автоматики, систем диспетчеризации
+                                    li Прокладка трубопроводов и сливных дренажей;
+                                    li Подключение электрооборудования и автоматики, настройка управления;
+                                    li Проведение испытаний на прочность и герметичность, пуско-наладочные работы, паспортизация объектов.
+                                    
+                            .service_img_w
+                                img(src='i/ph_spec_2.png')
+
+                    .service_tab_ph
+                        .service_range_w.dt_grad: .section_inner
+                            .service_range 
+                                h3.block_caption Спектр Услуг
+                                .block_caption_tip Широкий типоразмерный ряд смесительных узлов,  <br>   производимых под собственной торговой маркой AT
+                                    
+                            .service_range_list_w
+                                .service_range_list.rangeSlider
+                                    .slide
+                                        .service_range_unit.serviceBtn
+                                            .service_range_img
+                                                img.fitImage(src='i/svg/ph_service_1.svg' )
+                                            p Строительство<br>холодильных складов
+    
+                                    .slide
+                                        .service_range_unit.serviceBtn
+                                            .service_range_img
+                                                img.fitImage(src='i/svg/ph_service_2.svg' )
+                                            p Строительство<br>фрукто/овоще хранилищ
+    
+                                    .slide
+                                        .service_range_unit.serviceBtn
+                                            .service_range_img
+                                                img.fitImage(src='i/svg/ph_service_3.svg' )
+                                            p Строительство камер<br>шоковой заморозки
+    
+                                    .slide
+                                        .service_range_unit.serviceBtn
+                                            .service_range_img
+                                                img.fitImage(src='i/svg/ph_service_4.svg' )
+                                            p Холодоснабжение<br>предприятия АПК
+    
+                                    .slide
+                                        .service_range_unit.serviceBtn
+                                            .service_range_img
+                                                img.fitImage(src='i/svg/ph_service_5.svg' )
+                                            p Холодоснабжение<br>продуктовых гипермаркетов
+    
+                                    .slide
+                                        .service_range_unit.serviceBtn
+                                            .service_range_img
+                                                img.fitImage(src='i/svg/ph_service_6.svg' )
+                                            p Xолодоснабжение<br>с применением CO
+    
+                                    .slide
+                                        .service_range_unit.serviceBtn
+                                            .service_range_img
+                                                img.fitImage(src='i/svg/ph_service_7.svg' )
+                                            p Tехнологическое<br>охлаждение жидкостей
+    
+                                    .slide
+                                        .service_range_unit.serviceBtn
+                                            .service_range_img
+                                                img.fitImage(src='i/svg/ph_service_8.svg' )
+                                            p Монтаж сэндвич<br>панелей и дверей
+    
+                                .service_range_controls.dt_hidden
+                                    .slider_dots
+                                        
+                    .section_inner
+                        .service_spec_block
+                            .service_img_w.guarant_mod
+                                img(src='i/ph_guarant.png')
+
+                            .about_block
+                                h3.block_caption Гарантируем
+                                .block_caption_tip Мы осуществляем качественный монтаж сложного промышленного холодильного оборудования
+
+                                ul.service_feature_list
+                                    li
+                                        span Соответсвие
+                                        p Соответствие проекта конкретным технологическим процессам здания и условиям окружающей среды
+                                    li 
+                                        span Соблюдение
+                                        p Соблюдение строительных, санитарных, экологических и прочих требований и норм
+                                    li 
+                                        span Энергоэффективность
+                                        p Энергоэффективность разработанных схем и оптимизацию потребления электроэнергии
+                                        
+                                    li 
+                                        span Подбор
+                                        p Подбор качественного, современного и надежного оборудования
+                                    li 
+                                        span Предоставление
+                                        p Предоставление всей необходимой документации
+                                        
+                                    li 
+                                        span Выполнение
+                                        p Выполнение взятых обязательств точно в срок
+                                        
+                    .project_section
+                        .section_inner
+                            .service_range
+                                h3.block_caption Поставка оборудования
+                                .block_caption_tip Компания AIR TECHNOLOGY использует оборудование от <br>ведущих мировых производителей. 
+                                    
+                            .partners_list_w
+                                ul.partners_list
+                                    li
+                                        .partner_scope
+                                            .partner_scope_img
+                                                img(src='i/svg/ph_equip_1.svg')
+                                            p КОМПРЕССОРНОЕ<br>ОБОРУДОВАНИЕ
+                                    
+                                        .partner_unit
+                                            img(src='i/ph_equip_1_partner_1.png')
+                                    
+                                        .partner_unit
+                                            img(src='i/ph_equip_1_partner_2.png')
+                                    
+                                        .partner_unit
+                                            img(src='i/ph_equip_1_partner_3.png')
+                                    
+                                        .partner_unit
+                                            img(src='i/ph_equip_1_partner_4.png')
+                                    
+                                        .partner_unit
+                                            img(src='i/ph_equip_1_partner_5.png')
+                                    
+                                        .partner_unit
+                                            img(src='i/ph_equip_1_partner_6.png')
+                                    
+                                    li
+                                        .partner_scope
+                                            .partner_scope_img
+                                                img(src='i/svg/ph_equip_2.svg')
+                                            p ХОЛОДИЛЬНЫЕ<br>МАШИНЫ
+                                    
+                                        .partner_unit
+                                            img(src='i/ph_equip_2_partner_1.png')
+                                        .partner_unit
+                                            img(src='i/ph_equip_2_partner_2.png')
+                                    
+                                    li
+                                        .partner_scope
+                                            .partner_scope_img
+                                                img(src='i/svg/ph_equip_3.svg')
+                                            p ТЕПЛООБМЕННОЕ<br>ОБОРУДОВАНИЕ
+                                    
+                                        .partner_unit
+                                            img(src='i/ph_equip_3_partner_1.png')
+                                    
+                                        .partner_unit
+                                            img(src='i/ph_equip_3_partner_2.png')
+                                    
+                                        .partner_unit
+                                            img(src='i/ph_equip_3_partner_3.png')
+                                    
+                                        .partner_unit
+                                            img(src='i/ph_equip_3_partner_4.png')
+                                    
+                                        .partner_unit
+                                            img(src='i/ph_equip_3_partner_5.png')
+
+                                    li
+                                        .partner_scope
+                                            .partner_scope_img
+                                                img(src='i/svg/ph_equip_4.svg')
+                                            p АВТОМАТИКА
+                                    
+                                        .partner_unit
+                                            img(src='i/ph_equip_4_partner_1.png')
+                                    
+                                        .partner_unit
+                                            img(src='i/ph_equip_4_partner_2.png')
+                                    
+                                        .partner_unit
+                                            img(src='i/ph_equip_4_partner_3.png')
+                                        
+                                    li
+                                        .partner_scope
+                                            .partner_scope_img
+                                                img(src='i/svg/ph_equip_5.svg')
+                                            p СТРОИТЕЛЬНАЯ<br>ЧАСТЬ
+                                    
+                                        .partner_unit
+                                            img(src='i/ph_equip_5_partner_1.png')
+                                    
+                                        .partner_unit
+                                            img(src='i/ph_equip_5_partner_2.png')
+                                    
+                                        .partner_unit
+                                            img(src='i/ph_equip_5_partner_3.png')
+                                    
+                                        .partner_unit
+                                            img(src='i/ph_equip_5_partner_4.png')
+                                    
+                                        .partner_unit
+                                            img(src='i/ph_equip_5_partner_5.png')
+                                    
+                    .section_inner
+                        .service_range
+                            h3.block_caption Наши Приемущества
+                            .block_caption_tip AIR TECHOLOGY обладают большим практическим опытом
+                                
+                            .service_description
+                                p Специалисты AIR TECHNOLOGY обладают большим практическим опытом построения систем промышленного холодоснабжения с использованием различных типов холодильного оборудования, хладагентов и систем автоматизации холодоснабжения. Мы активно применяем знания, накопленные за годы работы, и внедряем инновационные разработки, что позволяет добиться высокой надежности и эффективности реализуемых схем.
+                            
+                        .service_description_img
+                            img(src='i/ph_benefits.png')
+                            
+                                        
+                    .service_tab_ph
+                        .service_object_list_w
+                            .section_inner
+                                .service_range
+                                    h3.block_caption Наши Обьекты
+                                    .block_caption_tip.mob_hidden Разработка систем холодоснабжения для складских,  <br>  производственных и торговых помещений
+                                    .block_caption_tip.dt_hidden Портфолио выполненных работ
+    
+                            +objectSlider()
+                            
+            +footer()
+            +object_popup()
+            

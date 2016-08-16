@@ -1,0 +1,113 @@
+include mixins
+doctype html
+html(lang='ru')
+    +dev_head('Air Промышленный Холод', false,false,false,false,false, true)
+
+    body.open_tabs
+        .wrapper
+            //.rect_1024
+            .base
+                +header(3)
+
+                div.main_content
+                    .service_tab_at.service_tab.standalone
+                        .service_block_w: .section_inner
+                            .service_block
+                                .service_img
+                                    img(src='i/svg/air_tech.svg')
+                                    //-+service_at()
+                                .service_info
+                                    .service_caption Продукция AIR TECHNOLOGY
+
+                                    .block_caption_tip.mob_hidden Отечественная продукция, собственного производства.
+                                    .block_caption_tip.dt_hidden Широкий спектр профессиональных услуг
+
+                                    p Предлагаем широкий типоразмерный ряд смесительных узлов, насосных станций и щитов автоматики для промышленного холода.
+
+                                    p Вся продукция может быть изготовлена в нескольких вариантах. Кроме того вы можете приобрести продукты с нестандартной конфигурацией, мы подберём оптимально соответствующий вашим задачам и требования вариант.
+
+                                    ul.service_more_info
+                                        li
+                                            a.service_calc_btn.btn_v2(href='calc_12.html')
+                                                span.i-calculator
+                                                div РАСЧИТАТЬ СТОИМОСТЬ
+                                                p Калькулятор вам в помощь
+
+                    .section_inner
+                        .service_spec_block
+
+                            .service_img_w.at_prod_mod
+                                img(src='i/at_spec_1.png')
+    
+                            .about_block
+                                h3.block_caption Продукция АТ ( AIR TECHNOLOGY )
+                                .block_caption_tip Безупречное качество за разумную стоимость
+    
+                                p Представленные продукты это результат более чем десятилетнего опыта и постоянного поиска наилучшего решения. Мы стремимся получить изделие исходя из 2-х основных принципов:
+
+                                p 
+                                    b • Высокое качество
+                                p
+                                    b • Выгодная стоимость
+                                p С продукцией AT, мы гарантируем 100% результат, в решении ваших задач.
+                                
+                    .service_tab_at
+                        .service_range_w.dt_grad: .section_inner
+                            .service_range 
+                                h3.block_caption Спектр Услуг
+                                .block_caption_tip Широкий типоразмерный ряд смесительных узлов,  <br>   производимых под собственной торговой маркой AT
+                                    
+                            .service_range_list_w
+                                .service_range_list.rangeSlider
+                                    .slide
+                                        .service_range_unit.serviceBtn
+                                            .service_range_img
+                                                img.fitImage(src='i/svg/at_service_1.svg' )
+                                            p Смесительные узлы для систем<br>вентиляции и теплоснабжения
+
+                                    .slide
+                                        .service_range_unit.serviceBtn
+                                            .service_range_img
+                                                img.fitImage(src='i/svg/at_service_2.svg' )
+                                            p Щиты автоматики<br>систем вентиляции
+
+                                    .slide
+                                        .service_range_unit.serviceBtn
+                                            .service_range_img
+                                                img.fitImage(src='i/svg/at_service_3.svg' )
+                                            p Щиты автоматики систем<br>холодоснабжения
+
+                                    .slide.new_line
+
+                                    .slide
+                                        .service_range_unit.serviceBtn
+                                            .service_range_img
+                                                img.fitImage(src='i/svg/at_service_4.svg' )
+                                            p Щиты автоматики<br>для холодильных дверей
+                                    .slide
+                                        .service_range_unit.serviceBtn
+                                            .service_range_img
+                                                img.fitImage(src='i/svg/at_service_5.svg' )
+                                            p Щиты автоматики для<br>секционных, рулонных ворот       
+
+                                    .slide
+                                        .service_range_unit.serviceBtn
+                                            .service_range_img
+                                                img.fitImage(src='i/svg/at_service_6.svg' )
+                                            p Насосные станции
+    
+                                .service_range_controls.dt_hidden
+                                    .slider_dots
+                    
+                    .service_tab_at
+                        .service_object_list_w
+                            .section_inner
+                                .service_range
+                                    h3.block_caption Наши Обьекты
+                                    .block_caption_tip Примеры работ в данной категории
+
+                            +objectSlider()
+                            
+            +footer()
+            +object_popup()
+            

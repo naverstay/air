@@ -1,0 +1,79 @@
+// **********  text
+
+.fw_300 {
+  font-weight: 300;
+}
+
+.fw_500 {
+  font-weight: 500;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.text_right {
+  text-align: right;
+}
+
+.text_left {
+  text-align: left;
+}
+
+.text_upper {
+  text-transform: uppercase;
+}
+
+.clr_green {
+  color: #4caf50;
+
+  @at-root a#{&} {
+    &:hover {
+      color: darken(#4caf50, 10%);
+    }
+  }
+
+}
+
+.clr_blue {
+  color: #1d87e4;
+
+  @at-root a#{&} {
+    &:hover {
+      color: darken(#1d87e4, 10%);
+    }
+  }
+
+}
+
+.clr_red {
+  color: #e7423e;
+
+  @at-root a#{&} {
+    &:hover {
+      color: darken(#e7423e, 10%);
+    }
+  }
+
+}
+
+.clr_red_hover:hover {
+  //color: #e7423e;
+  color: #1d87e4;
+}
+
+.clr_green_hover:hover {
+  //color: #4caf50;
+  color: #1d87e4;
+}
+
+.clr_blue_hover:hover {
+  color: #1d87e4;
+}
+
+.clr_gray_mob {
+  @include respond-to-max($resp_step_2) {
+    color: #9aa8be;
+  }
+}
+
