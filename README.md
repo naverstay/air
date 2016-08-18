@@ -1,2 +1,3 @@
 # air
-air
+npm i
+grunt
