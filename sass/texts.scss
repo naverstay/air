@@ -38,6 +38,12 @@
 .clr_blue {
   color: #1d87e4;
 
+  @at-root label#{&} {
+    &:hover {
+      color: darken(#1d87e4, 10%);
+    }
+  }
+  
   @at-root a#{&} {
     &:hover {
       color: darken(#1d87e4, 10%);
@@ -49,6 +55,12 @@
 .clr_red {
   color: #e7423e;
 
+  @at-root label#{&} {
+    &:hover {
+      color: darken(#e7423e, 10%);
+    }
+  }
+  
   @at-root a#{&} {
     &:hover {
       color: darken(#e7423e, 10%);

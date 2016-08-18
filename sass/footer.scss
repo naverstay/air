@@ -1,7 +1,7 @@
 
 .footer {
-  min-height: 255px;
-  padding-top: 40px;
+  min-height: (255 / 16 * 1em);
+  padding-top: (40 / 16 * 1em);
   background: url(../i/footer_bg.jpg) no-repeat 50%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -14,11 +14,11 @@
     bottom: 0;
     right: 0;
     left: 0;
-    padding-top: 58px;
+    padding-top: (58 / 16 * 1em);
 
     .section_inner {
       position: relative;
-      padding: 0 85px;
+      padding: 0 (85 / 16 * 1em);
       //max-width: $content-max-w - 170;
     }
   }
@@ -26,59 +26,73 @@
 
 .footer_logo_holder {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: (15 / 16 * 1em);
 
   @include respond-to-min($resp_step_2) {
     margin-bottom: 0;
     float: left;
     text-align: left;
-    min-width: 200px;
-    padding-left: 8px;
+    min-width: (200 / 16 * 1em);
+    padding-left: (8 / 16 * 1em);
   }
 
   @include respond-to-min($resp_step_2 + 200) {
-    min-width: 230px;
+    //min-width: (230 / 16 * 1em);
+    min-width: 15em;
   }
 }
 
 .copyright {
-  padding-top: 5px;
-  font-size: 12px;
-  line-height: 25px;
+  //padding-top: (5 / 16 * 1em);
+  line-height: (25 / 16 * 1em);
   color: #fff;
   color: rgba(255, 255, 255, .49);
 
+  span {
+    font-size: (12 / 16 * 1em);
+    letter-spacing: .1em;
+  }
+  
   @include respond-to-min($resp_step_2) {
     position: absolute;
-    top: 60px;
-    left: 83px;
-    font-size: 14px;
-    padding-top: 30px;
-    padding-left: 10px;
+    top: (60 / 16 * 1em);
+    left: (83 / 16 * 1em);
+    padding-top: (30 / 16 * 1em);
+    padding-left: (10 / 16 * 1em);
+    letter-spacing: 0;
+
+    span {
+      font-size: (14 / 16 * 1em);
+    }
   }
 }
 
 .footer_callback_block {
 
+  .callback_block {
+    float: none;
+  }
+  
   @include respond-to-min($resp_step_2) {
     float: right;
     text-align: right;
-    padding-right: 27px;
-    min-width: 230px;
+    padding-right: (27 / 16 * 1em);
+    min-width: (230 / 16 * 1em);
   }
 }
 
-.footer_dev_block {
-  padding-top: 10px;
-  padding-bottom: 50px;
+.footer_dev_link {
+  //margin-top: (10 / 16 * 1em);
+  //margin-bottom: (50 / 16 * 1em);
   white-space: nowrap;
   display: table;
-  width: 100%;
+  margin: (10 / 16 * 1em) auto (50 / 16 * 1em);
   text-align: center;
+  text-decoration: none;
 
   > span {
     color: #c9c9c9;
-    font-size: 10px;
+    font-size: (10 / 16 * 1em);
     display: table-header-group;
 
     &:first-child {
@@ -88,7 +102,7 @@
     @include respond-to-min($resp_step_2) {
       display: inline-block !important;
       vertical-align: middle;
-      padding-left: 5px;
+      padding-left: (5 / 16 * 1em);
     }
   }
 
@@ -99,9 +113,14 @@
 
   @include respond-to-min($resp_step_2) {
     display: block;
+    float: right;
     text-align: right;
-    padding: 40px 0 0;
+    margin: (40 / 16 * 1em) 0 0;
   }
+}
+
+.footer_dev_block {
+  @extend %clearfix;
 }
 
 .footer_menu_col {
@@ -109,20 +128,22 @@
   @include respond-to-min($resp_step_2) {
     display: inline-block;
     vertical-align: top;
-    min-width: 195px;
-    margin-left: 10px;
+    min-width: (195 / 16 * 1em);
+    //margin-left: (10 / 16 * 1em);
+    margin-left: .8em;
     text-align: left;
   }
 
 }
 
 .footer_menu_caption {
-  font-size: 14px;
+  font-size: (14 / 16 * 1em);
   font-weight: 500;
   text-transform: uppercase;
   color: #fff;
-  letter-spacing: 1.5px;
-  margin-bottom: 15px;
+  //letter-spacing: (1.5 / 14 * 1em);
+  letter-spacing: .125em;
+  margin-bottom: (15 / 14 * 1em);
 }
 
 .footer_menu {
@@ -132,18 +153,18 @@
     position: relative;
     display: inline-block;
     vertical-align: top;
-    margin-bottom: 5px;
-    padding: 0 15px;
+    margin-bottom: (5 / 16 * 1em);
+    padding: 0 (15 / 16 * 1em);
 
     &:before {
       content: '';
       position: absolute;
       top: 50%;
-      left: -2px;
+      left: (-2 / 16 * 1em);
       border-radius: 100%;
-      width: 4px;
-      height: 4px;
-      margin-top: -2px;
+      width: (4 / 16 * 1em);
+      height: (4 / 16 * 1em);
+      margin-top: (-2 / 16 * 1em);
       background: #fff;
     }
 
@@ -161,7 +182,8 @@
     li {
       display: block;
       padding: 0;
-      margin-bottom: 10px;
+      //margin-bottom: (10 / 16 * 1em);
+      margin-bottom: .675em;
 
       &:before {
         display: none;
@@ -173,7 +195,7 @@
 
 .f_menu_link {
   color: #cad3db;
-  font-size: 14px;
+  font-size: (14 / 16 * 1em);
 
   &:hover {
     color: #fff;
@@ -191,7 +213,7 @@ $rectWidth: $content-max-w;
   top: 0;
   bottom: 0;
   border: solid red;
-  border-width: 0 1px;
+  border-width: 0 (1 / 16 * 1em);
   z-index: 10;
   pointer-events: none;
 
@@ -201,12 +223,12 @@ $rectWidth: $content-max-w;
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 1px;
+    width: (1 / 16 * 1em);
     background: red;
   }
 }
 
 #chromeperfectpixel-panel {
-  top: 40px !important;
+  top: (40 / 16 * 1em) !important;
   left: 0 !important;
 }

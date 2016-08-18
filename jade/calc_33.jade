@@ -38,7 +38,7 @@ html(lang='ru')
                                                 .input_w
                                                     textarea#other_info.f_input_v1.f_input.autoSize(placeholder='Вы можете указать дополнительную информацию по объекту, региону и пр.')
                                                     input#attach_1.inp_hidden(type='file')
-                                                    label.attach_link(for='attach_1') Прикрепить файл
+                                                    label.attach_link.clr_blue(for='attach_1') Прикрепить файл
 
                                 .calc_section
                                     .block_caption Введенные данные
@@ -49,15 +49,15 @@ html(lang='ru')
                                                 +loop_while(2)
                                                     .order_object
                                                         span.order_object_icon.i-ward
-                                                        span Камера 1.  40х25х8, ПИР 150 мм, -18 С, канелюрный уголок, Распашная 1х2, Откатная без привода 2х2,5 со скоростными воротами
-                                                        a.order_object_rm.i-close(href='#')
+                                                        a.clr_blue(href='#') Камера 1.  40х25х8, ПИР 150 мм, -18 С, канелюрный уголок, Распашная 1х2, Откатная без привода 2х2,5 со скоростными воротами
+                                                        a.order_object_rm.orderObjectRMm.i-close(href='#')
                                                         
                                                 .f_label_v1 Двери 
                                                 +loop_while(2)
                                                     .order_object
                                                         span.order_object_icon.i-door
-                                                        span Дверь 1.  Откатная без привода 2х2,5 со скоростными воротами
-                                                        a.order_object_rm.i-close(href='#')
+                                                        a.clr_blue(href='#') Дверь 1.  Откатная без привода 2х2,5 со скоростными воротами
+                                                        a.order_object_rm.orderObjectRMm.i-close(href='#')
                                                         
 
                                 .calc_step_controls

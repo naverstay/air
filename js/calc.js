@@ -16,8 +16,12 @@ $(function ($) {
         return false;
     });
 
+    $('.orderObjectRMm').on ('click', function () {
+        $(this).closest('.order_object').remove();
+        return false;
+    });
+    
 });
-
 
 function initSelect() {
     

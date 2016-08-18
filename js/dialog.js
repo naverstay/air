@@ -21,6 +21,7 @@ function dialog(dialog_id, dialog_class, dialog_trigger_id, dialog_active_class,
 			dialogClass: dialog_class,
 			appendTo: dialog_wrap,
 			width: dialog_width,
+			collision: "fit flip",
 			open: function (event, ui) {
 				jQuery(this).parent().on('mouseenter', function () {
 							body_var.addClass('dialog_hover');

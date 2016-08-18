@@ -4,11 +4,16 @@ html, body {
 
 html {
   overflow-y: scroll;
+  font-size: (10 / 16 * 1em);
 }
 
 body {
-  font: 1.4em/1.2 $Roboto;
+  font: 1.6em/1.2 $Roboto;
   color: $default_t_color;
+
+  @include respond-to-max($resp_step_2) {
+    font-size: 1.6em !important;
+  }  
 }
 
 .hide {
@@ -35,14 +40,14 @@ body {
   overflow: hidden;
 
   @include respond-to-min($resp_step_2) {
+    //padding-top: (101 / 16 * 1em);
     padding-top: 101px;
   }
-
 }
 
 .base {
   @include respond-to-min($resp_step_2) {
-    padding-bottom: 255px;
+    padding-bottom: (255 / 16 * 1em);
   }
 }
 
@@ -51,10 +56,10 @@ body {
   width: 100%;
   max-width: $content-max-w;
   margin: 0 auto;
-  padding: 0 25px;
+  padding: 0 (25 / 16 * 1em);
 
   @include respond-to-min($resp_step_2) {
-    padding: 0 100px;
+    padding: 0 (100 / 16 * 1em);
   }
 
   .main_content & {
@@ -71,13 +76,14 @@ body {
   right: 0;
   z-index: 1000;
   text-align: center;
-  background: rgba(255, 255, 255, 0.69);
+  //background: rgba(255, 255, 255, 0.69);
+  background: #fff;
   pointer-events: none;
 
   img {
     display: inline-block;
     vertical-align: top;
-    max-width: 500px;
+    max-width: 70%;
   }
 
   &.loaded {

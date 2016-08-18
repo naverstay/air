@@ -4,6 +4,8 @@ html(lang='ru')
     +dev_head('Air главная', true)
 
     body.open_tabs
+        .preloader: .gl_table: .gl_table_cell
+            img(src='i/Logo_air_technology_big.png')
         .wrapper
             //.rect_1024
             .base
@@ -292,7 +294,7 @@ html(lang='ru')
                                                                     .review_author_name Тирион Ланистер 3
                                                                     .review_author_post President @ James Holdings Insurance Agency Inc.
                                                     
-                                                .review_unit_controls
+                                                .review_unit_controls.mob_hidden
                                                     a.btn_v1.review_btn.btn_white_blue.offReviewBtn(href='#')
                                                         span.i-doc_pdf.review_btn_icon
                                                         span ОФИЦИАЛЬНЫЙ ОТЗЫВ

@@ -7,7 +7,7 @@
     vertical-align: top;
     //max-width: 100%;
     width: 100%;
-    min-height: 270px;
+    min-height: (270 / 16 * 1em);
   }
 
   .section_inner {
@@ -24,7 +24,7 @@
   text-align: left;
 
   .main_banner & {
-    padding-bottom: 110px;
+    padding-bottom: (110 / 16 * 1em);
   }
 
 }
@@ -45,14 +45,14 @@
 .banner_content {
   @extend %clearfix;
   text-align: center;
-  margin-top: 28px;
+  margin-top: (28 / 16 * 1em);
   display: table;
   width: 100%;
 
   @include respond-to-min($resp_step_2) {
     text-align: left;
-    margin-top: 0;
-    display: block;
+    //margin-top: 0;
+    //display: block;
   }
 }
 
@@ -60,41 +60,41 @@
   color: #fff;
 
   p {
-    font-size: 20px;
+    font-size: (20 / 16 * 1em);
     font-weight: 300;
-    margin-top: 10px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+    margin-top: (10 / 16 * 1em);
+    text-shadow: 0 (2 / 16 * 1em) (4 / 16 * 1em) rgba(0, 0, 0, .15);
   }
 
   @include respond-to-min($resp_step_2) {
 
     p {
-      margin-top: 7px;
+      margin-top: (7 / 16 * 1em);
     }
   }
 
   @include respond-to-min($resp_step_2  + $add_step) {
 
     p {
-      font-size: 30px;
+      font-size: (30 / 16 * 1em);
     }
   }
 }
 
 .banner_title {
-  font-size: 27px;
+  font-size: (27 / 16 * 1em);
   font-weight: 500;
-  margin: 8px 0 15px;
+  margin: (8 / 27 * 1em) 0 (15 / 27 * 1em);
 
   @include respond-to-min($resp_step_2) {
-    font-size: 40px;
-    margin: 0 0 7px;
+    font-size: (40 / 16 * 1em);
+    margin: 0 0 (7 / 40 * 1em);
   }
 
   @include respond-to-min($resp_step_2  + $add_step) {
-    font-size: 50px;
+    font-size: (50 / 16 * 1em);
+    margin: 0 0 (7 / 50 * 1em);
   }
-
 }
 
 .banner_video_block {
@@ -102,32 +102,83 @@
   display: table-footer-group;
 
   @include respond-to-min($resp_step_2) {
-    position: relative;
-    float: right;
-    display: block;
-    padding: 0 8.5%;
+    display: table-cell;
+    padding: 0 1.5% 0 0;
+    vertical-align: middle;
   }
-
 }
 
 .banner_mob_top {
   display: table-header-group;
 
   @include respond-to-min($resp_step_2) {
-    display: block;
+    display: table-cell;
+    width: 70%;
+    vertical-align: middle;
   }
 }
 
-.banner_play_btn {
+.banner_play_btn_2 {
+  position: relative;
   display: inline-block;
   vertical-align: top;
-  position: relative;
   cursor: pointer;
+  border-radius: 45 / 16 * 1em;
+  height: 90 / 16 * 1em;
+  color: #fff;
+  padding-left: 90 / 16 * 1em;
+  background: rgba(0, 0, 0, .4);
+  font-size: .45em;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90 / 16 * 1em;
+    height: 90 / 16 * 1em;
+    border-radius: 100%;
+    border: (2 / 16 * 1em) solid #fff;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin: -1.27em 0 0 2.3em;
+    border-top: (22 / 16 * 1em) solid transparent;
+    border-bottom: (22 / 16 * 1em) solid transparent;
+    border-left: (33 / 16 * 1em) solid #fff;
+  }
+
+  @include respond-to-min($resp_step_2) {
+    width: 202 / 16 * 1em;
+    font-size: 1em;
+
+    &:after {
+      margin-top: -1.37em;
+    }
+  }
+}
+
+.banner_play_btn_time {
+  font: 300 1em $Roboto;
+  line-height: 1;
+  padding-top: 22 / 16 * 1em;
+}
+
+.banner_play_btn_name {
+  font: 300 (25 / 16 * 1em) $Roboto;
+}
+
+.banner_play_btn {
+
   border-radius: 100%;
   background: #fff;
-  width: 40px;
-  height: 40px;
-  box-shadow: 0 5px 15px rgba(45, 61, 74, 0.47);
+  width: (40 / 16 * 1em);
+  height: (40 / 16 * 1em);
+  box-shadow: 0 (5 / 16 * 1em) (15 / 16 * 1em) rgba(45, 61, 74, 0.47);
 
   img,
   svg {
@@ -135,35 +186,35 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: -7px 0 0 -3px;
-    width: 11px;
-    //border-top: 7px solid transparent;
-    //border-bottom: 7px solid transparent;
-    //border-left: 11px solid #00c04a;
+    margin: (-7 / 16 * 1em) 0 0 (-3 / 16 * 1em);
+    width: (11 / 16 * 1em);
+    //border-top: (7 / 16 * 1em)  solid transparent;
+    //border-bottom: (7 / 16 * 1em)  solid transparent;
+    //border-left: (11 / 16 * 1em)  solid #00c04a;
   }
 
   @include respond-to-min($resp_step_2) {
-    width: 190px;
-    height: 190px;
-    margin: -25px 0 20px;
+    width: (190 / 16 * 1em);
+    height: (190 / 16 * 1em);
+    margin: (-25 / 16 * 1em) 0 (20 / 16 * 1em);
     display: block;
 
     img,
     svg {
-      margin: -31px 0 0 -15px;
-      //border-top: 30px solid transparent;
-      //border-bottom: 30px solid transparent;
-      //border-left: 45px solid #00c04a;
-      width: 45px;
+      margin: (-31 / 16 * 1em) 0 0 (-15 / 16 * 1em);
+      //border-top: (30 / 16 * 1em)  solid transparent;
+      //border-bottom: (30 / 16 * 1em)  solid transparent;
+      //border-left: (45 / 16 * 1em)  solid #00c04a;
+      width: (45 / 16 * 1em);
     }
   }
 }
 
 .banner_video_tip {
-  font-size: 20px;
+  font-size: (20 / 16 * 1em);
   font-weight: 300;
-  padding: 10px;
-  border-radius: 22px;
+  padding: (10 / 16 * 1em);
+  border-radius: (22 / 16 * 1em);
   color: #fff;
   background: rgba(0, 0, 0, .46);
 }
@@ -171,11 +222,11 @@
 .mob_phone {
   position: absolute;
   bottom: 100%;
-  right: 10px;
-  margin-bottom: 10px;
+  right: (10 / 16 * 1em);
+  margin-bottom: (10 / 16 * 1em);
   border-radius: 100%;
-  width: 40px;
-  height: 40px;
+  width: (40 / 16 * 1em);
+  height: (40 / 16 * 1em);
   color: #fff;
   text-align: center;
   background: rgb(126, 205, 129);
@@ -186,7 +237,7 @@
 
   /* Oval 59: */
   //background-image: linear-gradient(-180deg, #7ecd81 0%, #4caf50 100%);
-  box-shadow: 0 5px 15px 0 rgba(76, 175, 80, 0.29);
+  box-shadow: 0 (5 / 16 * 1em) (15 / 16 * 1em) 0 rgba(76, 175, 80, 0.29);
 
   &:before {
     position: absolute;
@@ -194,8 +245,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    font-size: 22px;
-    line-height: 40px;
+    font-size: (22 / 16 * 1em);
+    line-height: (40 / 22 * 1em);
   }
 
   @include respond-to-min($resp_step_2) {
@@ -212,7 +263,7 @@
   left: 0;
   z-index: 3;
 
-  //box-shadow: 0 -1px 3px rgba(238, 89, 84, .12);
+  //box-shadow: 0 (-1 / 16 * 1em)  (3 / 16 * 1em)  rgba(238, 89, 84, .12);
 
   .section_inner {
     padding: 0;
@@ -225,12 +276,12 @@
   @include respond-to-min($resp_step_2) {
     @include transform_translate(0, 0);
     position: absolute;
-    bottom: -70px;
+    bottom: (-70 / 16 * 1em);
     right: 0;
     left: 0;
 
     .section_inner {
-      padding: 0 100px;
+      padding: 0 (100 / 16 * 1em);
     }
   }
 
@@ -241,7 +292,7 @@
   margin-right: -1%;
 
   @include respond-to-min($resp_step_2) {
-    margin-left: -20px;
+    margin-left: (-20 / 16 * 1em);
   }
 
 }
@@ -255,24 +306,24 @@
     content: '';
     position: absolute;
     bottom: 100%;
-    height: 1px;
-    width: 5000px;
+    height: (1 / 16 * 1em);
+    width: (5000 / 16 * 1em);
     left: 50%;
-    margin-left: -2500px;
-    margin-bottom: -1px;
+    margin-left: (-2500 / 16 * 1em);
+    margin-bottom: (-1 / 16 * 1em);
     display: none;
   }
 
   &.service_item_ph:before {
-    box-shadow: 0 -1px 3px rgba(18, 36, 52, 0.23);
+    box-shadow: 0 (-1 / 16 * 1em) (3 / 16 * 1em) rgba(18, 36, 52, 0.23);
   }
 
   &.service_item_ic:before {
-    box-shadow: 0 -1px 3px rgba(90, 28, 27, 0.23);
+    box-shadow: 0 (-1 / 16 * 1em) (3 / 16 * 1em) rgba(90, 28, 27, 0.23);
   }
 
   &.service_item_at:before {
-    box-shadow: 0 -1px 3px rgba(76, 175, 80, 0.29);
+    box-shadow: 0 (-1 / 16 * 1em) (3 / 16 * 1em) rgba(76, 175, 80, 0.29);
   }
 
   &.ui-state-active {
@@ -282,7 +333,7 @@
   }
 
   @include respond-to-min($resp_step_2) {
-    padding-left: 20px;
+    padding-left: (20 / 16 * 1em);
 
     &:before {
       display: none !important;
@@ -297,11 +348,11 @@
   color: $default_t_color;
   font-weight: 500;
   //overflow: hidden;
-  font-size: 7px;
-  min-height: 38px;
+  //font-size: (7 / 16 * 1em);
+  min-height: (38 / 16 * 1em);
 
   .service_item_ph & {
-    box-shadow: 0 1px 1px rgba(18, 36, 52, 0.23);
+    box-shadow: 0 (1 / 16 * 1em) (1 / 16 * 1em) rgba(18, 36, 52, 0.23);
     background: rgb(97, 164, 223);
     background: -moz-linear-gradient(top, rgba(97, 164, 223, 1) 0%, rgba(29, 135, 228, 1) 100%);
     background: -webkit-linear-gradient(top, rgba(97, 164, 223, 1) 0%, rgba(29, 135, 228, 1) 100%);
@@ -309,16 +360,20 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#61a4df', endColorstr='#1d87e4', GradientType=0);
 
     &:after {
-      border-top: 20px solid #1d87e4;
+      border-top: (20 / 16 * 1em) solid #1d87e4;
     }
 
     /* Combined Shape: */
     //background-image: linear-gradient(-180deg, #61a4df 0%, #1d87e4 100%);
 
+    .service_icon img {
+      max-width: 112 / 16 * 1em;
+    }
+    
   }
 
   .service_item_ic & {
-    box-shadow: 0 1px 1px rgba(90, 28, 27, 0.23);
+    box-shadow: 0 (1 / 16 * 1em) (1 / 16 * 1em) rgba(90, 28, 27, 0.23);
     background: rgb(244, 107, 101);
     background: -moz-linear-gradient(top, rgba(244, 107, 101, 1) 0%, rgba(231, 66, 62, 1) 100%);
     background: -webkit-linear-gradient(top, rgba(244, 107, 101, 1) 0%, rgba(231, 66, 62, 1) 100%);
@@ -326,16 +381,20 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f46b65', endColorstr='#e7423e', GradientType=0);
 
     &:after {
-      border-top: 20px solid #e7423e;
+      border-top: (20 / 16 * 1em) solid #e7423e;
     }
 
     /* Combined Shape: */
     //background-image: linear-gradient(-180deg, #f46b65 0%, #e7423e 100%);
 
+    .service_icon img {
+      max-width: 131 / 16 * 1em;
+    }
+    
   }
 
   .service_item_at & {
-    box-shadow: 0 1px 1px rgba(76, 175, 80, 0.29);
+    box-shadow: 0 (1 / 16 * 1em) (1 / 16 * 1em) rgba(76, 175, 80, 0.29);
     background: rgb(126, 205, 129);
     background: -moz-linear-gradient(top, rgba(126, 205, 129, 1) 0%, rgba(76, 175, 80, 1) 100%);
     background: -webkit-linear-gradient(top, rgba(126, 205, 129, 1) 0%, rgba(76, 175, 80, 1) 100%);
@@ -343,26 +402,29 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7ecd81', endColorstr='#4caf50', GradientType=0);
 
     &:after {
-      border-top: 20px solid #4caf50;
+      border-top: (20 / 16 * 1em) solid #4caf50;
     }
 
     /* Combined Shape: */
     //background-image: linear-gradient(-180deg, #7ecd81 0%, #4caf50 100%);
 
+    .service_icon img {
+      max-width: 208 / 16 * 1em;
+    }
   }
 
   &:after {
     @include transition_all(transform .3s, opacity .3s);
-    @include transform_translate(0, -25px);
+    @include transform_translate(0, (-25 / 16 * 1em));
     opacity: 0;
     content: '';
     position: absolute;
     display: none;
     top: 100%;
     left: 50%;
-    margin-left: -25px;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
+    margin-left: (-25 / 16 * 1em);
+    border-left: (25 / 16 * 1em) solid transparent;
+    border-right: (25 / 16 * 1em) solid transparent;
   }
 
   &:before {
@@ -370,7 +432,7 @@
     content: '';
     position: absolute;
     top: 0;
-    bottom: 2px;
+    bottom: (2 / 16 * 1em);
     z-index: 1;
     //height: 100%;
     left: 0;
@@ -406,8 +468,8 @@
   }
 
   @include respond-to-min($resp_step_2) {
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: (5 / 16 * 1em);
+    font-size: (16 / 16 * 1em);
 
     &:after {
       display: block;
@@ -421,20 +483,20 @@
     }
 
     .service_item_ph & {
-      box-shadow: 0 5px 15px rgba(18, 36, 52, 0.23);
+      box-shadow: 0 (5 / 16 * 1em) (15 / 16 * 1em) rgba(18, 36, 52, 0.23);
     }
 
     .service_item_ic & {
-      box-shadow: 0 5px 15px rgba(90, 28, 27, 0.23);
+      box-shadow: 0 (5 / 16 * 1em) (15 / 16 * 1em) rgba(90, 28, 27, 0.23);
     }
 
     .service_item_at & {
-      box-shadow: 0 5px 15px rgba(23, 93, 26, 0.21);
+      box-shadow: 0 (5 / 16 * 1em) (15 / 16 * 1em) rgba(23, 93, 26, 0.21);
     }
 
     &:before {
-      bottom: 9px;
-      //margin-top: -9px;
+      bottom: (9 / 16 * 1em);
+      //margin-top: (-9 / 16 * 1em) ;
     }
   }
 }
@@ -448,19 +510,20 @@
 }
 
 .service_name {
-  padding: 1px 1px 4px;
-  letter-spacing: 1px;
+  font-size: (7 / 16 * 1em);
+  padding: (1 / 7 * 1em) (1 / 7 * 1em) (4 / 7 * 1em);
+  letter-spacing: (1 / 7 * 1em);
 
   @include respond-to-min($resp_step_2) {
-    padding: 1px 10px 14px;
-    letter-spacing: 1.8px;
+    font-size: 1em;
+    padding: (1 / 16 * 1em) (10 / 16 * 1em) (14 / 16 * 1em);
+    letter-spacing: (1.8 / 16 * 1em);
   }
 
   @include respond-to-min($resp_step_2  + $add_step) {
-    padding: 5px 10px 30px;
+    padding: (5 / 16 * 1em) (10 / 16 * 1em) (30 / 16 * 1em);
     line-height: 1.45;
   }
-
 }
 
 .service_name,
@@ -471,17 +534,17 @@
 
 .service_icon {
   text-align: center;
-  padding: 7px 0 2px;
-  min-height: 23px;
+  padding: (7 / 16 * 1em) 0 (2 / 16 * 1em);
+  min-height: (23 / 16 * 1em);
 
   svg {
     vertical-align: top;
-    max-width: 20px;
+    max-width: (20 / 16 * 1em);
   }
 
   @include respond-to-min($resp_step_2) {
-    min-height: 140px;
-    padding: 10px 0 1px;
+    min-height: (140 / 16 * 1em);
+    padding: (10 / 16 * 1em) 0 (1 / 16 * 1em);
 
     svg {
       max-width: 100%;
@@ -489,8 +552,8 @@
   }
 
   @include respond-to-min($resp_step_2  + $add_step) {
-    min-height: 160px;
-    padding: 30px 0 1px;
+    min-height: (160 / 16 * 1em);
+    padding: (30 / 16 * 1em) 0 (1 / 16 * 1em);
   }
 
 }
@@ -500,10 +563,10 @@
   position: relative;
 
   @include respond-to-min($resp_step_2) {
-    padding-top: 120px;
+    padding-top: (120 / 16 * 1em);
 
     &.standalone {
-      padding-top: 80px;
+      padding-top: (80 / 16 * 1em);
       background: #f7f7f7;
 
       .service_block_w {
@@ -547,7 +610,7 @@
           //background-image: linear-gradient(0deg, rgba(244, 234, 234, 0.63) 1%, #fae9e8 100%);
         }
       }
-      
+
       &.service_tab_at {
 
         &:before {
@@ -590,9 +653,9 @@
 
 .service_caption {
   font-weight: 800;
-  font-size: 22px;
+  font-size: (22 / 16 * 1em);
   line-height: 1.37;
-  margin-bottom: 4px;
+  margin-bottom: (4 / 22 * 1em);
   text-align: center;
 
   .service_tab_ph & {
@@ -608,9 +671,9 @@
   }
 
   @include respond-to-min($resp_step_2) {
-    font-size: 32px;
+    font-size: (32 / 16 * 1em);
     text-align: left;
-    margin-bottom: 15px;
+    margin-bottom: (15 / 32 * 1em);
   }
 
 }
@@ -619,15 +682,15 @@
   font-weight: 300;
   line-height: 1.5;
   color: #9aa8be;
-  padding: 0 10px;
-  margin-bottom: 3px;
+  padding: 0 (10 / 16 * 1em);
+  margin-bottom: (3 / 16 * 1em);
   text-align: center;
 
   @include respond-to-min($resp_step_2) {
-    font-size: 20px;
+    font-size: (20 / 16 * 1em);
     padding: 0;
     line-height: 1.37;
-    margin-bottom: 23px;
+    margin-bottom: (23 / 20 * 1em);
 
     .service_info & {
       text-align: left;
@@ -645,13 +708,13 @@
   @include respond-to-min($resp_step_2) {
     float: left;
     width: 50%;
-    padding-right: 10px;
+    padding-right: (10 / 16 * 1em);
   }
 }
 
 .service_img {
   text-align: center;
-  padding: 40px 55px 10px;
+  padding: (40 / 16 * 1em) (55 / 16 * 1em) (10 / 16 * 1em);
 
   img,
   svg {
@@ -663,16 +726,16 @@
   @include respond-to-min($resp_step_2) {
     float: right;
     width: 50%;
-    padding: 35px 0 0;
-    max-width: 505px;
+    padding: (35 / 16 * 1em) 0 0;
+    max-width: (505 / 16 * 1em);
     text-align: right;
 
     .service_tab_ph & {
-      padding-top: 100px;
+      padding-top: (100 / 16 * 1em);
     }
 
     .service_tab_ic & {
-      max-width: 523px;
+      max-width: (523 / 16 * 1em);
     }
 
     .service_tab_at & {
@@ -682,11 +745,11 @@
 
 .service_more_info {
   @extend %clearfix;
-  margin-left: -28px;
+  margin-left: (-28 / 16 * 1em);
   display: none;
 
   li {
-    padding-left: 28px;
+    padding-left: (28 / 16 * 1em);
     float: left;
   }
 
@@ -698,10 +761,10 @@
 
 .service_block_w {
   background: #fff;
-  padding-bottom: 20px;
+  padding-bottom: (20 / 16 * 1em);
 
   @include respond-to-min($resp_step_2) {
-    padding-bottom: 60px;
+    padding-bottom: (60 / 16 * 1em);
     background: #f7f7f7;
     background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5) 9%, rgba(247, 247, 247, 1) 100%);
     background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 9%, rgba(247, 247, 247, 1) 100%);
@@ -714,28 +777,28 @@
 
 .service_block {
   @extend %clearfix;
-  //margin-bottom: 30px;
+  //margin-bottom: (30 / 16 * 1em) ;
 
   p {
-    margin-bottom: 14px;
     line-height: 1.65;
-    font-size: 14px;
+    font-size: (14 / 16 * 1em);
+    margin-bottom: 1em;
   }
 
   @include respond-to-min($resp_step_2) {
-    //margin-bottom: 115px;
+    //margin-bottom: (115 / 16 * 1em) ;
 
     p {
-      margin-bottom: 17px;
       line-height: 1.8;
-      font-size: 16px;
+      font-size: (16 / 16 * 1em);
+      margin-bottom: (17 / 16 * 1em);
     }
   }
 }
 
 .service_range_w {
   position: relative;
-  //padding-top: 35px;
+  //padding-top: (35 / 16 * 1em) ;
   background: #f7f7f7;
 
   &:before {
@@ -757,7 +820,7 @@
   //background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 91%, #cde2ed 100%);
 
   @include respond-to-min($resp_step_2) {
-    //padding-top: 55px;
+    //padding-top: (55 / 16 * 1em) ;
 
     background: #fff;
 
@@ -767,7 +830,7 @@
 
     &.dt_grad {
       background: #f7f7f7;
-      padding-bottom: 1px;
+      padding-bottom: (1 / 16 * 1em);
 
       &:before {
         display: block;
@@ -783,39 +846,41 @@
 }
 
 .service_range {
-  padding-top: 35px;
-  margin-bottom: 20px;
+  padding-top: (35 / 16 * 1em);
+  margin-bottom: (20 / 16 * 1em);
   text-align: center;
 
   @include respond-to-min($resp_step_2) {
-    margin-bottom: 25px;
-    padding-top: 55px;
+    margin-bottom: (25 / 16 * 1em);
+    //padding-top: (55 / 16 * 1em);
+    padding-top: $section_pt / 16 * 1em;
   }
 }
 
 .service_range_img {
-  margin-bottom: 3px;
-  min-height: 65px;
-  padding-top: 15px;
+  margin-bottom: (3 / 16 * 1em);
+  min-height: (65 / 16 * 1em);
+  padding-top: (15 / 16 * 1em);
 
   img {
     display: inline-block;
     vertical-align: top;
-    //max-width: 55px;
+    //max-height: 70 / 16 * 1em;
+    //max-width: (55 / 16 * 1em) ;
   }
 
   @include respond-to-min($resp_step_2) {
-    margin-bottom: 20px;
-    min-height: 100px;
-    padding-top: 35px;
+    margin-bottom: (20 / 16 * 1em);
+    min-height: (100 / 16 * 1em);
+    padding-top: (35 / 16 * 1em);
 
     img {
       max-width: 100%;
     }
 
-    .popup_inner & {
-      margin: -5px 0 8px;
-      min-height: 85px;
+    .popup_inner > & {
+      margin: (-5 / 16 * 1em) 0 (8 / 16 * 1em);
+      min-height: (85 / 16 * 1em);
       padding-top: 0;
     }
   }
@@ -823,12 +888,13 @@
 
 .block_caption {
   font-weight: 800;
-  font-size: 22px;
-  margin-bottom: 6px;
+  font-size: (22 / 16 * 1em);
+  margin-bottom: (6 / 22 * 1em);
 
   @include respond-to-min($resp_step_2) {
-    font-size: 32px;
-    margin-bottom: 17px;
+    font-size: (32 / 16 * 1em);
+    margin-bottom: .4em;
+    line-height: 1.5;
 
     .popup_inner & {
       line-height: 1.4;
@@ -838,14 +904,14 @@
   @include respond-to-max($resp_step_2) {
     .news_page & {
       line-height: 1.5;
-      margin-top: -4px;
-      margin-bottom: 10px;
+      margin-top: (-4 / 16 * 1em);
+      margin-bottom: (10 / 16 * 1em);
     }
   }
 }
 
 .service_object_list_w {
-  padding: 0 0 30px;
+  padding: 0 0 (30 / 16 * 1em);
 
   .section_inner {
     z-index: 1;
@@ -911,7 +977,8 @@
 
   .block_caption_tip {
     opacity: .7;
-    margin-bottom: 35px;
+    //margin-bottom: (35 / 16 * 1em);
+    margin-bottom: (23 / 20 * 1em);
   }
 
   .block_caption_tip,
@@ -920,23 +987,23 @@
   }
 
   .slider_arrow {
-    margin: 3px 6px;
+    margin: (3 / 16 * 1em) (6 / 16 * 1em);
   }
 
   .slider_dots .slick-dots li {
-    margin: 6px 10px;
+    margin: (8 / 16 * 1em) (10 / 16 * 1em);
   }
 
   @include respond-to-min($resp_step_2) {
-    padding: 0 0 50px;
+    padding: 0 0 (50 / 16 * 1em);
 
     &.standalone {
-      padding-bottom: 36px;
+      padding-bottom: (36 / 16 * 1em);
     }
   }
 
   .hero_block & {
-    min-height: 250px;
+    min-height: (250 / 16 * 1em);
     padding: 0;
 
     &:before {
@@ -951,34 +1018,39 @@
     }
 
     @include respond-to-min($resp_step_2) {
-      min-height: 400px;
+      min-height: (400 / 16 * 1em);
     }
   }
 
   .hero_block_small & {
-    min-height: 137px;
+    min-height: (137 / 16 * 1em);
   }
 }
 
 .service_range_list_w {
   position: relative;
-  margin: 20px -25px 30px;
+  margin: (20 / 16 * 1em) (-25 / 16 * 1em) (30 / 16 * 1em);
 
   @include respond-to-min($resp_step_2) {
-    margin: 25px 0 40px;
+    margin: (25 / 16 * 1em) 0 (40 / 16 * 1em);
   }
 
+  .popup_inner & {
+    margin: 1.25em -9em 1.875em -1.5625em;
+  }
+  
   .slick-dots {
     font-size: 0;
     white-space: normal;
 
     li {
-      box-shadow: 0 1px 2px rgba(147, 147, 147, .46), inset 0 1px 2px rgba(147, 147, 147, .46);
+      font-size: 16px;
+      box-shadow: 0 (1 / 16 * 1em) (2 / 16 * 1em) rgba(147, 147, 147, .46), inset 0 (1 / 16 * 1em) (2 / 16 * 1em) rgba(147, 147, 147, .46);
 
       &.slick-active {
         background: #fff;
         cursor: default;
-        box-shadow: 0 1px 2px rgba(147, 147, 147, .46);
+        box-shadow: 0 (1 / 16 * 1em) (2 / 16 * 1em) rgba(147, 147, 147, .46);
       }
     }
   }
@@ -993,12 +1065,13 @@
     white-space: normal;
 
     li {
-      //box-shadow: 0 1px 2px rgba(147, 147, 147, .46), inset 0 1px 2px rgba(147, 147, 147, .46);
+      font-size: 16px;
+      //box-shadow: 0 (1 / 16 * 1em)  (2 / 16 * 1em)  rgba(147, 147, 147, .46), inset 0 (1 / 16 * 1em)  (2 / 16 * 1em)  rgba(147, 147, 147, .46);
       //
       //&.slick-active {
       //  background: #fff;
       //  cursor: default;
-      //  box-shadow: 0 1px 2px rgba(147, 147, 147, .46);
+      //  box-shadow: 0 (1 / 16 * 1em)  (2 / 16 * 1em)  rgba(147, 147, 147, .46);
       //}
     }
   }
@@ -1021,9 +1094,9 @@
 .slider_arrow {
   display: inline-block;
   vertical-align: top;
-  margin: 8px;
+  margin: (8 / 16 * 1em);
   color: #fff;
-  font-size: 20px;
+  font-size: (20 / 16 * 1em);
   cursor: pointer;
 
   &:before {
@@ -1032,7 +1105,7 @@
 
   &:hover {
     &:before {
-      text-shadow: 0 5px 6px rgba(0, 0, 0, 0.36);
+      text-shadow: 0 (5 / 16 * 1em) (6 / 16 * 1em) rgba(0, 0, 0, 0.36);
     }
   }
 
@@ -1066,26 +1139,27 @@
       @include transition_all(background .3s, box-shadow .3s);
       display: inline-block;
       vertical-align: top;
-      border: 2px solid #fff;
+      border: (2 / 16 * 1em) solid #fff;
       border-radius: 100%;
       overflow: hidden;
       position: relative;
       cursor: pointer;
-      margin: 8px;
-      width: 12px;
-      height: 12px;
-      box-shadow: 0 1px 2px rgba(147, 147, 147, .46), inset 0 1px 2px rgba(147, 147, 147, .46);
+      font-size: 16px;
+      margin: (8 / 16 * 1em);
+      width: (12 / 16 * 1em);
+      height: (12 / 16 * 1em);
+      box-shadow: 0 (1 / 16 * 1em) (2 / 16 * 1em) rgba(147, 147, 147, .46), inset 0 (1 / 16 * 1em) (2 / 16 * 1em) rgba(147, 147, 147, .46);
 
       &:hover {
-        //box-shadow: 0 2px 4px rgba(0, 0, 0, 0.50);
-        box-shadow: 0 5px 6px rgba(0, 0, 0, 0.36);
+        //box-shadow: 0 (2 / 16 * 1em)  (4 / 16 * 1em)  rgba(0, 0, 0, 0.50);
+        box-shadow: 0 (5 / 16 * 1em) (6 / 16 * 1em) rgba(0, 0, 0, 0.36);
       }
 
       &.slick-active {
         background: #fff;
         cursor: default;
-        box-shadow: 0 1px 2px rgba(147, 147, 147, .46);
-        //box-shadow: 0 2px 4px rgba(0, 0, 0, 0.50);
+        box-shadow: 0 (1 / 16 * 1em) (2 / 16 * 1em) rgba(147, 147, 147, .46);
+        //box-shadow: 0 (2 / 16 * 1em)  (4 / 16 * 1em)  rgba(0, 0, 0, 0.50);
       }
 
       button {
@@ -1099,24 +1173,31 @@
       }
 
       @include respond-to-min($resp_step_2) {
-        width: 15px;
-        height: 15px;
+        width: (15 / 16 * 1em);
+        height: (15 / 16 * 1em);
       }
     }
   }
 }
 
+.slide {
+
+  @include respond-to-max($resp_step_2) {
+    font-size: 16px !important;
+  }
+}
+
 .service_range_list {
   @extend %clearfix;
-  margin: -10px -10px -10px -30px;
+  margin: (-10 / 16 * 1em) (-10 / 16 * 1em) (-10 / 16 * 1em) (-30 / 16 * 1em);
   overflow: hidden;
   position: relative;
   font-size: 0;
-  padding: 10px;
+  padding: (10 / 16 * 1em);
   text-align: center;
 
   .popup_inner & {
-    margin-bottom: 20px;
+    margin-bottom: (20 / 16 * 1em);
   }
 
   .slick-list {
@@ -1128,8 +1209,8 @@
     display: inline-block;
     vertical-align: top;
     font-size: 16px;
-    padding-left: 20px;
-    margin-bottom: 21px;
+    padding-left: (20 / 16 * 1em);
+    margin-bottom: (21 / 16 * 1em);
 
     &.new_line {
       width: 0 !important;
@@ -1140,31 +1221,34 @@
       //@include transform_scale(1.1);
 
       .service_range_unit {
-        margin: -10px -10px -20px;
-        height: 143px;
+        margin: (-10 / 16 * 1em) (-10 / 16 * 1em) (-20 / 16 * 1em);
+        height: (143 / 16 * 1em);
         overflow: hidden;
 
         p {
-          //min-height: 55px;
+          //min-height: (55 / 16 * 1em) ;
         }
       }
 
       .service_range_img {
-        padding-top: 25px;
-        margin-bottom: 13px;
+        padding-top: (25 / 16 * 1em);
+        margin-bottom: (13 / 16 * 1em);
       }
-
     }
 
+    @include respond-to-max($resp_step_2) {
+      //font-size: 16px !important;
+    }
+    
     @include respond-to-min($resp_step_2) {
       width: 25%;
-      //padding-left: 20px;
-      //margin-bottom: 21px;
+      //padding-left: (20 / 16 * 1em) ;
+      //margin-bottom: (21 / 16 * 1em) ;
 
       &.new_line {
         display: inline-block;
         vertical-align: top;
-        margin-left: -19px;
+        margin-left: (-19 / 16 * 1em);
       }
 
       &.slick-current {
@@ -1177,9 +1261,9 @@
         }
 
         .service_range_img {
-          margin-bottom: 20px;
-          min-height: 100px;
-          padding-top: 35px;
+          margin-bottom: (20 / 16 * 1em);
+          min-height: (100 / 16 * 1em);
+          padding-top: (35 / 16 * 1em);
         }
       }
     }
@@ -1190,12 +1274,12 @@
   @extend %clearfix;
   overflow: hidden;
   position: relative;
-  font-size: 0;
   text-align: center;
-  padding: 10px 0;
-  margin: -20px -25px 0;
+  padding: (10 / 16 * 1em) 0;
+  margin: (-20 / 16 * 1em) (-25 / 16 * 1em) 0;
 
   .slick-list {
+    font-size: 0;
     overflow: visible;
   }
 
@@ -1203,24 +1287,24 @@
     display: inline-block;
     vertical-align: top;
     font-size: 16px;
-    padding: 0 10px;
-    margin-bottom: 15px;
+    padding: 0 (10 / 16 * 1em);
+    margin-bottom: (15 / 16 * 1em);
 
     &.slick-current {
       //@include transform_scale(1.1);
-      //margin-bottom: -15px;
+      //margin-bottom: (-15 / 16 * 1em) ;
 
       .service_object_unit {
-        margin: -10px -10px -20px;
+        margin: (-10 / 16 * 1em) (-10 / 16 * 1em) (-20 / 16 * 1em);
 
         p {
-          padding: 14px 10px;
+          padding: (14 / 14 * 1em) (10 / 14 * 1em);
         }
       }
     }
 
     @include respond-to-min($resp_step_2) {
-      margin-bottom: 25px;
+      margin-bottom: (25 / 16 * 1em);
 
       &.slick-current {
         //@include transform_scale(1);
@@ -1229,7 +1313,7 @@
           margin: 0;
 
           p {
-            padding: 26px 20px;
+            padding: (26 / 20 * 1em) (20 / 20 * 1em);
           }
         }
       }
@@ -1237,7 +1321,7 @@
   }
 
   @include respond-to-min($resp_step_2) {
-    margin: 0 -10px;
+    margin: 0 (-10 / 16 * 1em);
     padding: 0;
   }
 }
@@ -1248,67 +1332,81 @@
 
 .service_range_unit {
   @include transition_all(box-shadow .3s, color .3s);
-  border-radius: 5px;
+  border-radius: (5 / 16 * 1em);
   background: #fff;
-  font-size: 14px;
   overflow: hidden;
-  min-height: 124px;
+  min-height: (124 / 16 * 1em);
   text-align: center;
   cursor: pointer;
 
+  p {
+    //font-size: (14 / 16 * 1em);
+    font-size: 0.85em;
+  }
+  
   .service_tab_ph & {
-    box-shadow: 0 4px 4px rgba(43, 92, 136, .17);
+    box-shadow: 0 (4 / 16 * 1em) (4 / 16 * 1em) rgba(43, 92, 136, .17);
   }
 
   .service_tab_ic & {
-    box-shadow: 0 4px 4px rgba(113, 58, 56, 0.14);
+    box-shadow: 0 (4 / 16 * 1em) (4 / 16 * 1em) rgba(113, 58, 56, 0.14);
   }
 
   .service_tab_at & {
-    box-shadow: 0 4px 4px rgba(75, 153, 79, 0.19);
+    box-shadow: 0 (4 / 16 * 1em) (4 / 16 * 1em) rgba(75, 153, 79, 0.19);
   }
 
   &:hover {
     color: $clr_blue;
-    box-shadow: 0 5px 10px rgba(18, 36, 52, 0.23);
+    box-shadow: 0 (5 / 16 * 1em) (10 / 16 * 1em) rgba(18, 36, 52, 0.23);
   }
 
   @include respond-to-min($resp_step_2) {
-    font-size: 16px;
-    min-height: 190px;
+    font-size: (16 / 16 * 1em);
+    min-height: (190 / 16 * 1em);
+  }
+
+  @include respond-to-min($resp_step_2 + $add_step) {
+
+    p {
+      font-size: (16 / 16 * 1em);
+    }
   }
 }
 
 .service_object_unit {
   @include transition_all(box-shadow .3s, margin .3s);
-  border-radius: 5px;
+  border-radius: (5 / 16 * 1em);
   overflow: hidden;
   background: #fff;
   text-align: left;
   display: block;
   cursor: pointer;
   margin: 0;
-  box-shadow: 0 4px 4px rgba(33, 60, 34, .24);
+  box-shadow: 0 (4 / 16 * 1em) (4 / 16 * 1em) rgba(33, 60, 34, .24);
 
   p {
     @include transition_all(padding .3s);
-    padding: 10px;
-    font-size: 14px;
+    font-size: (14 / 16 * 1em);
+    padding: (10 / 14 * 1em);
     font-weight: 500;
     color: #1d87e4;
-    //letter-spacing: .2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    //letter-spacing: (.2 / 16 * 1em) ;
   }
 
   &:hover {
-    box-shadow: 0 10px 18px rgba(18, 36, 53, .23);
+    box-shadow: 0 (10 / 16 * 1em) (18 / 16 * 1em) rgba(18, 36, 53, .23);
   }
 
   @include respond-to-min($resp_step_2) {
-    //min-height: 330px;
+    //min-height: (330 / 16 * 1em) ;
 
     p {
-      padding: 26px 20px;
-      font-size: 20px;
+      font-size: (20 / 16 * 1em);
+      padding: (26 / 20 * 1em) (20 / 20 * 1em);
       color: $default_t_color;
     }
   }
@@ -1318,14 +1416,14 @@
   @extend %clearfix;
   text-align: left;
   position: absolute;
-  bottom: 1px;
+  bottom: (1 / 16 * 1em);
   right: 0;
   left: 0;
   z-index: 1;
-  padding: 20px;
+  padding: (20 / 16 * 1em);
   color: #fff;
-  font-size: 14px;
-  line-height: 25px;
+  font-size: (14 / 16 * 1em);
+  line-height: (25 / 16 * 1em);
 }
 
 .service_object_counter {
@@ -1397,7 +1495,7 @@ a.service_object_img {
 
 .review_section {
   position: relative;
-  padding-bottom: 7px;
+  padding-bottom: (7 / 16 * 1em);
   background: #fff;
 
   //background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5) 89%, rgba(205, 226, 237, 0.9) 100%);
@@ -1409,7 +1507,7 @@ a.service_object_img {
 
   @include respond-to-min($resp_step_2) {
     background: #f7f7f7;
-    padding-bottom: 40px;
+    padding-bottom: (40 / 16 * 1em);
 
     &:before {
       content: '';
@@ -1430,38 +1528,39 @@ a.service_object_img {
   //background-image: linear-gradient(-179deg, rgba(255, 255, 255, 0.50) 89%, #cde2ed 100%);
 
   @include respond-to-min($resp_step_2) {
-    padding-bottom: 60px;
+    padding-bottom: (60 / 16 * 1em);
   }
 
 }
 
 .review_block {
-  padding-top: 37px;
+  padding-top: (37 / 16 * 1em);
   text-align: center;
 
   .block_caption {
-    //font-size: 20px;
+    //font-size: (20 / 16 * 1em) ;
   }
 
   @include respond-to-min($resp_step_2) {
-    padding-top: 55px;
+    //padding-top: (55 / 16 * 1em);
+    padding-top: ($section_pt / 16 * 1em);
   }
 }
 
 .review_slider_w {
   overflow: hidden;
-  padding: 10px;
-  margin: 0 -25px;
+  padding: (10 / 16 * 1em);
+  margin: 0 (-25 / 16 * 1em);
   position: relative;
 
   @include respond-to-min($resp_step_2) {
-    margin: -10px;
+    margin: (-10 / 16 * 1em);
   }
 }
 
 .review_list {
   @extend %clearfix;
-  //margin-left: -20px;
+  //margin-left: (-20 / 16 * 1em) ;
 
   .slide {
     float: left;
@@ -1469,9 +1568,9 @@ a.service_object_img {
   }
 
   .review_text .slide {
-    font-size: 16px;
-    //padding-left: 20px;
-    margin-bottom: 22px;
+    font-size: (16 / 16 * 1em);
+    //padding-left: (20 / 16 * 1em) ;
+    margin-bottom: (22 / 16 * 1em);
 
     @include respond-to-min($resp_step_2) {
       margin-bottom: 0;
@@ -1482,7 +1581,8 @@ a.service_object_img {
 .review_controls {
   @extend %clearfix;
   position: absolute;
-  bottom: 120px;
+  //bottom: (120 / 16 * 1em);
+  bottom: 1em;
   left: 0;
   right: 0;
   text-align: center;
@@ -1491,7 +1591,8 @@ a.service_object_img {
 
   .slider_arrow {
     color: #1d87e4;
-    font-size: 28px;
+    font-size: (28 / 16 * 1em);
+    margin: (8 / 28 * 1em);
 
     &.slider_prev {
       float: left;
@@ -1503,6 +1604,7 @@ a.service_object_img {
   }
 
   .slick-dots {
+    //line-height: (40 / 16 * 1em);
     line-height: 40px;
 
     li {
@@ -1518,17 +1620,17 @@ a.service_object_img {
 
     .slider_arrow {
       position: absolute;
-      bottom: 245px;
+      bottom: (245 / 16 * 1em);
       top: auto;
-      font-size: 26px;
+      font-size: (26 / 16 * 1em);
 
       &.slider_prev {
-        //left: 440px;
+        //left: (440 / 16 * 1em) ;
         left: 35.5%;
       }
 
       &.slider_next {
-        right: 22px;
+        right: (22 / 16 * 1em);
       }
     }
   }
@@ -1537,10 +1639,10 @@ a.service_object_img {
 .reviews_holder {
   overflow: hidden;
   position: relative;
-  border-radius: 5px;
+  border-radius: (5 / 16 * 1em);
   background: #fff;
-  padding: 40px 15px;
-  box-shadow: 0 5px 15px rgba(43, 93, 136, .17);
+  padding: (40 / 16 * 1em) (15 / 16 * 1em);
+  box-shadow: 0 (5 / 16 * 1em) (15 / 16 * 1em) rgba(43, 93, 136, .17);
 
   @include respond-to-min($resp_step_2) {
     padding: 0;
@@ -1548,8 +1650,8 @@ a.service_object_img {
 }
 
 .review_author_avatar {
-  width: 55px;
-  height: 55px;
+  width: (55 / 16 * 1em);
+  height: (55 / 16 * 1em);
   border-radius: 100%;
   overflow: hidden;
 
@@ -1579,10 +1681,10 @@ a.service_object_img {
 
 .review_author_box {
   position: absolute;
-  padding-left: 80px;
-  padding-right: 15px;
+  padding-left: (80 / 16 * 1em);
+  padding-right: (15 / 16 * 1em);
   width: 100%;
-  top: 40px;
+  top: (40 / 16 * 1em);
   right: 0;
 
   @include respond-to-min($resp_step_2) {
@@ -1595,7 +1697,7 @@ a.service_object_img {
 
 .mob_table {
   display: table;
-  min-height: 55px;
+  min-height: (55 / 16 * 1em);
   width: 100%;
 
   @include respond-to-min($resp_step_2) {
@@ -1615,26 +1717,26 @@ a.service_object_img {
 }
 
 .review_text {
-  padding-top: 25px;
+  padding-top: (25 / 16 * 1em);
 
   p {
-    font-size: 14px;
-    line-height: 23px;
-    margin-bottom: 15px;
+    font-size: (14 / 16 * 1em);
+    margin-bottom: (15 / 16 * 1em);
+    line-height: 1.65;
   }
 
   @include respond-to-min($resp_step_2) {
-    //margin-left: 527px;
-    margin-left: 41.85%;
-    padding-top: 52px;
-    padding-right: 70px;
+    //margin-left: (527 / 16 * 1em) ;
+    margin-left: 42.5%;
+    padding-top: (52 / 16 * 1em);
+    padding-right: (70 / 16 * 1em);
 
     p {
-      font-size: 24px;
-      line-height: 40px;
+      font-size: (24 / 16 * 1em);
+      line-height: 1.67;
       font-weight: 300;
-      letter-spacing: .25px;
-      margin-bottom: 14px;
+      letter-spacing: (.25 / 16 * 1em);
+      margin-bottom: (14 / 24 * 1em);
     }
   }
 }
@@ -1642,14 +1744,14 @@ a.service_object_img {
 .review_author_name {
   color: #4a5669;
   font-weight: 500;
-  margin-bottom: 15px;
+  //margin-bottom: (15 / 16 * 1em);
 
   @include respond-to-min($resp_step_2) {
-    font-size: 20px;
+    font-size: (20 / 16 * 1em);
     color: #9aa8be;
     font-weight: 300;
-    padding-left: 20px;
-    margin-bottom: 5px;
+    padding-left: (20 / 16 * 1em);
+    margin-bottom: (5 / 16 * 1em);
     position: relative;
 
     &:before {
@@ -1657,9 +1759,9 @@ a.service_object_img {
       position: absolute;
       top: 50%;
       left: 0;
-      width: 10px;
-      height: 1px;
-      margin-top: -2px;
+      width: (10 / 16 * 1em);
+      height: (1 / 16 * 1em);
+      margin-top: (-2 / 16 * 1em);
       background: #9aa8be;
     }
   }
@@ -1670,12 +1772,12 @@ a.service_object_img {
   font-weight: 300;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-height: 38px;
+  max-height: (38 / 16 * 1em);
 
   @include respond-to-min($resp_step_2) {
     color: #cad3db;
-    padding-left: 20px;
-    font-size: 14px;
+    padding-left: (20 / 16 * 1em);
+    font-size: (14 / 16 * 1em);
     font-weight: 400;
     max-height: none;
   }
@@ -1683,30 +1785,30 @@ a.service_object_img {
 }
 
 .review_unit {
-  //padding-left: 20px;
+  //padding-left: (20 / 16 * 1em) ;
 }
 
 .review_unit_controls {
   @extend %clearfix;
-  padding-top: 22px;
-  margin-top: 15px;
+  padding-top: (22 / 16 * 1em);
+  margin-top: 1.6em;
   position: relative;
   text-align: center;
 
   &:before {
-    height: 1px;
+    height: (1 / 16 * 1em);
     content: '';
     position: absolute;
-    top: 0;
-    right: -15px;
-    left: -15px;
+    top: -8 / 16 * 1em;
+    right: (-15 / 16 * 1em);
+    left: (-15 / 16 * 1em);
     background: #e7e9eb;
   }
 
   @include respond-to-min($resp_step_2) {
     margin: 0;
-    padding-top: 25px;
-    padding-left: 18px;
+    padding-top: (25 / 16 * 1em);
+    //padding-left: (18 / 16 * 1em);
     text-align: left;
 
     &:before {
@@ -1716,20 +1818,23 @@ a.service_object_img {
 }
 
 .contacts_block {
-  padding-top: 20px;
+  padding-top: .75em;
   text-align: center;
 
   @include respond-to-max($resp_step_2) {
+    padding-top: (20 / 16 * 1em);
+    
     .contacts_page & {
-      padding-top: 35px;
+      padding-top: (35 / 16 * 1em);
     }
   }
 
   @include respond-to-min($resp_step_2) {
-    padding-top: 55px;
+    //padding-top: (55 / 16 * 1em);
+    padding-top: ($section_pt / 16 * 1em);
 
     .contacts_page & {
-      padding-top: 40px;
+      padding-top: (40 / 16 * 1em);
     }
   }
 }
@@ -1742,7 +1847,7 @@ a.service_object_img {
   @extend %clearfix;
   position: relative;
   z-index: 2;
-  padding-top: 10px;
+  padding-top: (10 / 16 * 1em);
 }
 
 .map_info {
@@ -1766,7 +1871,7 @@ a.service_object_img {
   position: relative;
   text-align: center;
   overflow: hidden;
-  height: 320px;
+  height: (320 / 16 * 1em);
 
   &:before {
     pointer-events: none;
@@ -1785,7 +1890,7 @@ a.service_object_img {
   }
 
   @include respond-to-min($resp_step_2) {
-    height: 625px;
+    height: (625 / 16 * 1em);
   }
 }
 
@@ -1798,18 +1903,33 @@ a.service_object_img {
 }
 
 .contacts_col {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: -20 / 16 * 1em;
+    left: -25 / 16 * 1em;
+    right: -25 / 16 * 1em;
+    background: #f7f7f7;
+  }
 
   @include respond-to-min($resp_step_2) {
     float: left;
     width: 49.2%;
-    min-width: 600px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, .26);
-  }
+    min-width: (600 / 16 * 1em);
+    box-shadow: 0 (2 / 16 * 1em) (15 / 16 * 1em) rgba(0, 0, 0, .26);
 
+    &:before {
+      display: none;
+    }
+  }
 }
 
 .office_block {
-  padding-top: 33px;
+  //padding-top: (33 / 16 * 1em);
+  padding-top: 1.625em;
   display: none;
   position: relative;
 
@@ -1818,7 +1938,7 @@ a.service_object_img {
   }
 
   @include respond-to-min($resp_step_2) {
-    padding: 35px 65px 15px;
+    padding: (35 / 16 * 1em) (65 / 16 * 1em) (15 / 16 * 1em);
     cursor: pointer;
     display: block;
 
@@ -1892,11 +2012,11 @@ a.service_object_img {
 .contacts_caption {
   position: relative;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  line-height: 28px;
+  letter-spacing: (2 / 16 * 1em);
+  line-height: (28 / 16 * 1em);
   font-weight: 500;
-  margin-bottom: 17px;
-  padding-bottom: 11px;
+  margin-bottom: (17 / 16 * 1em);
+  padding-bottom: (11 / 16 * 1em);
 
   z-index: 1;
 
@@ -1905,16 +2025,17 @@ a.service_object_img {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 40px;
-    height: 1px;
+    width: (40 / 16 * 1em);
+    height: (1 / 16 * 1em);
+    min-height: 1px;
     background: $default_t_color;
   }
 
   @include respond-to-min($resp_step_2) {
     color: #fff;
-    margin-bottom: 28px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    margin-bottom: (28 / 16 * 1em);
+    padding-top: (12 / 16 * 1em);
+    padding-bottom: .5em;
 
     &:before {
       background: #fff;
@@ -1925,24 +2046,25 @@ a.service_object_img {
 .active_arrow {
   position: absolute;
   top: 50%;
-  margin-top: -32px;
+  margin-top: (-32 / 16 * 1em);
   left: 100%;
-  border-top: 32px solid transparent;
-  border-bottom: 32px solid transparent;
-  border-left: 25px solid #e7423e;
+  border-top: (32 / 16 * 1em) solid transparent;
+  border-bottom: (32 / 16 * 1em) solid transparent;
+  border-left: (25 / 16 * 1em) solid #e7423e;
   opacity: 0;
 }
 
 .contact_icon {
   display: block;
-  font-size: 18px;
-  width: 25px;
-  margin-bottom: 5px;
+  font-size: (18 / 16 * 1em);
+  width: (25 / 16 * 1em);
+  //margin-bottom: (5 / 16 * 1em);
+  margin-bottom: .525em;
 
   @include respond-to-min($resp_step_2) {
     display: inline-block;
     vertical-align: middle;
-    margin-left: -25px;
+    margin-left: (-25 / 16 * 1em);
     margin-bottom: 0;
   }
 }
@@ -1953,38 +2075,38 @@ a.service_object_img {
   @include respond-to-min($resp_step_2) {
     position: relative;
     z-index: 1;
-    max-width: 465px;
+    max-width: (465 / 16 * 1em);
   }
-
 }
 
 .contacts_list {
   font-weight: 300;
-  font-size: 14px;
+  font-size: (14 / 16 * 1em);
 
   dd, dt {
     display: block;
   }
 
   dd {
-    margin-bottom: 14px;
+    //margin-bottom: (14 / 16 * 1em);
+    margin-bottom: 0.65em;
     line-height: 1.4;
 
     p {
-      margin-bottom: 4px;
+      margin-bottom: (4 / 16 * 1em);
     }
 
   }
 
   dt {
-    margin-bottom: 10px;
+    margin-bottom: (10 / 16 * 1em);
   }
 
   @include respond-to-min($resp_step_2) {
     float: left;
     width: 50%;
     color: #fff;
-    font-size: 16px;
+    font-size: (16 / 16 * 1em);
     color: rgba(255, 255, 255, .6);
 
     &.contacts_list_right {
@@ -1996,11 +2118,12 @@ a.service_object_img {
     }
 
     dt {
-      margin-bottom: 6px;
+      //margin-bottom: (6 / 16 * 1em);
+      margin-bottom: .3em;
     }
 
     dd {
-      margin-bottom: 20px;
+      margin-bottom: (20 / 16 * 1em);
     }
   }
 
@@ -2011,17 +2134,22 @@ a.service_object_img {
 }
 
 .contact_tip {
-  font-size: 14px;
+  font-size: (14 / 16 * 1em);
 }
 
 .feedback_block {
   @extend %clearfix;
-  padding-top: 50px;
+  padding-top: 4.125em;
   text-align: center;
+
+  @include respond-to-min($resp_step_2) {
+    //padding-top: (50 / 16 * 1em);
+    padding-top: ($section_pt / 16 * 1em);
+  }
 }
 
 .feedback_form_holder {
-  margin-bottom: 40px;
+  margin-bottom: (40 / 16 * 1em);
 
   .f_input_v1 {
     //text-align: center;
@@ -2031,11 +2159,11 @@ a.service_object_img {
     float: left;
     width: 50%;
     padding: 0 1.6% 0 4.6%;
-    max-width: 520px;
-    margin-bottom: 32px;
+    max-width: (520 / 16 * 1em);
+    margin-bottom: (32 / 16 * 1em);
 
     .contacts_page & {
-      margin-bottom: 36px;
+      margin-bottom: (36 / 16 * 1em);
     }
 
     .f_input_v1 {
@@ -2050,44 +2178,44 @@ a.service_object_img {
     float: right;
     width: 50%;
     padding: 0 1.6%;
-    max-width: 520px;
+    max-width: (520 / 16 * 1em);
   }
 }
 
 .feedback_form_caption {
   position: relative;
-  padding-bottom: 22px;
+  padding-bottom: (22 / 16 * 1em);
   font-weight: 500;
-  letter-spacing: 2px;
-  margin-top: -5px;
+  letter-spacing: (2 / 16 * 1em);
+  margin-top: (-5 / 16 * 1em);
 
   &:before {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 40px;
-    height: 2px;
+    width: (40 / 16 * 1em);
+    height: (2 / 16 * 1em);
     background: #cad3db;
   }
 }
 
 .feedback_contacts {
-  margin-bottom: -42px;
+  margin-bottom: (-42 / 16 * 1em);
   position: relative;
   z-index: 1;
 
   dt {
     display: block;
     color: #9aa8be;
-    font-size: 18px;
-    margin-top: 16px;
-    margin-bottom: 6px;
+    font-size: (18 / 16 * 1em);
+    margin-top: (16 / 16 * 1em);
+    margin-bottom: (6 / 16 * 1em);
   }
 
   dd {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: (30 / 16 * 1em);
   }
 
 }
@@ -2103,11 +2231,11 @@ a.service_object_img {
 
 .insta_block {
   @extend %clearfix;
-  padding-top: 40px;
+  padding-top: (40 / 16 * 1em);
   text-align: center;
 
   @include respond-to-min($resp_step_2) {
-    padding-top: 50px;
+    padding-top: ($section_pt / 16 * 1em);
   }
 }
 
@@ -2142,9 +2270,9 @@ a.service_object_img {
 .insta_icon {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 16px;
-  margin-left: -8px;
-  max-width: 30px;
+  margin-right: (16 / 22 * 1em);
+  margin-left: (-8 / 22 * 1em);
+  max-width: (30 / 22 * 1em);
 
   img {
     display: block;
@@ -2153,13 +2281,15 @@ a.service_object_img {
 
   @include respond-to-min($resp_step_2) {
     max-width: none;
+    margin-right: (16 / 32 * 1em);
+    margin-left: (-8 / 32 * 1em);    
   }
 }
 
 .insta_list {
   @extend %clearfix;
   margin: 0 auto;
-  padding-top: 15px;
+  padding-top: (15 / 16 * 1em);
   position: relative;
   //max-width: $content-max-w;
 

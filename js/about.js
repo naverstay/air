@@ -7,13 +7,14 @@ $(function ($) {
         modal: true,
         closeOnEscape: true,
         closeText: '',
-        dialogClass: 'dialog_close_butt_mod_1 dialog_g_size_2 ',
+        dialogClass: 'dialog_close_butt_mod_1 dialog_g_size_2 mob_hidden ',
         appendTo: '.wrapper',
         width: 720,
         draggable: true,
+        collision: "fit flip",
         position: {my: "center center", at: "center center", of: window},
         open: function (event, ui) {
-
+            checkPopupOffset($(this));
         },
         close: function (event, ui) {
 
@@ -27,7 +28,7 @@ $(function ($) {
         return false;
     });
 
-    initFeaturesSlider(wnd.width() <= 1040);
+    initFeaturesSlider(wnd.width() <= mq_mob);
 
 
 });
@@ -79,7 +80,7 @@ function initFeaturesSlider(state) {
                             }
                         },
                         {
-                            breakpoint: 1040,
+                            breakpoint: mq_mob,
                             settings: {
                                 centerPadding: '50px',
                                 slidesToScroll: 4,
@@ -110,7 +111,7 @@ $(window).on('resize', function () {
     clearTimeout(resizeTimerHndlA);
 
     resizeTimerHndlA = setTimeout(function () {
-        initFeaturesSlider(wnd.width() <= 1040);
+        initFeaturesSlider(wnd.width() <= mq_mob);
     }, 100);
 
 }).on('scroll', function () {

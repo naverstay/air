@@ -6,13 +6,14 @@
   top: 0;
   right: 0;
   left: 0;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: (20 / 16 * 1em);
   text-align: center;
   z-index: 5;
-  min-height: 50px;
-
+  min-height: (50 / 16 * 1em);
+  
   .section_inner {
-    padding: 0 25px;
+    padding: 0 (25 / 16 * 1em);
     max-width: none;
   }
 
@@ -25,10 +26,10 @@
   }
 
   @include respond-to-min($resp_step_2) {
-    line-height: 100px;
-    height: 101px;
+    line-height: (100 / 16 * 1em);
+    height: (101 / 16 * 1em);
     background: #fff;
-    box-shadow: 0 5px 15px rgba(8, 52, 91, 0.13);
+    box-shadow: 0 (5 / 16 * 1em) (15 / 16 * 1em) rgba(8, 52, 91, 0.13);
   }
 }
 
@@ -56,19 +57,21 @@
   }
 
   @include respond-to-min($resp_step_2) {
-    //margin: 0 60px 0 10px;
+    max-width: 65 / 16 * 1em;
+
+    //margin: 0 (60 / 16 * 1em)  0 (10 / 16 * 1em) ;
   }
 }
 
 .header_l_col {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: (30 / 16 * 1em);
 
   @include respond-to-min($resp_step_2) {
     float: left;
     white-space: nowrap;
     padding-bottom: 0;
-    //min-width: 300px;
+    //min-width: (300 / 16 * 1em) ;
     min-width: 21.6%;
     text-align: left;
   }
@@ -98,9 +101,9 @@
     line-height: normal;
 
     .ui-menu {
-      border-radius: 0 0 25px 25px;
-      border: 1px solid #eff0f2;
-      margin-top: -1px;
+      border-radius: 0 0 (25 / 16 * 1em) (25 / 16 * 1em);
+      border: (1 / 16 * 1em) solid #eff0f2;
+      margin-top: (-1 / 16 * 1em);
       overflow: hidden;
       background: #fff;
       text-align: left;
@@ -108,7 +111,7 @@
 
     .ui-menu-item {
       @include transition_all(color .3s);
-      padding: 10px 17px;
+      padding: (10 / 16 * 1em) (17 / 16 * 1em);
 
       &:hover {
         //background: #eff0f2;
@@ -124,34 +127,34 @@
   .ui-selectmenu-button {
     @extend %icon_pseudo;
     position: relative;
-    line-height: 18px;
+    line-height: (18 / 16 * 1em);
     display: inline-block;
     vertical-align: middle;
     white-space: nowrap;
-    height: 50px;
-    padding: 15px 33px 15px 17px;
-    //border: 1px solid #eff0f2;
-    font-size: 14px;
-    border-radius: 25px;
+    height: (50 / 16 * 1em);
+    padding: (15 / 16 * 1em) (33 / 16 * 1em) (15 / 16 * 1em) (17 / 16 * 1em);
+    //border: (1 / 16 * 1em)  solid #eff0f2;
+    font-size: (14 / 16 * 1em);
+    border-radius: (25 / 16 * 1em);
     cursor: pointer;
 
     background: #fff;
-    border: 1px solid #e7e9eb;
-    border: 1px solid transparentize(#e7e9eb, .31);
-    box-shadow: inset 0 2px 25px transparentize(#eee, .31);
+    border: (1 / 16 * 1em) solid #e7e9eb;
+    border: (1 / 16 * 1em) solid transparentize(#e7e9eb, .31);
+    box-shadow: inset 0 (2 / 16 * 1em) (25 / 16 * 1em) transparentize(#eee, .31);
 
     &:before {
       content: $i-chevron-down;
       position: absolute;
-      height: 18px;
-      right: 18px;
-      margin-top: -6px;
+      height: (18 / 16 * 1em);
+      right: (18 / 16 * 1em);
+      margin-top: (-6 / 16 * 1em);
       top: 50%;
-      font-size: 12px;
+      font-size: (12 / 16 * 1em);
     }
 
     &.ui-corner-top {
-      border-radius: 25px 25px 0 0;
+      border-radius: (25 / 16 * 1em) (25 / 16 * 1em) 0 0;
 
       &:before {
         content: $i-chevron-up;
@@ -159,14 +162,14 @@
     }
 
     .ui-icon {
-      margin-right: 8px;
+      margin-right: (8 / 16 * 1em);
       display: inline-block;
       vertical-align: middle;
 
     }
 
     @include respond-to-min($resp_step_2  + $add_step) {
-      font-size: 16px;
+      font-size: (16 / 16 * 1em);
     }
 
   }
@@ -180,14 +183,14 @@
 
 .lang_item {
   white-space: nowrap;
-  line-height: 20px;
+  line-height: (20 / 16 * 1em);
   cursor: pointer;
 }
 
 .lang_flag {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 8px;
+  margin-right: (8 / 16 * 1em);
 }
 
 .lang_label {
@@ -204,20 +207,20 @@
     left: auto !important;
     right: 0 !important;
     line-height: normal;
-    box-shadow: 0 5px 15px rgba(21, 38, 48, 0.13);
-    border-radius: 5px;
+    box-shadow: 0 (5 / 16 * 1em) (15 / 16 * 1em) rgba(21, 38, 48, 0.13);
+    border-radius: (5 / 16 * 1em);
     text-align: left;
     max-width: none;
 
-    @include respond-to-max(460px) {
-      max-width: 300px;
+    @include respond-to-max((460 / 16 * 1em)) {
+      max-width: (300 / 16 * 1em);
     }
   }
 
   .header & {
     .ui-dialog {
       top: 100% !important;
-      margin-top: -4px;
+      margin-top: (-4 / 16 * 1em);
     }
 
     .ui-dialog-titlebar {
@@ -225,13 +228,13 @@
         @include transform(rotate(40deg) skew(-15deg));
         content: '';
         position: absolute;
-        right: 80px;
-        width: 25px;
-        height: 25px;
+        right: (80 / 16 * 1em);
+        width: (25 / 16 * 1em);
+        height: (25 / 16 * 1em);
         background: #fff;
         bottom: 100%;
-        margin-bottom: -14px;
-        box-shadow: 0 0 10px rgba(21, 38, 48, 0.07);
+        margin-bottom: (-14 / 16 * 1em);
+        box-shadow: 0 0 (10 / 16 * 1em) rgba(21, 38, 48, 0.07);
       }
     }
   }
@@ -240,7 +243,7 @@
     .ui-dialog {
       top: auto !important;
       bottom: 100%;
-      margin-bottom: 20px;
+      margin-bottom: (20 / 16 * 1em);
     }
 
     .popup_v3 {
@@ -248,13 +251,13 @@
         @include transform(rotate(40deg) skew(-15deg));
         content: '';
         position: absolute;
-        right: 80px;
-        width: 25px;
-        height: 25px;
+        right: (80 / 16 * 1em);
+        width: (25 / 16 * 1em);
+        height: (25 / 16 * 1em);
         background: #fff;
         top: 100%;
-        margin-top: -14px;
-        box-shadow: 0 0 -10px rgba(21, 38, 48, 0.07);
+        margin-top: (-14 / 16 * 1em);
+        box-shadow: 0 0 (-10 / 16 * 1em) rgba(21, 38, 48, 0.07);
       }
     }
   }
@@ -271,15 +274,15 @@
 
 .mob_menu {
   position: fixed;
-  top: 20px;
-  right: 10px;
-  width: 40px;
-  height: 34px;
+  top: (20 / 16 * 1em);
+  right: (10 / 16 * 1em);
+  width: (40 / 16 * 1em);
+  height: (34 / 16 * 1em);
   z-index: 1;
   cursor: pointer;
 
   .header_overlay & {
-    top: 8px;
+    top: (8 / 16 * 1em);
   }
 
   span,
@@ -288,26 +291,26 @@
     @include transition_all(background .3s, transform .3s, width .3s, top .3s);
     content: '';
     position: absolute;
-    left: 10px;
-    width: 20px;
-    height: 2px;
-    border-radius: 1px;
+    left: (10 / 16 * 1em);
+    width: (20 / 16 * 1em);
+    height: (2 / 16 * 1em);
+    border-radius: (1 / 16 * 1em);
     background: #fff;
   }
 
   &:before {
     @include transform-origin(0 0);
-    top: 10px;
+    top: (10 / 16 * 1em);
   }
 
   &:after {
     @include transform-origin(0 100%);
-    bottom: 10px;
+    bottom: (10 / 16 * 1em);
   }
 
   span {
     top: 50%;
-    margin-top: -1px;
+    margin-top: (-1 / 16 * 1em);
   }
 
   .menu_open & {
@@ -318,15 +321,15 @@
     &:after,
     &:before {
       background: #000;
-      width: 18px;
+      width: (18 / 16 * 1em);
     }
 
     &:after {
-      @include transform(translate(2px, 0) rotate(-45deg));
+      @include transform(translate((2 / 16 * 1em), 0) rotate(-45deg));
     }
 
     &:before {
-      @include transform(translate(2px, 0) rotate(45deg));
+      @include transform(translate((2 / 16 * 1em), 0) rotate(45deg));
     }
   }
 
@@ -365,7 +368,7 @@
 .main_menu {
   @extend %clearfix;
   position: relative;
-  padding: 42px 15px;
+  padding: (42 / 16 * 1em) (15 / 16 * 1em);
 
   @include respond-to-min($resp_step_2) {
     display: inline-block;
@@ -380,30 +383,32 @@
 
   &.sub_menu_mod {
 
-    &:hover {
-      > .menu_link {
-        font-weight: 300;
-      }
+    @include respond-to-min($resp_step_2) {
+      &:hover {
+        > .menu_link {
+          font-weight: 300;
+        }
 
-      .header_sub_menu_holder {
-        display: block;
+        .header_sub_menu_holder {
+          display: block;
+        }
       }
     }
   }
 
   @include respond-to-min($resp_step_2) {
     float: left;
-    margin: 0 12px;
+    margin: 0 (12 / 16 * 1em);
 
     &:before {
       content: '';
       position: absolute;
       top: 50%;
-      left: -12px;
+      left: (-12 / 16 * 1em);
       border-radius: 100%;
-      width: 4px;
-      height: 4px;
-      margin-top: -2px;
+      width: (4 / 16 * 1em);
+      height: (4 / 16 * 1em);
+      margin-top: (-2 / 16 * 1em);
       background: #c4d5e5;
     }
 
@@ -415,23 +420,23 @@
   }
 
   @include respond-to-min($resp_step_2  + $add_step) {
-    margin: 0 18px;
+    margin: 0 (18 / 16 * 1em);
 
     &:before {
-      left: -18px;
+      left: (-18 / 16 * 1em);
     }
   }
 }
 
 .sub_menu_icon {
   display: none;
-  line-height: 85px;
+  line-height: (85 / 16 * 1em);
 
   img,
   svg {
     display: inline-block;
     vertical-align: middle;
-    max-width: 80px;
+    max-width: (80 / 16 * 1em);
   }
 
   @include respond-to-min($resp_step_2) {
@@ -440,11 +445,11 @@
 }
 
 .sub_menu_text {
-  font-size: 12px;
-  line-height: 14px;
+  font-size: (12 / 16 * 1em);
+  line-height: (14 / 16 * 1em);
   text-transform: uppercase;
   font-weight: 500;
-  letter-spacing: 1.5px;
+  letter-spacing: (1.5 / 16 * 1em);
 }
 
 .link_text {
@@ -452,49 +457,59 @@
   display: inline-block;
   vertical-align: top;
   position: relative;
-  padding: 12px 5px;
+  padding: (12 / 16 * 1em) (5 / 16 * 1em);
 
   &:before {
     @include transition_all(background .3s);
     content: '';
     position: absolute;
-    bottom: 4px;
+    bottom: (4 / 16 * 1em);
     right: 0;
     left: 0;
-    height: 2px;
+    height: (2 / 16 * 1em);
   }
 
   .sub_menu_mod & {
-    padding-right: 15px;
+    padding-right: (15 / 16 * 1em);
 
     &:after {
       content: $i-chevron-down;
       position: absolute;
       right: 0;
       top: 50%;
-      height: 20px;
-      margin-top: -10px;
-      font-size: 12px;
-      line-height: 20px;
+      height: (20 / 16 * 1em);
+      margin-top: (-10 / 16 * 1em);
+      font-size: (12 / 16 * 1em);
+      line-height: (20 / 16 * 1em);
     }
   }
 
-  .sub_menu_mod:hover & {
-    &:after {
-      content: $i-chevron-up;
-    }
-  }
+
 
   @include respond-to-min($resp_step_2) {
-    padding: 0 4px;
+    //padding: 0 (4 / 16 * 1em);
+    padding: 0 .16em;
     display: block;
 
     &:before {
       bottom: 0;
-      height: 4px;
+      height: (4 / 16 * 1em);
+    }
+
+    .sub_menu_mod:hover & {
+      &:after {
+        content: $i-chevron-up;
+      }
     }
   }
 
+  @include respond-to-max($resp_step_2) {
+    .open_sub_menu & {
+      &:after {
+        content: $i-chevron-up;
+      }
+    }
+  }
 }
 
 .menu_link {
@@ -503,10 +518,6 @@
   display: block;
   text-decoration: none;
   color: $default_t_color;
-
-  &:hover {
-    color: #e7423e;
-  }
 
   .active > & {
     cursor: default;
@@ -518,12 +529,16 @@
   }
 
   @include respond-to-min($resp_step_2) {
-    font-size: 16px;
+    font-size: (16 / 16 * 1em);
     padding: 0;
+
+    &:hover {
+      color: #e7423e;
+    }
   }
 
   @include respond-to-min($resp_step_2  + $add_step) {
-    font-size: 18px;
+    font-size: (18 / 16 * 1em);
     padding: 0;
   }
 
@@ -533,23 +548,31 @@
   position: relative;
   display: none;
   text-align: center;
-  margin-top: -12px;
+  z-index: 1;
+  margin-top: (-12 / 16 * 1em);
 
   @include respond-to-min($resp_step_2) {
-    margin-top: -25px;
+    margin-top: (-25 / 16 * 1em);
     position: absolute;
     top: 100%;
     left: 50%;
-    width: 1px;
+    width: (1 / 16 * 1em);
   }
+
+  @include respond-to-max($resp_step_2) {
+    .open_sub_menu & {
+      display: block;
+    }
+  }
+  
 }
 
 #triangle-up {
   width: 0;
   height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 100px solid red;
+  border-left: (50 / 16 * 1em) solid transparent;
+  border-right: (50 / 16 * 1em) solid transparent;
+  border-bottom: (100 / 16 * 1em) solid red;
 }
 
 .header_sub_menu_w {
@@ -557,23 +580,23 @@
   @include respond-to-min($resp_step_2) {
     display: inline-block;
     vertical-align: top;
-    margin: 0 -300px;
-    width: 600px;
-    border-radius: 5px;
+    margin: 0 (-300 / 16 * 1em);
+    width: (600 / 16 * 1em);
+    border-radius: (5 / 16 * 1em);
     background: #fff;
     position: relative;
-    box-shadow: 0 5px 15px rgba(22, 39, 49, 0.13);
+    box-shadow: 0 (5 / 16 * 1em) (15 / 16 * 1em) rgba(22, 39, 49, 0.13);
 
     &:before {
       content: '';
       position: absolute;
       bottom: 100%;
-      margin-bottom: -1px;
+      margin-bottom: (-1 / 16 * 1em);
       left: 50%;
-      margin-left: -17px;
-      border-left: 17px solid transparent;
-      border-right: 17px solid transparent;
-      border-bottom: 10px solid #fff;
+      margin-left: (-17 / 16 * 1em);
+      border-left: (17 / 16 * 1em) solid transparent;
+      border-right: (17 / 16 * 1em) solid transparent;
+      border-bottom: (10 / 16 * 1em) solid #fff;
     }
 
   }
@@ -584,24 +607,24 @@
 
   > li {
     display: block;
-    margin: 14px 0;
+    margin: (14 / 16 * 1em) 0;
 
     .menu_link {
-      line-height: 20px;
-      padding: 5px;
-      font-size: 14px;
-      letter-spacing: .05px;
+      line-height: (20 / 16 * 1em);
+      padding: (5 / 16 * 1em);
+      font-size: (14 / 16 * 1em);
+      letter-spacing: (.05 / 16 * 1em);
     }
   }
 
   @include respond-to-min($resp_step_2) {
-    //margin-top: -30px;
+    //margin-top: (-30 / 16 * 1em) ;
     //position: absolute;
     //top: 100%;
     //right: 0;
     //text-align: left;
     //min-width: 100%;
-    //box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+    //box-shadow: 0 (2 / 16 * 1em)  (5 / 16 * 1em)  rgba(0, 0, 0, .5);
     /* Combined Shape: */
 
     margin-right: -1%;
@@ -613,16 +636,16 @@
       margin: 0;
 
       .menu_link {
-        padding: 20px;
+        padding: (20 / 16 * 1em);
       }
 
       &:before {
         content: '';
         position: absolute;
-        top: 20px;
-        bottom: 20px;
+        top: (20 / 16 * 1em);
+        bottom: (20 / 16 * 1em);
         left: 0;
-        width: 1px;
+        width: (1 / 16 * 1em);
         background: #cad3db;
       }
 

@@ -49,9 +49,6 @@ mixin loop_while(counter)
         block
 
 mixin header(ind)
-    .preloader: .gl_table: .gl_table_cell
-        img.dt_hidden(src='i/GIF_AT_MOB.gif')
-        img.mob_hidden(src='i/GIF_AT_PC.gif')
     div.header
         .mob_menu.openMenu
             span
@@ -213,19 +210,20 @@ mixin main_banner()
                 .gl_table_cell
                     .section_inner
                         .banner_content
-                            .banner_video_block
-                                .banner_play_btn.playVideo
-                                    img(src='i/svg/play_triangle.svg')
-                                    //-+play_tringle()
-                                .banner_video_tip.mob_hidden 40 секунд видео
-
                             .banner_text.banner_mob_top
                                 a.logo.dt_hidden(href='#')
                                     img(src='i/svg/logo_w2.svg')
                                 h2.banner_title Профессиональное решение задач
                                 p.mob_hidden В сфере промышленного холода и построения внутренних инженерных систем с использованием качественных продуктов АТ
-                            
-                            
+                            .banner_video_block
+                                .banner_play_btn_2.playVideo
+                                    .banner_play_btn_time.mob_hidden 40 секунд 
+                                    .banner_play_btn_name.mob_hidden видео
+                                //-.banner_play_btn.playVideo
+                                    img(src='i/svg/play_triangle.svg')
+                                    //-+play_tringle()
+                                //-.banner_video_tip.mob_hidden 40 секунд видео
+
         .service_tabs_holder: .section_inner
             .mob_phone.i-phone
             ul#service_tabs.service_tabs
@@ -262,7 +260,7 @@ mixin footer()
     .footer
         .section_inner.clearfix
             .footer_logo_holder
-                a.logo(href='#')
+                a.logo(href='index.html')
                     img(src='i/svg/logo_w.svg')
                     
             .footer_menu_col
@@ -281,19 +279,17 @@ mixin footer()
                     li: a.f_menu_link(href='#') Инжиниринговый Генподряд
                     li: a.f_menu_link(href='#') Продукция Air-Technology
                 
-            .copyright AIR TECHNOLOGY, 2006-2016.
+            .copyright: span AIR TECHNOLOGY, 2006-2016.
             
             .footer_callback_block: .callback_block
                 a.btn_v1.callback_btn.btn_red.mob_hidden.footerCallbackBtn(href='#')
                     span.i-phone
                     span 8 (800) 500 88 10
                     
-                .footer_dev_block
-                    span design 
-                        //-span.dt_hidden  <br>  
-                        | by
+                .footer_dev_block: a.footer_dev_link(href='index.html')
+                    span design by
                     span: img(src='i/difiz_logo_invisio_ava.png')
-        
+
     #auth_popup.popup.popup_v3
         .popup_inner
             .popup_auth_caption ВВЕДИТЕ ДАННЫЕ
@@ -342,9 +338,11 @@ mixin about_popups()
 mixin object_popup()
     #object_popup.popup.popup_v2
         .popup_inner.popupObjectHolder
-            .popup_object_img
-                img(src='i/ulmart.jpg')
-                .popup_object_info Плащадь: 22 500 m2
+            .popup_object_img.popupObjectFader
+                +loop_while(10)
+                    .slide
+                        img(src='i/ulmart.jpg')
+                        .popup_object_info Плащадь: 22 500 m2
                 
             .popup_object_slide_counter.popupObjectSlideCounter
                 
@@ -352,43 +350,43 @@ mixin object_popup()
                 +loop_while(10)
                     .slide: img(src='i/ulmart_3.jpg')
             
-            h3.block_caption Пригородный центр исполнения заказов интернет-ретейлера  <br>  «Юлмарт»
-            .block_caption_tip Компания AIR TECHNOLOGY выполнила монтажные работы инженерных систем в новом центре исполнения заказов «Юлмарт». Работы проводились по системам:
-                
-            .service_tab_at: .service_range_list.text_left
-                .slide
-                    .service_range_unit.serviceBtn
-                        .service_range_img
-                            img.fitImage(src='i/svg/at_service_1.svg' )
-                        p Смесительные узлы для систем<br>вентиляции и теплоснабжения
+        h3.block_caption Пригородный центр исполнения заказов интернет-ретейлера  <br>  «Юлмарт»
+        .block_caption_tip Компания AIR TECHNOLOGY выполнила монтажные работы инженерных систем в новом центре исполнения заказов «Юлмарт». Работы проводились по системам:
+            
+        .service_range_list_w.service_tab_at: .service_range_list.text_left
+            .slide
+                .service_range_unit.serviceBtn
+                    .service_range_img
+                        img.fitImage(src='i/svg/at_service_1.svg' )
+                    p Смесительные узлы для систем<br>вентиляции и теплоснабжения
 
-                .slide
-                    .service_range_unit.serviceBtn
-                        .service_range_img
-                            img.fitImage(src='i/svg/at_service_2.svg' )
-                        p Щиты автоматики<br>систем вентиляции
+            .slide
+                .service_range_unit.serviceBtn
+                    .service_range_img
+                        img.fitImage(src='i/svg/at_service_2.svg' )
+                    p Щиты автоматики<br>систем вентиляции
 
-                .slide
-                    .service_range_unit.serviceBtn
-                        .service_range_img
-                            img.fitImage(src='i/svg/at_service_3.svg' )
-                        p Щиты автоматики систем<br>холодоснабжения
+            .slide
+                .service_range_unit.serviceBtn
+                    .service_range_img
+                        img.fitImage(src='i/svg/at_service_3.svg' )
+                    p Щиты автоматики систем<br>холодоснабжения
+            
+        .block_caption_tip Используемое оборудование:
+        .partners_list_w
+            ul.partners_list
+                +loop_while(10)
+                    li
+                        .partner_unit
+                            img(src='i/ph_equip_1_partner_1.png')
                 
-            .block_caption_tip Используемое оборудование:
-            .partners_list_w
-                ul.partners_list
-                    +loop_while(10)
-                        li
-                            .partner_unit
-                                img(src='i/ph_equip_1_partner_1.png')
-                    
-            .block_caption_tip Материалы:
-            .partners_list_w
-                ul.partners_list
-                    +loop_while(8)
-                        li
-                            .partner_unit
-                                img(src='i/ph_equip_1_partner_3.png')
+        .block_caption_tip Материалы:
+        .partners_list_w
+            ul.partners_list
+                +loop_while(8)
+                    li
+                        .partner_unit
+                            img(src='i/ph_equip_1_partner_3.png')
             
 mixin index_popup()
     #service_popup.popup.popup_v2
@@ -423,8 +421,9 @@ mixin index_popup()
     
     #service_popup_at.popup.popup_v2
         .popup_inner.popupObjectHolder
-            .popup_object_img
-                img(src='i/freeze.jpg')
+            .popup_object_img.popupObjectFader
+                +loop_while(10)
+                    .slide: img(src='i/freeze.jpg')
 
             .popup_object_slide_counter.popupObjectSlideCounter
 
@@ -432,41 +431,41 @@ mixin index_popup()
                 +loop_while(10)
                     .slide: img(src='i/ulmart_3.jpg')
 
-            .service_range_img
-                img.fitImage(src='i/svg/at_service_1.svg' )
-                    
-            .block_caption Сместительные узлы для систем вентиляции и теплоснабжения
-                    
-            .block_caption_tip Безупречное качество от профессионалов
+        .service_range_img
+            img.fitImage(src='i/svg/at_service_1.svg' )
                 
-            p Компания AIR TECHNOLOGY производит узлы регулирования производительности калориферов систем отопления, вентиляции, кондиционирования и холодоснабжения:
+        .block_caption Сместительные узлы для систем вентиляции и теплоснабжения
+                
+        .block_caption_tip Безупречное качество от профессионалов
             
-            p 
-                b Отличительные особенности:
-                
-            ul.service_list
-                li • Четыре типа смесительных узлов с разным принципов регулирования и комплектацией
-                li • Огромный стандартный модельный ряд позволяет произвести гибкий подбор для разных теплообменников. Модельный ряд постоянно совершенствуется
-                li • C возможность выбора  необходимых дополнительных опции: байпас, фильтр, термометры, манометры, балансировочный вентиль и др.
-                li • Cналичие программы подбора, которая позволяет произвести быстрый подбор, узнать цену, получить техническое описание
-                li • Cмесительные узлы малых диаметров выполнены из европейских медных труб и фитингов под пайку. Смесительные узлы больших диаметров выполнены из стальных труб со сварными деталями, окрашены порошковой краской
-                li • Cмесительный узлы проходят гидравлические испытания давлением 10 бар
-                
-            p Возможны нестандартные исполнения смесительных узлов по запросу.
+        p Компания AIR TECHNOLOGY производит узлы регулирования производительности калориферов систем отопления, вентиляции, кондиционирования и холодоснабжения:
+        
+        p 
+            b Отличительные особенности:
             
-            p 
-                b  Если у Вас возникли дополнительные вопросы, Вы можете заказать звонок или расчитать стоимость продукта
+        ul.service_list
+            li • Четыре типа смесительных узлов с разным принципов регулирования и комплектацией
+            li • Огромный стандартный модельный ряд позволяет произвести гибкий подбор для разных теплообменников. Модельный ряд постоянно совершенствуется
+            li • C возможность выбора  необходимых дополнительных опции: байпас, фильтр, термометры, манометры, балансировочный вентиль и др.
+            li • Cналичие программы подбора, которая позволяет произвести быстрый подбор, узнать цену, получить техническое описание
+            li • Cмесительные узлы малых диаметров выполнены из европейских медных труб и фитингов под пайку. Смесительные узлы больших диаметров выполнены из стальных труб со сварными деталями, окрашены порошковой краской
+            li • Cмесительный узлы проходят гидравлические испытания давлением 10 бар
+            
+        p Возможны нестандартные исполнения смесительных узлов по запросу.
+        
+        p 
+            b  Если у Вас возникли дополнительные вопросы, Вы можете заказать звонок или расчитать стоимость продукта
 
-            ul.service_more_info
-                li
-                    a.btn_v1.callback_btn.btn_red(href='#')
-                        span.i-phone
-                        span 8 (800) 500 88 10
-                li
-                    a.service_calc_btn.btn_v2(href='calc_12.html')
-                        span.i-calculator
-                        div РАСЧИТАТЬ СТОИМОСТЬ
-                        p Калькулятор вам в помощь
+        ul.service_more_info
+            li
+                a.btn_v1.callback_btn.btn_red(href='#')
+                    span.i-phone
+                    span 8 (800) 500 88 10
+            li
+                a.service_calc_btn.btn_v2(href='calc_12.html')
+                    span.i-calculator
+                    div РАСЧИТАТЬ СТОИМОСТЬ
+                    p Калькулятор вам в помощь
     
     #off_review_popup.popup.popup_v2
         .popup_inner

@@ -1,11 +1,6 @@
-var video_popup, service_popup, service_popup_at, off_review_popup;
+var video_popup, off_review_popup;
 
 $(function ($) {
-
-    wnd = $(window);
-    doc = $(document);
-    body = $('body');
-    header = $('.header');
 
     breadcrumbsSpacer = $('.breadcrumbsSpacer');
 
@@ -83,10 +78,12 @@ $(function ($) {
 
     initObjectSlider();
 
-    initRangeSlick(wnd.width() <= 1040);
+    initRangeSlick(wnd.width() <= mq_mob);
 
     initMap();
 
+    initServicePopup();
+    
     video_popup = $('#video_popup').dialog({
         autoOpen: false,
         modal: true,
@@ -96,12 +93,18 @@ $(function ($) {
         appendTo: '.wrapper',
         width: 800,
         draggable: false,
+        collision: "fit flip",
         position: {my: "center center", at: "center center", of: window},
         open: function (event, ui) {
+            checkPopupOffset($(this));
+            
             toggleFSVideo('banner_video');
+            body.addClass('show_overlay');
+
         },
         close: function (event, ui) {
             toggleFSVideo('banner_video', 'hide');
+            body.removeClass('show_overlay');
         }
     });
 
@@ -112,78 +115,19 @@ $(function ($) {
         return false;
     });
 
-    service_popup = $('#service_popup').dialog({
-        autoOpen: false,
-        modal: true,
-        closeOnEscape: true,
-        closeText: '',
-        dialogClass: 'dialog_close_butt_mod_1 dialog_g_size_2 ',
-        appendTo: '.wrapper',
-        width: 1240,
-        draggable: true,
-        position: {my: "center center", at: "center center", of: window},
-        open: function (event, ui) {
-
-        },
-        close: function (event, ui) {
-
-        }
-    });
-
-    body.delegate('.serviceBtn', 'click', function () {
-        if (!$(this).closest('.busy').length) {
-            service_popup.dialog('open');
-        }
-        return false;
-    });
-
-    service_popup_at = $('#service_popup_at').dialog({
-        autoOpen: false,
-        modal: true,
-        closeOnEscape: true,
-        closeText: '',
-        dialogClass: 'dialog_close_butt_mod_1 dialog_g_size_2 ',
-        appendTo: '.wrapper',
-        width: 1240,
-        draggable: true,
-        position: {my: "center center", at: "center center", of: window},
-        open: function (event, ui) {
-
-            var sld = $(event.target).find('.popupObjectSlider');
-
-            if (sld.hasClass('slick-initialized')) {
-                setTimeout(function () {
-                    sld.slick('setPosition');
-                }, 1);
-            } else {
-                initPopupObjectSlider();
-            }
-
-        },
-        close: function (event, ui) {
-
-        }
-    });
-
-    body.delegate('.serviceBtnAT', 'click', function () {
-        if (!$(this).closest('.busy').length) {
-            service_popup_at.dialog('open');
-        }
-        return false;
-    });
-
     off_review_popup = $('#off_review_popup').dialog({
         autoOpen: false,
         modal: true,
         closeOnEscape: true,
         closeText: '',
-        dialogClass: 'dialog_close_butt_mod_1 dialog_g_size_2 ',
+        dialogClass: 'dialog_close_butt_mod_1 dialog_g_size_2 mob_hidden ',
         appendTo: '.wrapper',
         width: 720,
         draggable: true,
+        collision: "fit flip",
         position: {my: "center center", at: "center center", of: window},
         open: function (event, ui) {
-
+            checkPopupOffset($(this));
         },
         close: function (event, ui) {
 

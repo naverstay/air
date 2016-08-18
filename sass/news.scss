@@ -4,11 +4,11 @@
 
 .news_list {
   @extend %clearfix;
-  margin: 0 -15px 10px;
-  padding-top: 10px;
+  margin: 0 (-15 / 16 * 1em) (10 / 16 * 1em);
+  padding-top: (10 / 16 * 1em);
 
   > li {
-    margin-bottom: 18px;
+    margin-bottom: (18 / 16 * 1em);
 
     @include respond-to-max($resp_step_3) {
       &:nth-child(n+5) {
@@ -18,18 +18,18 @@
   }
 
   @include respond-to-min($resp_step_3) {
-    margin: 0 0 10px -20px;
+    margin: 0 0 (10 / 16 * 1em) (-20 / 16 * 1em);
 
     > li {
       float: left;
-      padding-left: 20px;
+      padding-left: (20 / 16 * 1em);
       width: 50%;
     }
   }
 
   @include respond-to-min($resp_step_2) {
     margin-right: -1%;
-    margin-left: -20px;
+    margin-left: (-20 / 16 * 1em);
     padding-top: 0;
 
     > li {
@@ -41,27 +41,27 @@
 
 .news_unit {
   @include transition_all(box-shadow .3s, margin .3s);
-  border-radius: 5px;
+  border-radius: (5 / 16 * 1em);
   overflow: hidden;
   background: #fff;
   text-align: left;
   display: block;
   cursor: pointer;
-  box-shadow: 0 5px 15px rgba(43, 92, 136, 0.17);
+  box-shadow: 0 (5 / 16 * 1em) (15 / 16 * 1em) rgba(43, 92, 136, 0.17);
 
   &:hover {
-    box-shadow: 0 4px 8px rgba(42, 92, 136, 0.4);
+    box-shadow: 0 (4 / 16 * 1em) (8 / 16 * 1em) rgba(42, 92, 136, 0.4);
   }
- 
+
 }
 
 .news_block {
   text-align: center;
-  padding-top: 36px;
+  padding-top: (36 / 16 * 1em);
 
   @include respond-to-min($resp_step_2) {
     text-align: left;
-    padding-top: 50px;
+    padding-top: (50 / 16 * 1em);
 
     .block_caption_tip {
       text-align: left;
@@ -75,36 +75,36 @@
 
 .news_description {
   line-height: 1.7;
-  padding: 14px 14px 24px;
+  padding: (14 / 16 * 1em) (14 / 16 * 1em) (24 / 16 * 1em);
 
   p {
-    font-size: 14px;
+    font-size: (14 / 16 * 1em);
   }
 
   @include respond-to-min($resp_step_2) {
-    padding: 25px 20px 20px;
+    padding: (25 / 16 * 1em) (20 / 16 * 1em) (20 / 16 * 1em);
     line-height: 1.75;
 
     p {
-      font-size: 16px;
+      font-size: (16 / 16 * 1em);
     }
   }
 }
 
 .news_caption {
-  margin-bottom: 7px;
+  margin-bottom: (7 / 16 * 1em);
   line-height: 1.6;
 
   @include respond-to-min($resp_step_2) {
     line-height: 1.5;
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: (20 / 16 * 1em);
+    margin-bottom: (15 / 20 * 1em);
   }
 }
 
 .subscribe_row {
   @extend %clearfix;
-  padding-top: 15px;
+  padding-top: (15 / 16 * 1em);
 
   @include respond-to-min($resp_step_2) {
     display: inline-block;
@@ -112,13 +112,13 @@
     padding-top: 0;
 
     .input_w {
-      width: 385px;
+      width: (385 / 16 * 1em);
       float: left;
-      margin-right: 10px;
+      margin-right: (10 / 16 * 1em);
     }
 
     .about_callback_btn {
-      width: 210px;
+      width: (210 / 16 * 1em);
     }
 
   }
@@ -138,19 +138,19 @@
   @include respond-to-min($resp_step_2) {
     float: right;
     width: 33%;
-    max-width: 297px;
-    margin-top: -7px;
+    max-width: (297 / 16 * 1em);
+    //margin-top: (-7 / 16 * 1em);
   }
 }
 
 .news_aside_caption {
   position: relative;
   z-index: 1;
-  padding-bottom: 20px;
-  font-size: 14px;
+  padding-bottom: (20 / 16 * 1em);
+  font-size: (14 / 16 * 1em);
   font-weight: 500;
   color: #e7423e;
-  letter-spacing: 1.7px;
+  letter-spacing: (1.7 / 16 * 1em);
   text-align: center;
 
   &:before {
@@ -158,17 +158,17 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    margin-left: -20px;
-    width: 40px;
-    height: 2px;
+    margin-left: (-20 / 16 * 1em);
+    width: (40 / 16 * 1em);
+    height: (2 / 16 * 1em);
     background: #cad3db;
   }
 
   @include respond-to-min($resp_step_2) {
     text-align: left;
-    font-size: 15px;
-    letter-spacing: 2px;
-    padding-bottom: 16px;
+    font-size: (15 / 16 * 1em);
+    letter-spacing: (2 / 16 * 1em);
+    padding-bottom: (16 / 16 * 1em);
 
     &:before {
       left: 0;
@@ -178,41 +178,41 @@
 }
 
 .article_block {
-  padding-top: 25px;
-  padding-bottom: 40px;
+  padding-top: (25 / 16 * 1em);
+  padding-bottom: (40 / 16 * 1em);
 
   h3 {
     font-weight: 500;
-    font-size: 20px;
-    margin-bottom: 17px;
+    font-size: (20 / 16 * 1em);
+    margin-bottom: (17 / 16 * 1em);
   }
 
   p {
-    margin-bottom: 14px;
+    margin-bottom: (14 / 16 * 1em);
     line-height: 1.8;
 
     + h3 {
-      margin-top: 25px;
+      margin-top: (25 / 16 * 1em);
     }
   }
 
   @include respond-to-max($resp_step_2) {
-    padding-top: 15px;
-    padding-bottom: 54px;
+    padding-top: (15 / 16 * 1em);
+    padding-bottom: (54 / 16 * 1em);
 
     h3 {
-      font-size: 16px;
+      font-size: (16 / 16 * 1em);
       line-height: 1.6;
-      margin-bottom: 6px;
+      margin-bottom: (6 / 16 * 1em);
     }
 
     p {
       line-height: 1.7;
-      font-size: 14px;
+      font-size: (14 / 16 * 1em);
 
       + h3 {
-        margin-top: 20px;
-        margin-bottom: 13px;
+        margin-top: (20 / 16 * 1em);
+        margin-bottom: (13 / 16 * 1em);
       }
     }
   }
@@ -221,11 +221,11 @@
 .news_image {
 
   @include respond-to-max($resp_step_2) {
-    margin: 0 -25px;
+    margin: 0 (-25 / 16 * 1em);
 
     .service_object_date {
-      font-size: 12px;
-      padding-bottom: 10px;
+      font-size: (12 / 16 * 1em);
+      padding-bottom: (10 / 16 * 1em);
     }
 
   }
@@ -234,9 +234,9 @@
 .other_news_item {
 
   p {
-    margin: -6px 0 5px;
+    margin: (-6 / 16 * 1em) 0 (5 / 16 * 1em);
     line-height: 1.5;
-    font-size: 14px;
+    font-size: (14 / 16 * 1em);
   }
 
   @include respond-to-min($resp_step_2) {
@@ -250,24 +250,29 @@
   position: relative;
   z-index: 1;
   text-align: center;
-  padding-top: 8px;
+  padding-top: (8 / 16 * 1em);
 
   > li {
     @extend %clearfix;
-    margin-bottom: 35px;
+    margin-bottom: (35 / 16 * 1em);
   }
 
   @include respond-to-min($resp_step_2) {
     text-align: left;
-    padding-top: 15px;
-    margin-bottom: 20px;
+    //padding-top: (15 / 16 * 1em);
+    padding-top: 1.75em;
+    margin-bottom: (20 / 16 * 1em);
+
+    > li {
+      margin-bottom: 1.2em;
+    }
   }
 }
 
 .other_img {
   display: inline-block;
   vertical-align: top;
-  margin-bottom: 16px;
+  margin-bottom: (16 / 16 * 1em);
 
   img {
     display: block;
@@ -276,8 +281,8 @@
 
   @include respond-to-min($resp_step_2) {
     float: left;
-    margin-right: 20px;
-    padding-top: 6px;
+    margin-right: (20 / 16 * 1em);
+    padding-top: (6 / 16 * 1em);
     margin-bottom: 0;
   }
 }
@@ -291,17 +296,17 @@
 }
 
 .news_date {
-  padding-top: 5px;
+  padding-top: (5 / 16 * 1em);
   color: #cad3db;
-  font-size: 14px;
+  font-size: (14 / 16 * 1em);
 }
 
 .fullscreen_btn {
   position: absolute;
-  top: 9px;
-  right: 9px;
-  width: 40px;
-  height: 40px;
+  top: (9 / 16 * 1em);
+  right: (9 / 16 * 1em);
+  width: (40 / 16 * 1em);
+  height: (40 / 16 * 1em);
   background: rgba(0, 0, 0, .46);
 
   &:before {
@@ -310,8 +315,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    line-height: 40px;
-    font-size: 36px;
+    line-height: (40 / 16 * 1em);
+    font-size: (36 / 16 * 1em);
     text-align: center;
     color: #fff;
   }

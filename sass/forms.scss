@@ -1,13 +1,13 @@
 .f_label_v1 {
-  font-size: 14px;
+  font-size: (14 / 16 * 1em);
   font-weight: 500;
   display: inline-block;
   vertical-align: top;
-  margin-bottom: 5px;
+  margin-bottom: (5 / 16 * 1em);
 
   @include respond-to-min($resp_step_2) {
-    font-size: 15px;
-    margin-bottom: 10px;
+    font-size: (15 / 16 * 1em);
+    margin-bottom: (10 / 16 * 1em);
   }
 
 }
@@ -17,10 +17,10 @@
   top: 0;
   width: 100%;
   left: 100%;
-  margin-left: 20px;
+  margin-left: (20 / 16 * 1em);
   color: #4a5669;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: (14 / 16 * 1em);
+  line-height: (22 / 16 * 1em);
 }
 
 .input_w {
@@ -30,8 +30,8 @@
 
     input {
       text-align: center;
-      padding-left: 64px !important;
-      padding-right: 64px !important;
+      padding-left: (64 / 16 * 1em) !important;
+      padding-right: (64 / 16 * 1em) !important;
     }
   }
 }
@@ -39,12 +39,12 @@
 %input_v1 {
   @include transition_all(border-color .3s);
   color: $default_t_color;
-  font: 16px/18px $Roboto;
-  border-radius: 5px;
-  padding: 15px 20px;
-  border: 1px solid #e7e9eb;
-  //border: 1px solid transparentize(#e7e9eb, .31);
-  box-shadow: inset 0 2px 25px #eee;
+  font: (16 / 16 * 1em) /(18 / 16 * 1em) $Roboto;
+  border-radius: (5 / 16 * 1em);
+  padding: (15 / 16 * 1em) (20 / 16 * 1em);
+  border: (1 / 16 * 1em) solid #e7e9eb;
+  //border: (1 / 16 * 1em)  solid transparentize(#e7e9eb, .31);
+  box-shadow: inset 0 (2 / 16 * 1em) (25 / 16 * 1em) #eee;
 }
 
 .f_label_tip {
@@ -56,16 +56,16 @@
   width: 100%;
 
   &.f_input_v2 {
-    height: 50px;
-    border-radius: 5px;
-    padding: 15px 25px;
+    height: (50 / 16 * 1em);
+    border-radius: (5 / 16 * 1em);
+    padding: (15 / 16 * 1em) (25 / 16 * 1em);
     color: #fff;
-    font: 500 16px/20px $Roboto;
-    letter-spacing: 1.7px;
+    font: 500 (16 / 16 * 1em) /(20 / 16 * 1em) $Roboto;
+    letter-spacing: (1.7 / 16 * 1em);
     //background: #195c9b;
     //opacity: .69;
     background: transparentize(#195c9b, .31);
-    box-shadow: 1px 1px rgba(255, 255, 255, 0.21), 0 2px 15px rgba(22, 86, 141, 0.57), inset 0 2px 25px #10416c;
+    box-shadow: (1 / 16 * 1em) (1 / 16 * 1em) rgba(255, 255, 255, 0.21), 0 (2 / 16 * 1em) (15 / 16 * 1em) rgba(22, 86, 141, 0.57), inset 0 (2 / 16 * 1em) (25 / 16 * 1em) #10416c;
 
     &::-moz-placeholder {
       color: #fff;
@@ -76,8 +76,8 @@
     }
 
     @include respond-to-min($resp_step_2) {
-      height: 60px;
-      padding: 20px 25px;
+      height: (60 / 16 * 1em);
+      padding: (20 / 16 * 1em) (25 / 16 * 1em);
     }
   }
 
@@ -89,22 +89,22 @@
     }
 
     @at-root div#{&} {
-      height: 50px;
+      height: (50 / 16 * 1em) ;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
 
     @at-root input#{&} {
-      height: 50px;
+      height: (50 / 16 * 1em) ;
     }
 
     @at-root textarea#{&} {
-      height: 105px;
-      line-height: 24px;
+      height: (105 / 16 * 1em) ;
+      line-height: (24 / 16 * 1em) ;
 
       @include respond-to-min($resp_step_2) {
-        height: 190px;
+        height: (190 / 16 * 1em);
       }
 
       &.autoSize {
@@ -118,33 +118,33 @@
   position: relative;
 
   &.form_cell_v2 {
-    margin: 28px 0 -10px;
+    margin: (28 / 16 * 1em) 0 (-10 / 16 * 1em);
   }
-  
+
   &.form_cell_v1 {
-    margin-top: 19px;
+    margin-top: (19 / 16 * 1em);
 
     &:first-child {
-      margin-top: 13px;
+      margin-top: (13 / 16 * 1em);
     }
 
     @include respond-to-min($resp_step_2) {
-      margin-bottom: 22px;
+      margin-bottom: (22 / 16 * 1em);
 
       &:first-child {
-        margin-top: 22px;
+        margin-top: (22 / 16 * 1em);
       }
     }
   }
 
   &.form_el_v1 {
     @extend %clearfix;
-    line-height: 60px;
-    //margin-left: -70px;
-    margin-top: 20px;
+    line-height: (60 / 16 * 1em);
+    //margin-left: (-70 / 16 * 1em) ;
+    margin-top: (20 / 16 * 1em);
 
     @include respond-to-min($resp_step_2) {
-      margin-top: 12px;
+      margin-top: (12 / 16 * 1em);
 
       .form_el {
         float: left;
@@ -170,7 +170,7 @@
     @extend %icon_pseudo;
     display: block;
     position: relative;
-    padding-left: 40px;
+    padding-left: (40 / 16 * 1em);
 
     &:after {
       @extend .btn_red;
@@ -178,10 +178,10 @@
       position: absolute;
       top: 50%;
       left: 0;
-      width: 20px;
-      height: 20px;
-      border-radius: 5px;
-      margin-top: -10px;
+      width: (20 / 16 * 1em);
+      height: (20 / 16 * 1em);
+      border-radius: (5 / 16 * 1em);
+      margin-top: (-10 / 16 * 1em);
       z-index: 1;
     }
 
@@ -190,14 +190,16 @@
       position: absolute;
       top: 50%;
       left: 0;
-      width: 30px;
-      height: 30px;
-      margin-top: -18px;
-      font-size: 26px;
-      line-height: 30px;
+      //width: (30 / 16 * 1em);
+      //height: (30 / 16 * 1em);
+      font-size: (26 / 16 * 1em);
+      line-height: 1.15;
+      margin-top: (-18 * 1em) / 26;
+      width: (30  * 1em) / 26;
+      height: (30  * 1em) / 26;
       color: #fff;
       text-align: center;
-      text-shadow: 0 1px 2px rgba(106, 40, 38, .3);
+      text-shadow: 0 (1em / 26) (2em / 26) rgba(106, 40, 38, .3);
       z-index: 2;
     }
   }
@@ -222,47 +224,51 @@
   position: absolute;
   top: 50%;
   left: 0;
-  margin-top: -10px;
+  margin-top: (-10 / 16 * 1em);
   display: none;
 }
 
 .attach_link {
+  @include transition_all(color .3s);
   @extend %icon_pseudo;
   display: inline-block;
   vertical-align: top;
-  margin-top: 15px;
+  margin-top: (15 / 16 * 1em);
   position: relative;
-  color: #1d87e4;
-  font: 16px $Roboto;
-  padding-left: 26px;
+  //color: #1d87e4;
+  font: (16 / 16 * 1em) $Roboto;
+  padding-left: (26 / 16 * 1em);
+  cursor: pointer;
 
   &:before {
     content: $i-attach;
-    font-size: 20px;
+    font-size: (20 / 16 * 1em);
     position: absolute;
-    height: 24px;
-    margin-top: -12px;
+    height: (24 / 20 * 1em);
+    margin-top: (-12 / 20 * 1em);
     top: 50%;
     left: 0;
   }
 }
 
 .rm_link {
+  @include transition_all(color .3s);
   @extend %icon_pseudo;
   display: inline-block;
   vertical-align: top;
-  margin-top: 15px;
+  margin-top: (15 / 16 * 1em);
   position: relative;
-  color: #e53935;
-  font: 16px $Roboto;
-  padding-left: 26px;
+  //color: #e53935;
+  font: (16 / 16 * 1em) $Roboto;
+  padding-left: (26 / 16 * 1em);
+  cursor: pointer;
 
   &:before {
     content: $i-trash-can;
-    font-size: 20px;
+    font-size: (20 / 16 * 1em);
     position: absolute;
-    height: 24px;
-    margin-top: -12px;
+    height: (24 / 20 * 1em);
+    margin-top: (-12 / 20 * 1em);
     top: 50%;
     left: 0;
   }
@@ -277,18 +283,18 @@
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  padding-left: 20px;
+  padding-left: (20 / 16 * 1em);
   color: #1d87e4;
 
   &:before {
     content: $i-document;
     position: absolute;
     top: 50%;
-    margin-top: -10px;
-    height: 20px;
+    margin-top: (-10 / 16 * 1em);
+    height: (20 / 16 * 1em);
     left: 0;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: (16 / 16 * 1em);
+    line-height: (20 / 16 * 1em);
   }
 }
 

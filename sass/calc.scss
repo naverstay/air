@@ -1,7 +1,7 @@
 .calc_block {
   @extend %clearfix;
   margin-right: -1%;
-  margin-left: -20px;
+  margin-left: (-20 / 16 * 1em);
   position: relative;
 
 }
@@ -9,35 +9,35 @@
 .order_block {
 
   + .order_block {
-    border-top: 1px solid #cad3db;
-    padding-top: 50px;
-    margin-top: 40px;
+    border-top: (1 / 16 * 1em) solid #cad3db;
+    padding-top: (50 / 16 * 1em);
+    margin-top: (40 / 16 * 1em);
   }
 }
 
 .calc_section {
-  padding-bottom: 40px;
-  margin-bottom: 53px;
-  border-bottom: 1px solid #cad3db;
+  padding-bottom: (40 / 16 * 1em);
+  margin-bottom: (53 / 16 * 1em);
+  border-bottom: (1 / 16 * 1em) solid #cad3db;
 
   + .calc_section {
-    padding-bottom: 5px;
+    padding-bottom: (5 / 16 * 1em);
   }
 }
 
 .calc_step_controls {
   text-align: center;
-  padding: 6px 0 60px;
+  padding: (6 / 16 * 1em) 0 (60 / 16 * 1em);
 }
 
 .calc_form_col {
   float: left;
   width: 33%;
-  padding-left: 20px;
-  margin-top: -20px;
+  padding-left: (20 / 16 * 1em);
+  margin-top: (-20 / 16 * 1em);
 
   .f_label_v1 {
-    letter-spacing: .5px;
+    letter-spacing: (.5 / 16 * 1em);
   }
 
   &.full_width {
@@ -46,38 +46,38 @@
 }
 
 .calc_holder {
-  padding-top: 53px;
+  padding-top: (53 / 16 * 1em);
 }
 
 .calc_steps {
   @extend %clearfix;
-  padding-top: 5px;
-  margin: 0 -1% 53px -20px;
+  padding-top: (5 / 16 * 1em);
+  margin: 0 -1% (53 / 16 * 1em) (-20 / 16 * 1em);
 
   li {
     float: left;
     width: 33%;
-    padding-left: 20px;
+    padding-left: (20 / 16 * 1em);
   }
 }
 
 .calc_step_btn {
   display: block;
-  line-height: 70px;
-  height: 75px;
+  line-height: (70 / 16 * 1em);
+  height: (75 / 16 * 1em);
   background: #f0f5fb;
-  border-radius: 5px;
-  font-size: 15px;
+  border-radius: (5 / 16 * 1em);
+  font-size: (15 / 16 * 1em);
   font-weight: 500;
   color: #9aa8be;
-  letter-spacing: 2px;
-  border: 2px solid #f0f5fb;
+  letter-spacing: (2 / 16 * 1em);
+  border: (2 / 16 * 1em) solid #f0f5fb;
   text-align: center;
 
   .active & {
     cursor: default;
-    border: 2px solid #1d87e4;
-    border-radius: 5px;
+    border: (2 / 16 * 1em) solid #1d87e4;
+    border-radius: (5 / 16 * 1em);
     background: #fff;
     color: #1d87e4;
   }
@@ -85,17 +85,17 @@
   .complete & {
 
     .calc_step_text {
-      margin-left: 28px;
+      margin-left: (28 / 16 * 1em);
 
       &:after {
-        font-size: 24px;
+        font-size: (24 / 16 * 1em);
         content: $i-check;
         color: #4caf50;
         display: inline-block;
         vertical-align: top;
-        margin-top: -5px;
-        margin-left: 7px;
-        text-shadow: 0 1px 2px transparentize(#4caf50, .7);
+        margin-top: (-5 / 16 * 1em);
+        margin-left: (7 / 16 * 1em);
+        text-shadow: 0 (1 / 16 * 1em) (2 / 16 * 1em) transparentize(#4caf50, .7);
       }
     }
   }
@@ -114,12 +114,12 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  font-size: 24px;
-  line-height: 54px;
-  width: 54px;
+  font-size: (24 / 16 * 1em);
+  line-height: (54 / 24 * 1em);
+  width: (54 / 24 * 1em);
   text-align: center;
   color: #fff;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+  text-shadow: 0 (1 / 24 * 1em) (2 / 24 * 1em) rgba(0, 0, 0, .3);
   background: #34a6d8;
   background: -moz-linear-gradient(top, #34a6d8 0%, #1d87e4 100%);
   background: -webkit-linear-gradient(top, #34a6d8 0%, #1d87e4 100%);
@@ -128,12 +128,12 @@
 
   &.minus {
     left: 0;
-    border-radius: 5px 0 0 5px;
+    border-radius: (5 / 24 * 1em) 0 0 (5 / 24 * 1em);
   }
 
   &.plus {
     right: 0;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 (5 / 24 * 1em) (5 / 24 * 1em) 0;
   }
 }
 
@@ -143,20 +143,20 @@
 
     &.select_c2 {
       @extend %input_v1;
-      height: 50px;
+      height: (50 / 16 * 1em);
 
       .select2-selection__rendered {
-        line-height: 20px;
+        line-height: (20 / 16 * 1em);
         color: #5e5c57;
-        padding: 0 60px 0 0;
+        padding: 0 (60 / 16 * 1em) 0 0;
       }
 
       .select2-selection__arrow {
         @extend %icon_pseudo;
-        width: 54px;
-        height: 50px;
+        width: (54 / 16 * 1em);
+        height: (50 / 16 * 1em);
         text-align: center;
-        border-radius: 0 5px 5px 0;
+        border-radius: 0 (5 / 16 * 1em) (5 / 16 * 1em) 0;
         background: #34a6d8;
         background: -moz-linear-gradient(top, #34a6d8 0%, #1d87e4 100%);
         background: -webkit-linear-gradient(top, #34a6d8 0%, #1d87e4 100%);
@@ -170,7 +170,7 @@
           bottom: 0;
           left: 0;
           right: 0;
-          line-height: 50px;
+          line-height: (50 / 16 * 1em);
           color: #fff;
         }
 
@@ -197,15 +197,15 @@
   &.select_v1 {
 
     //opacity: 0.68;
-    padding: 0 10px;
+    padding: 0 (10 / 16 * 1em);
     background: #fff;
-    border: 1px solid #e7e9eb;
-    box-shadow: inset 0 2px 25px #eee;
-    border-radius: 0 0 5px 5px;
+    border: (1 / 16 * 1em) solid #e7e9eb;
+    box-shadow: inset 0 (2 / 16 * 1em) (25 / 16 * 1em) #eee;
+    border-radius: 0 0 (5 / 16 * 1em) (5 / 16 * 1em);
 
     .select2-results__option {
-      padding: 11px 10px;
-      line-height: 17px;
+      padding: (11 / 16 * 1em) (10 / 16 * 1em);
+      line-height: (17 / 16 * 1em);
       color: #5e5c57;
 
       &.select2-results__option--highlighted,
@@ -226,8 +226,8 @@
 
   > li {
     @extend %clearfix;
-    margin-top: 23px;
-    margin-bottom: 26px;
+    margin-top: (23 / 16 * 1em);
+    margin-bottom: (26 / 16 * 1em);
 
     .check_emul_v1 {
       float: left;
@@ -242,17 +242,17 @@
 .order_object {
   position: relative;
   color: #1d87e4;
-  margin: 17px 0 48px;
-  letter-spacing: .09px;
+  margin: (17 / 16 * 1em) 0 (48 / 16 * 1em);
+  letter-spacing: (.09 / 16 * 1em);
 }
 
 .order_object_icon {
-  padding-right: 5px;
+  padding-right: (5 / 16 * 1em);
 }
 
 .order_object_rm {
-  padding-left: 5px;
-  font-size: 12px;
+  padding-left: (5 / 16 * 1em);
+  font-size: (12 / 16 * 1em);
   color: #e53935;
   font-weight: 800;
 }
