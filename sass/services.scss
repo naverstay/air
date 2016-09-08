@@ -297,6 +297,30 @@
   }
 }
 
+.fader_controls {
+  position: absolute;
+  top: 50%;
+  right: -3em;
+  left: -3em;
+  margin-top: -1.5em;
+
+  .slider_next,
+  .slider_prev {
+    position: absolute;
+    top: 0;
+    color: $clr_blue;
+    font-size: 2em;
+  }
+
+  .slider_prev {
+    left: 0;
+  }
+
+  .slider_next {
+    right: 0;
+  }
+}
+
 .popup_object_img {
   position: relative;
 
@@ -399,5 +423,4 @@
     top: auto;
     text-align: left;
   }
-
 }

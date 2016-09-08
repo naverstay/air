@@ -47,12 +47,12 @@
   text-align: left;
   display: block;
   cursor: pointer;
+  min-height: 100%;
   box-shadow: 0 (5 / 16 * 1em) (15 / 16 * 1em) rgba(43, 92, 136, 0.17);
 
   &:hover {
     box-shadow: 0 (4 / 16 * 1em) (8 / 16 * 1em) rgba(42, 92, 136, 0.4);
   }
-
 }
 
 .news_block {

@@ -3858,7 +3858,7 @@ a.service_object_img {
   }
   .review_controls .slider_arrow {
     position: absolute;
-    bottom: 15.3125em;
+    bottom: 9.42308em;
     top: auto;
     font-size: 1.625em;
   }
@@ -5244,6 +5244,7 @@ a.clr_red:hover {
   text-align: left;
   display: block;
   cursor: pointer;
+  min-height: 100%;
   box-shadow: 0 0.3125em 0.9375em rgba(43, 92, 136, 0.17);
 }
 .news_unit:hover {
@@ -5744,6 +5745,27 @@ a.clr_red:hover {
 .service_description_img img {
   display: inline-block;
   vertical-align: top;
+}
+
+.fader_controls {
+  position: absolute;
+  top: 50%;
+  right: -3em;
+  left: -3em;
+  margin-top: -1.5em;
+}
+.fader_controls .slider_next,
+.fader_controls .slider_prev {
+  position: absolute;
+  top: 0;
+  color: #1d87e4;
+  font-size: 2em;
+}
+.fader_controls .slider_prev {
+  left: 0;
+}
+.fader_controls .slider_next {
+  right: 0;
 }
 
 .popup_object_img {

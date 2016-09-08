@@ -113,6 +113,45 @@ $(function ($) {
 
 });
 
+function getNeighbors(el) {
+
+    var neighbors = el.nextAll(), curTop = el.offset().top, maxHeight = el.height(), ret = 0;
+
+    for (var i = 0; i < neighbors.length; i++) {
+        var nghbr = $(neighbors[i]);
+
+        if (nghbr.offset().top != curTop) break;
+        maxHeight = Math.max(maxHeight, nghbr.height());
+        ret++;
+    }
+
+    el.height(maxHeight);
+
+    for (var k = 0; k < ret; k++) {
+        $(neighbors[k]).height(maxHeight);
+    }
+
+    return ret;
+}
+
+function fitRow() {
+    var rows = $('.fitRowHeight');
+
+    rows.each(function () {
+        var units = $(this).children().css('height', 'auto');
+
+        setTimeout(function () {
+            var i = 0;
+            do {
+                var obj = $(units[i]), nextEls = getNeighbors(obj);
+                i += nextEls + 1;
+            }
+            while (i < units.length - 1);
+        }, 10);
+
+    });
+}
+
 function svg_fallback() { // замена СВГ на ПНГ 
 
     if (html.hasClass('ie8')) {
@@ -400,6 +439,11 @@ function setPopupObjectSlideCounter(sld) {
     var sliderHolder = $(sld.$slider).closest('.popupObjectHolder');
 
     sliderHolder.find('.popupObjectSlideCounter').text('Фото ' + (sld.currentSlide + 1) + ' из ' + sld.slideCount);
+
+    sliderHolder.find('.popupObjectSlider').slick('slickGoTo', sld.currentSlide);
+
+    sliderHolder
+        .find('.popupObjectSlider .slide[data-slick-index="' + sld.currentSlide + '"]').addClass('fader-current').siblings().removeClass('fader-current');
 }
 
 function setPopupObjectFader(sld) {
@@ -427,30 +471,6 @@ function initPopupObjectSlider(callback) {
             firedEl.closest('.popupObjectHolder').find('.popupObjectFader').slick('slickGoTo', firedEl.attr('data-slick-index').replace('-', ''));
         }
 
-    });
-
-    $('.popupObjectFader').not('.slick-initialized').each(function (ind) {
-        var sld = $(this);
-
-        sld
-            .on('init', function (e, slick) {
-                setPopupObjectSlideCounter(slick);
-            })
-            .on('afterChange', function (e, slick) {
-                setPopupObjectSlideCounter(slick);
-            })
-            .on('afterChange', function (e, slick) {
-                //setPopupObjectSlideFader(slick);
-            })
-            .slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                swipe: false,
-                dots: false,
-                arrows: false,
-                //asNavFor: sld.nextAll('.popupObjectSlider').first(),
-                fade: true
-            });
     });
 
     $('.popupObjectSlider').not('.slick-initialized').each(function (ind) {
@@ -520,6 +540,34 @@ function initPopupObjectSlider(callback) {
                 ]
             });
     });
+
+    $('.popupObjectFader').not('.slick-initialized').each(function (ind) {
+        var sld = $(this),
+            sld_parent = sld.closest('.popupObjectHolder');
+
+        sld
+            .on('init', function (e, slick) {
+                setPopupObjectSlideCounter(slick);
+            })
+            .on('afterChange', function (e, slick) {
+                setPopupObjectSlideCounter(slick);
+            })
+            .on('afterChange', function (e, slick) {
+                //setPopupObjectSlideFader(slick);
+            })
+            .slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                swipe: false,
+                dots: false,
+                arrows: true,
+                prevArrow: sld_parent.find('.slider_prev'),
+                nextArrow: sld_parent.find('.slider_next'),
+                //asNavFor: sld_parent.find('.popupObjectSlider').first(),
+                fade: true
+            });
+    });
+
 
     if (typeof callback == 'function') {
         callback();
@@ -682,6 +730,8 @@ window.onload = new function () {  // дубль функции $(window).on('lo
 
         checkDots();
 
+        fitRow();
+        
         recalcFZ();
 
         mobFitImages();
@@ -832,6 +882,8 @@ $(window).on('load', function () {
 }).on('resize', function () {
 
     checkDots();
+
+    fitRow();
 
     recalcFZ();
 

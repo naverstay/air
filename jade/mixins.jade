@@ -338,11 +338,15 @@ mixin about_popups()
 mixin object_popup()
     #object_popup.popup.popup_v2
         .popup_inner.popupObjectHolder
-            .popup_object_img.popupObjectFader
-                +loop_while(10)
-                    .slide
-                        img(src='i/ulmart.jpg')
-                        .popup_object_info Плащадь: 22 500 m2
+            .popup_object_img
+                .fader_controls
+                    .slider_arrow.slider_prev.i-chevron-left
+                    .slider_arrow.slider_next.i-chevron-right
+                .popupObjectFader
+                    +loop_while(10)
+                        .slide
+                            img(src='i/ulmart.jpg')
+                            .popup_object_info Плащадь: 22 500 m2
                 
             .popup_object_slide_counter.popupObjectSlideCounter
                 
@@ -421,9 +425,14 @@ mixin index_popup()
     
     #service_popup_at.popup.popup_v2
         .popup_inner.popupObjectHolder
-            .popup_object_img.popupObjectFader
-                +loop_while(10)
-                    .slide: img(src='i/freeze.jpg')
+            
+            .popup_object_img
+                .fader_controls
+                    .slider_arrow.slider_prev.i-chevron-left
+                    .slider_arrow.slider_next.i-chevron-right
+                .popupObjectFader
+                    +loop_while(10)
+                        .slide: img(src='i/freeze.jpg')
 
             .popup_object_slide_counter.popupObjectSlideCounter
 
