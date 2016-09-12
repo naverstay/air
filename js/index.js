@@ -14,6 +14,7 @@ $(function ($) {
                 sld.slick('setPosition');
             }, 1);
 
+            scroll2(u.newPanel.offset().top, 600);            
         }
     });
 
