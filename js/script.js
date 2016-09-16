@@ -577,7 +577,28 @@ function initPopupObjectSlider(callback) {
 
 function initServicePopup() {
 
-    service_popup = $('#service_popup').dialog({
+    $('.servicePopup').each(function (ind) {
+        $(this).dialog({
+            autoOpen: false,
+            modal: true,
+            closeOnEscape: true,
+            closeText: '',
+            dialogClass: 'dialog_close_butt_mod_1 dialog_g_size_2 mob_hidden ',
+            appendTo: '.wrapper',
+            width: 1240,
+            draggable: true,
+            //collision: "fit flip",
+            //position: {my: "center center", at: "center center", of: window},
+            open: function (event, ui) {
+                checkPopupOffset($(this));
+            },
+            close: function (event, ui) {
+
+            }
+        });
+    });
+    
+    service_popup = $('#service_popup_1').dialog({
         autoOpen: false,
         modal: true,
         closeOnEscape: true,
@@ -597,14 +618,24 @@ function initServicePopup() {
     });
 
     body.delegate('.serviceBtn', 'click', function () {
-        var sld = $(this).closest('.slick-slider');
+        var sld = $(this).closest('.slick-slider'), target = $($(this).attr('data-popup'));
 
+        console.log(target);
+        
         if (sld && sld.length) {
             if (!sld.hasClass('busy')) {
-                service_popup.dialog('open');
+                if (target.length) {
+                    target.dialog('open');
+                } else {
+                    service_popup.dialog('open');
+                }                
             }
         } else {
-            service_popup.dialog('open');
+            if (target.length) {
+                target.dialog('open');
+            } else {
+                service_popup.dialog('open');
+            }
         }
         return false;
     });
