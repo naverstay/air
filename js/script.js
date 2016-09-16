@@ -404,14 +404,51 @@ function objectPopup() {
         }
     });
 
+    $('.objectPopup').each(function (ind) {
+        $(this).dialog({
+            autoOpen: false,
+            modal: true,
+            closeOnEscape: true,
+            closeText: '',
+            dialogClass: 'dialog_close_butt_mod_1 dialog_g_size_2 mob_hidden ',
+            appendTo: '.wrapper',
+            width: 1240,
+            draggable: true,
+            //position: {my: "center center", at: "center center", of: window},
+            open: function (event, ui) {
+
+                var sld = $(event.target).find('.popupObjectSlider');
+
+                if (sld.hasClass('slick-initialized')) {
+                    setTimeout(function () {
+                        sld.slick('setPosition');
+                    }, 1);
+                } else {
+                    initPopupObjectSlider();
+                }
+
+                checkPopupOffset($(this));
+
+            },
+            close: function (event, ui) {
+
+            }
+        });
+    });
+
     body.delegate('.objectBtn', 'click', function () {
+        var target = $($(this).attr('data-popup'));
+        
         if (!$(this).closest('.busy').length) {
-            object_popup.dialog('open');
+            if (target.length) {
+                target.dialog('open');
+            } else {
+                object_popup.dialog('open');
+            }
         }
 
         return false;
     });
-
 }
 
 function checkPopupOffset(popup) {
@@ -598,7 +635,7 @@ function initServicePopup() {
         });
     });
     
-    service_popup = $('#service_popup_1').dialog({
+    service_popup = $('#service_popup').dialog({
         autoOpen: false,
         modal: true,
         closeOnEscape: true,
@@ -619,8 +656,6 @@ function initServicePopup() {
 
     body.delegate('.serviceBtn', 'click', function () {
         var sld = $(this).closest('.slick-slider'), target = $($(this).attr('data-popup'));
-
-        console.log(target);
         
         if (sld && sld.length) {
             if (!sld.hasClass('busy')) {
