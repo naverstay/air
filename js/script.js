@@ -385,18 +385,20 @@ function objectPopup() {
         draggable: true,
         //position: {my: "center center", at: "center center", of: window},
         open: function (event, ui) {
-
+            var popup = $(this);
             var sld = $(event.target).find('.popupObjectSlider');
+            var sld2 = $(event.target).find('.popupObjectFader');
 
             if (sld.hasClass('slick-initialized')) {
                 setTimeout(function () {
                     sld.slick('setPosition');
+                    sld2.slick('setPosition');
+                    checkPopupOffset(popup);
                 }, 1);
             } else {
                 initPopupObjectSlider();
+                checkPopupOffset(popup);
             }
-
-            checkPopupOffset($(this));
          
         },
         close: function (event, ui) {
@@ -416,19 +418,21 @@ function objectPopup() {
             draggable: true,
             //position: {my: "center center", at: "center center", of: window},
             open: function (event, ui) {
-
+                var popup = $(this);
                 var sld = $(event.target).find('.popupObjectSlider');
+                var sld2 = $(event.target).find('.popupObjectFader');
 
                 if (sld.hasClass('slick-initialized')) {
                     setTimeout(function () {
                         sld.slick('setPosition');
+                        sld2.slick('setPosition');
+                        checkPopupOffset(popup);
                     }, 1);
                 } else {
                     initPopupObjectSlider();
+                    checkPopupOffset(popup);
                 }
-
-                checkPopupOffset($(this));
-
+                
             },
             close: function (event, ui) {
 
@@ -455,11 +459,11 @@ function checkPopupOffset(popup) {
 
     var dlg = $(popup).closest('.ui-dialog'),
         dlg_top = dlg.css('top').replace('px', '') * 1,
-        limit = Math.max(doc.height() - dlg.height() - 15, 0);
-
+        limit = Math.max(doc.height() - dlg.outerHeight(), 0);
+    
     if (dlg_top > limit) {
-        dlg.css('top', limit, 0);
-        scroll2(limit, 800);
+        dlg.css('top', 30, 0);
+        scroll2(0, 800);
     }
 }
 
@@ -750,7 +754,7 @@ function initObjectSlider() {
                 arrows: true,
                 speed: 600,
                 zIndex: 1,
-                initialSlide: 2,
+                initialSlide: 0,
                 centerPadding: '50px',
                 slide: '.slide',
                 prevArrow: sld.parent().find('.slider_prev'),

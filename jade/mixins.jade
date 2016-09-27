@@ -392,12 +392,184 @@ mixin object_popup()
                         .partner_unit
                             img(src='i/ph_equip_1_partner_3.png')
             
+    #object_popup_1.popup.popup_v2.objectPopup
+        .popup_inner.popupObjectHolder
+            .popup_object_img
+                .fader_controls
+                    .slider_arrow.slider_prev.i-chevron-left
+                    .slider_arrow.slider_next.i-chevron-right
+                .popupObjectFader
+                    +loop_while(10)
+                        .slide
+                            img(src='i/ulmart.jpg')
+                            .popup_object_info Плащадь: 22 500 m2
+                
+            .popup_object_slide_counter.popupObjectSlideCounter
+                
+            .popup_object_slider.popupObjectSlider
+                +loop_while(10)
+                    .slide: img(src='i/ulmart_3.jpg')
+            
+        h3.block_caption Пригородный центр исполнения заказов интернет-ретейлера  <br>  «Юлмарт» 1
+        .block_caption_tip Компания AIR TECHNOLOGY выполнила монтажные работы инженерных систем в новом центре исполнения заказов «Юлмарт». Работы проводились по системам:
+            
+        .service_range_list_w.service_tab_at: .service_range_list.text_left
+            .slide
+                .service_range_unit.serviceBtn
+                    .service_range_img
+                        img.fitImage(src='i/svg/at_service_1.svg' )
+                    p Смесительные узлы для систем<br>вентиляции и теплоснабжения
+
+            .slide
+                .service_range_unit.serviceBtn
+                    .service_range_img
+                        img.fitImage(src='i/svg/at_service_2.svg' )
+                    p Щиты автоматики<br>систем вентиляции
+
+            .slide
+                .service_range_unit.serviceBtn
+                    .service_range_img
+                        img.fitImage(src='i/svg/at_service_3.svg' )
+                    p Щиты автоматики систем<br>холодоснабжения
+            
+        .block_caption_tip Используемое оборудование:
+        .partners_list_w
+            ul.partners_list
+                +loop_while(10)
+                    li
+                        .partner_unit
+                            img(src='i/ph_equip_1_partner_1.png')
+                
+        .block_caption_tip Материалы:
+        .partners_list_w
+            ul.partners_list
+                +loop_while(8)
+                    li
+                        .partner_unit
+                            img(src='i/ph_equip_1_partner_3.png')
+            
+    #object_popup_2.popup.popup_v2.objectPopup
+        .popup_inner.popupObjectHolder
+            .popup_object_img
+                .fader_controls
+                    .slider_arrow.slider_prev.i-chevron-left
+                    .slider_arrow.slider_next.i-chevron-right
+                .popupObjectFader
+                    +loop_while(10)
+                        .slide
+                            img(src='i/ulmart.jpg')
+                            .popup_object_info Плащадь: 22 500 m2
+                
+            .popup_object_slide_counter.popupObjectSlideCounter
+                
+            .popup_object_slider.popupObjectSlider
+                +loop_while(10)
+                    .slide: img(src='i/ulmart_3.jpg')
+            
+        h3.block_caption Пригородный центр исполнения заказов интернет-ретейлера  <br>  «Юлмарт» 2
+        .block_caption_tip Компания AIR TECHNOLOGY выполнила монтажные работы инженерных систем в новом центре исполнения заказов «Юлмарт». Работы проводились по системам:
+            
+        .service_range_list_w.service_tab_at: .service_range_list.text_left
+            .slide
+                .service_range_unit.serviceBtn
+                    .service_range_img
+                        img.fitImage(src='i/svg/at_service_1.svg' )
+                    p Смесительные узлы для систем<br>вентиляции и теплоснабжения
+
+            .slide
+                .service_range_unit.serviceBtn
+                    .service_range_img
+                        img.fitImage(src='i/svg/at_service_2.svg' )
+                    p Щиты автоматики<br>систем вентиляции
+
+            .slide
+                .service_range_unit.serviceBtn
+                    .service_range_img
+                        img.fitImage(src='i/svg/at_service_3.svg' )
+                    p Щиты автоматики систем<br>холодоснабжения
+            
+        .block_caption_tip Используемое оборудование:
+        .partners_list_w
+            ul.partners_list
+                +loop_while(10)
+                    li
+                        .partner_unit
+                            img(src='i/ph_equip_1_partner_1.png')
+                
+        .block_caption_tip Материалы:
+        .partners_list_w
+            ul.partners_list
+                +loop_while(8)
+                    li
+                        .partner_unit
+                            img(src='i/ph_equip_1_partner_3.png')
+            
 mixin index_popup()
-    #service_popup.popup.popup_v2
+    #service_popup_1.popup.popup_v2.servicePopup
         .popup_inner
             .popup_service_img
                 img(src='i/svg/ph_service_3.svg')
             .block_caption Камеры шоковой заморозки
+            .block_caption_tip Производим камеры шоковой заморозки для холодильной обработки:
+
+            ul.service_list
+                li • Говяжьих, свиных, бараньих туш на крюках
+                li • Мясной продукции, рыбы и рыбных продуктов, хлебопекарной и плодоовощной продукции в коробах
+                li • Готовые блюда в контейнерах
+
+            .block_caption_tip Применяем:
+
+            ul.service_list
+                li • Низкотемпературные централи, ресиверные станции. Подбор оптимального режима и комплектации для более низкого энергопотребления
+                li • Воздухоохладители подвесные, постаментные. Поддержание высокой скорости движения воздуха для быстрой заморозки
+                li • Конденсаторы. Применение обычных и адиабатически охлаждаемых
+
+            p
+                b Если Вам необходимо построить камеру шоковой заморозки вы можете заполнить простую форму или сразу позвонить.
+
+            ul.popup_controls
+                li
+                    a.btn_v1.btn_blue.service_btn(href='#') ЗАПОЛНИТЬ ФОРМУ
+                li
+                    a.btn_v1.callback_btn.btn_red(href='#')
+                        span.i-phone
+                        span 8 (800) 500 88 10
+                        
+    #service_popup_2.popup.popup_v2.servicePopup
+        .popup_inner
+            .popup_service_img
+                img(src='i/svg/ph_service_3.svg')
+            .block_caption Камеры шоковой заморозки 2
+            .block_caption_tip Производим камеры шоковой заморозки для холодильной обработки:
+
+            ul.service_list
+                li • Говяжьих, свиных, бараньих туш на крюках
+                li • Мясной продукции, рыбы и рыбных продуктов, хлебопекарной и плодоовощной продукции в коробах
+                li • Готовые блюда в контейнерах
+
+            .block_caption_tip Применяем:
+
+            ul.service_list
+                li • Низкотемпературные централи, ресиверные станции. Подбор оптимального режима и комплектации для более низкого энергопотребления
+                li • Воздухоохладители подвесные, постаментные. Поддержание высокой скорости движения воздуха для быстрой заморозки
+                li • Конденсаторы. Применение обычных и адиабатически охлаждаемых
+
+            p
+                b Если Вам необходимо построить камеру шоковой заморозки вы можете заполнить простую форму или сразу позвонить.
+
+            ul.popup_controls
+                li
+                    a.btn_v1.btn_blue.service_btn(href='#') ЗАПОЛНИТЬ ФОРМУ
+                li
+                    a.btn_v1.callback_btn.btn_red(href='#')
+                        span.i-phone
+                        span 8 (800) 500 88 10
+                        
+    #service_popup.popup.popup_v2
+        .popup_inner
+            .popup_service_img
+                img(src='i/svg/ph_service_3.svg')
+            .block_caption Камеры шоковой заморозки 2
             .block_caption_tip Производим камеры шоковой заморозки для холодильной обработки:
 
             ul.service_list
@@ -494,21 +666,21 @@ mixin objectSlider()
         .service_object_list.objectSlider
             +loop_while(3) 
                 .slide
-                    a.service_object_unit.objectBtn(href='#')
+                    a.service_object_unit.objectBtn(href='#' data-popup='#object_popup_1')
                         .service_object_img
                             img(src='i/object_1.jpg')
                             .service_object_date 14 июня, 2016
                         p Комплекс “Чупа-Чупс”
                         
                 .slide
-                    a.service_object_unit.objectBtn(href='#')
+                    a.service_object_unit.objectBtn(href='#' data-popup='#object_popup_2')
                         .service_object_img
                             img(src='i/object_1.jpg')
                             .service_object_date 14 июня, 2016
                         p Автоцентр “Audi"
                         
                 .slide
-                    a.service_object_unit.objectBtn(href='#')
+                    a.service_object_unit.objectBtn(href='#' data-popup='#object_popup_2')
                         .service_object_img
                             img(src='i/object_1.jpg')
                             .service_object_date 14 июня, 2016
