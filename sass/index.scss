@@ -512,7 +512,7 @@
 .service_name {
   font-size: (7 / 16 * 1em);
   padding: (1 / 7 * 1em) (1 / 7 * 1em) (4 / 7 * 1em);
-  letter-spacing: (1 / 7 * 1em);
+  //letter-spacing: (1 / 7 * 1em);
 
   @include respond-to-min($resp_step_2) {
     font-size: 1em;

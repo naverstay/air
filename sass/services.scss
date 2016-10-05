@@ -113,13 +113,17 @@
     vertical-align: top;
     font-size: 16px;
     text-align: center;
+    width: 100%;
   }
 
   &.col_4 {
     padding-bottom: (45 / 16 * 1em);
 
     > li {
-      width: 25%;
+      
+      @include respond-to-min($resp_step_2) {
+        width: 25%;
+      }
     }
   }
 
@@ -127,10 +131,12 @@
     padding-bottom: (25 / 16 * 1em);
 
     > li {
-      width: 20%;
+ 
+      @include respond-to-min($resp_step_2) {
+        width: 20%;
+      }
     }
   }
-
 }
 
 .service_scroll_item {
@@ -236,9 +242,12 @@
   text-align: center;
 
   > li {
-    float: left;
-    width: 20%;
     padding-left: (20 / 16 * 1em);
+
+    @include respond-to-min($resp_step_2) {
+      float: left;
+      width: 20%;
+    }
   }
 }
 

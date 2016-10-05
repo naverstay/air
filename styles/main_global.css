@@ -2979,7 +2979,6 @@ textarea.f_input.f_input_v1.autoSize {
 .service_name {
   font-size: 0.4375em;
   padding: 0.14286em 0.14286em 0.57143em;
-  letter-spacing: 0.14286em;
 }
 @media only screen and (min-width: 1040px) {
   .service_name {
@@ -5589,18 +5588,23 @@ a.clr_red:hover {
   vertical-align: top;
   font-size: 16px;
   text-align: center;
+  width: 100%;
 }
 .service_scroll.col_4 {
   padding-bottom: 2.8125em;
 }
-.service_scroll.col_4 > li {
-  width: 25%;
+@media only screen and (min-width: 1040px) {
+  .service_scroll.col_4 > li {
+    width: 25%;
+  }
 }
 .service_scroll.col_5 {
   padding-bottom: 1.5625em;
 }
-.service_scroll.col_5 > li {
-  width: 20%;
+@media only screen and (min-width: 1040px) {
+  .service_scroll.col_5 > li {
+    width: 20%;
+  }
 }
 
 .col_4 .service_scroll_item {
@@ -5691,9 +5695,13 @@ a.clr_red:hover {
   text-align: center;
 }
 .partners_list > li {
-  float: left;
-  width: 20%;
   padding-left: 1.25em;
+}
+@media only screen and (min-width: 1040px) {
+  .partners_list > li {
+    float: left;
+    width: 20%;
+  }
 }
 
 .partner_scope {
