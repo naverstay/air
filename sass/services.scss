@@ -175,7 +175,10 @@
   margin: (-5 / 16 * 1em) 0 (50 / 16 * 1em);
 
   &.mod_1 {
-    margin-left: (-40 / 16 * 1em);
+
+    @include respond-to-min($resp_step_2) {
+      margin-left: (-40 / 16 * 1em);
+    }
   }
 
   li {

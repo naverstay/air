@@ -5637,8 +5637,10 @@ a.clr_red:hover {
 .service_feature_list {
   margin: -0.3125em 0 3.125em;
 }
-.service_feature_list.mod_1 {
-  margin-left: -2.5em;
+@media only screen and (min-width: 1040px) {
+  .service_feature_list.mod_1 {
+    margin-left: -2.5em;
+  }
 }
 .service_feature_list li {
   position: relative;
