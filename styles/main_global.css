@@ -3007,6 +3007,7 @@ textarea.f_input.f_input_v1.autoSize {
 }
 .service_icon svg {
   vertical-align: top;
+  max-height: 1em;
   max-width: 1.25em;
 }
 @media only screen and (min-width: 1040px) {
@@ -3016,6 +3017,7 @@ textarea.f_input.f_input_v1.autoSize {
   }
   .service_icon svg {
     max-width: 100%;
+    max-height: none;
   }
 }
 @media only screen and (min-width: 1240px) {

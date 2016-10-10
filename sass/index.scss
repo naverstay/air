@@ -263,8 +263,6 @@
   left: 0;
   z-index: 3;
 
-  //box-shadow: 0 (-1 / 16 * 1em)  (3 / 16 * 1em)  rgba(238, 89, 84, .12);
-
   .section_inner {
     padding: 0;
   }
@@ -272,7 +270,7 @@
   .open_tabs & {
     @include transform_translate(0, 0);
   }
-
+    
   @include respond-to-min($resp_step_2) {
     @include transform_translate(0, 0);
     position: absolute;
@@ -284,7 +282,6 @@
       padding: 0 (100 / 16 * 1em);
     }
   }
-
 }
 
 .service_tabs {
@@ -539,6 +536,7 @@
 
   svg {
     vertical-align: top;
+    max-height: 1em;
     max-width: (20 / 16 * 1em);
   }
 
@@ -548,6 +546,7 @@
 
     svg {
       max-width: 100%;
+      max-height: none;
     }
   }
 

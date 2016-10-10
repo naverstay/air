@@ -399,18 +399,8 @@
       display: block;
       width: 100%;
     }
-
-    &.slick-current {
-      //cursor: default;
-      
-      &:before {
-        //border: (3 / 16 * 1em) solid #e7423e;
-      }
-    }
     
     &.fader-current {
-      //cursor: default;
-      
       &:before {
         border: (3 / 16 * 1em) solid #e7423e;
       }
